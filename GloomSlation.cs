@@ -17,7 +17,7 @@ namespace GloomSlation
     public class GloomSlation : MelonMod
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
-
+       
         private static readonly string modPath = "Mods\\GloomSlation";
 
         private string langPath = "";
@@ -33,7 +33,7 @@ namespace GloomSlation
 
             // Read font map
             var text = File.ReadAllText(Path.Combine(langPath, "fontMap.json"));
-            if ( !(JSON.Load(text) is ProxyObject fMap) )
+            if (!(JSON.Load(text) is ProxyObject fMap))
             {
                 LoggerInstance.Msg("failed to load fontMap.json");
                 return;
@@ -51,9 +51,13 @@ namespace GloomSlation
             LoggerInstance.Msg("Font mapping:");
             foreach (var (k, v) in fMap)
             {
-                var asset = (TMP_FontAsset)bundle.LoadAsset($"Assets/{k}.asset");
-                fontMap.Add(k, asset);
-                LoggerInstance.Msg($"{k} -> {v}");
+                var asset = (TMP_FontAsset)bundle.LoadAsset($"Assets/{v}.asset");
+                if (asset == null) {
+                    LoggerInstance.Msg($"Asset not found: {k}");
+                } else {
+                    fontMap.Add(k, asset);
+                    LoggerInstance.Msg($"{k} -> {v}");
+                }
             }
         }
 
@@ -72,9 +76,18 @@ namespace GloomSlation
             // Recursively patch all fonts found
             foreach (var tmp in obj.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
             {
-                if (tmp.font != null && fontMap.TryGetValue(tmp.font.name, out TMP_FontAsset font))
+                if (tmp.font != null)
                 {
-                    tmp.font = font;
+                    TMP_FontAsset font;
+                    if (fontMap.TryGetValue(tmp.font.name, out font))
+                    {
+                        tmp.font = font;
+                    }
+                    else if (fontMap.TryGetValue("FALLBACK_FONT", out font))
+                    {
+                        LoggerInstance.Msg($"mapping {tmp.font.name} -> FALLBACK");
+                        tmp.font = font;
+                    }
                 }
             }
         }
