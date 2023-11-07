@@ -17,6 +17,7 @@ namespace GloomSlation
     public class GloomSlation : MelonMod
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
+        private readonly HashSet<string> ourFonts = new HashSet<string>();
        
         private static readonly string modPath = "Mods\\GloomSlation";
 
@@ -55,6 +56,7 @@ namespace GloomSlation
                 if (asset == null) {
                     LoggerInstance.Msg($"Asset not found: {k}");
                 } else {
+                    ourFonts.Add(v);
                     fontMap.Add(k, asset);
                     LoggerInstance.Msg($"{k} -> {v}");
                 }
@@ -76,7 +78,8 @@ namespace GloomSlation
             // Recursively patch all fonts found
             foreach (var tmp in obj.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
             {
-                if (tmp.font != null)
+                // Do not remap twice
+                if (tmp.font != null && !ourFonts.Contains(tmp.font.name))
                 {
                     TMP_FontAsset font;
                     if (fontMap.TryGetValue(tmp.font.name, out font))
