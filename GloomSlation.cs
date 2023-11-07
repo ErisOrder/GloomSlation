@@ -1,7 +1,9 @@
 ﻿using Gloomwood.Languages;
+using Gloomwood.UI;
 using HarmonyLib;
 using MelonLoader;
 using MelonLoader.TinyJSON;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
@@ -133,6 +135,18 @@ namespace GloomSlation
         )
         {
             __result = Melon<GloomSlation>.Instance.ReadLanguageData(dataType);
+        }
+    }
+    
+    [HarmonyPatch(typeof(TextBehaviour), "SetString", new Type[] { typeof(string), typeof(bool), typeof(bool) })]
+    static class PatchTextBehaviour {
+        static void Prefix(
+            // ref bool localize,
+            ref bool lowercase
+        ) {
+            // Text in some places is forcefully set to lowercase.
+            // Undo that
+            lowercase = false;
         }
     }
 }
