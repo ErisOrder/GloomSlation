@@ -113,10 +113,11 @@ namespace GloomSlation
                     }
                 }
 
-                // For every object that doesn't have localization component or key, 
-                // add one and generate key
                 var tmpObj = tmp.gameObject;
                 var component = tmpObj.GetComponent<TextBehaviour>();
+                
+                // For every object that doesn't have localization component or key, 
+                // add one and generate key
                 if (
                     (component != null && component.LocalizationId.Length == 0 || component == null) 
                     && tmp.text != null && tmp.text.Length > 0
@@ -146,6 +147,11 @@ namespace GloomSlation
                         
                     // TODO: Make some kind of "debug mode" to only enable such helper logs in it
                     MelonLogger.Msg($"Found unlocalized text: {localeKey} = \"{tmp.text}\";");                    
+                }
+                
+                // Force-enable text behavior
+                if (component != null) {
+                    component.enabled = true;
                 }
             }
         }
