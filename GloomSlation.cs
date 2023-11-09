@@ -1,5 +1,6 @@
 ﻿using Gloomwood.Languages;
 using Gloomwood.UI;
+using Gloomwood;
 using HarmonyLib;
 using MelonLoader;
 using MelonLoader.TinyJSON;
@@ -18,6 +19,22 @@ using UnityEngine.SceneManagement;
 
 namespace GloomSlation
 {
+    public static class Extensions {
+        public static T ReadPrivateField<T>(this object instance, string name) {
+            return (T)instance
+                .GetType()
+                .GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
+                .GetValue(instance);
+        }
+
+        public static bool NullOrEmpty(this string inst) {
+            return inst == null || inst == string.Empty;
+        }
+
+    }
+
+    public class LocalizeMarker: MonoBehaviour {}
+
     public class GloomSlation : MelonMod
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
@@ -91,7 +108,7 @@ namespace GloomSlation
         public static string ConstructLocaleKey(string objName, string origText) {
             return notIdentRex.Replace($"{objName}@{origText}", "_");
         }
-
+        
         /// Patch single GameObject
         public void PatchGameObject(GameObject obj)
         {
@@ -115,41 +132,58 @@ namespace GloomSlation
 
                 var tmpObj = tmp.gameObject;
                 var component = tmpObj.GetComponent<TextBehaviour>();
+                var localizedText = tmpObj.GetComponent<LocalizedText>();
                 
                 // For every object that doesn't have localization component or key, 
-                // add one and generate key
-                if (
-                    (component != null && component.LocalizationId.Length == 0 || component == null) 
-                    && tmp.text != null && tmp.text.Length > 0
+                // generate key and try to get localization
+                if (tmpObj.GetComponent<LocalizeMarker>() == null
+                    && !tmp.text.NullOrEmpty()
+                    && (component == null || localizedText == null || !localizedText.enabled)
                 ) {
-                    var localeKey = ConstructLocaleKey(tmp.gameObject.name, tmp.text);
-
-                    // Create new if necessary
-                    if (component == null) {
-                        component = tmpObj.AddComponent<TextBehaviour>();
-                    }
-
-                    // This private fields are set in serialized asset and inacessible without reflection
-                    typeof(TextBehaviour)
-                        .GetField("localizedID", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .SetValue(component, localeKey);
-                    typeof(TextBehaviour)
-                        .GetField("startLocalizedID", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .SetValue(component, localeKey);
-                    typeof(TextBehaviour)
-                        .GetField("localizedFormatId", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .SetValue(component, localeKey);
-                        
-                    // Most of such texts are related to menu, so let's store there all of them
-                    typeof(TextBehaviour)
-                        .GetField("localizationType", BindingFlags.NonPublic | BindingFlags.Instance)
-                        .SetValue(component, LanguageDataTypes.Menus);
+                    var localeKey = ConstructLocaleKey(tmpObj.name, tmp.text);
                         
                     // TODO: Make some kind of "debug mode" to only enable such helper logs in it
                     MelonLogger.Msg($"Found unlocalized text: {localeKey} = \"{tmp.text}\";");                    
+                    
+                    // Most of such texts are related to menu, so let's store there all of them
+                    if(GameManager.LanguageManager.TryGetLocalizedContent(
+                        LanguageDataTypes.Menus,
+                        localeKey,
+                        out string localized
+                    )) {
+                        MelonLogger.Msg("Found localization!");
+                        tmp.text = localized;
+
+                        tmpObj.AddComponent<LocalizeMarker>();
+
+                        // This prevents anything from changing our text back
+                        tmp.OnPreRenderText += (ti) => {
+                            // Prerender triggered by our action
+                            if (ti.textComponent.text == localized) {
+                                return;
+                            }    
+                        
+                            var newLocaleKey = ConstructLocaleKey(tmpObj.name, ti.textComponent.text);
+                            MelonLogger.Msg($"{localeKey} -> {newLocaleKey}: \"{ti.textComponent.text}\"");
+                            if(GameManager.LanguageManager.TryGetLocalizedContent(
+                                LanguageDataTypes.Menus,
+                                newLocaleKey,
+                                out string localizedNew
+                            )) {
+                                // Update text in case there's something localized
+                                ti.textComponent.text = localizedNew;                               
+                                localized = localizedNew;
+                                ti.textComponent.ForceMeshUpdate(true, true);
+                            } else {
+                                // Write previous value back
+                                ti.textComponent.text = localized;
+                                ti.textComponent.ForceMeshUpdate(true, true);
+                            }                        
+                        };
+                    }
                 }
-                
-                // Force-enable text behavior
+
+                // Force-enable components
                 if (component != null) {
                     component.enabled = true;
                 }
@@ -204,6 +238,7 @@ namespace GloomSlation
             // ref bool localize,
             ref bool lowercase
         ) {
+            
             // Text in some places is forcefully set to lowercase.
             // Undo that
             lowercase = false;
