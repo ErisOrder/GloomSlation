@@ -6,6 +6,8 @@ using MelonLoader.TinyJSON;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
+using System.Reflection;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,10 +25,19 @@ namespace GloomSlation
        
         private static readonly string modPath = "Mods\\GloomSlation";
 
+        private static readonly Regex notIdentRex = new Regex("[^0-9a-zA-Z_]+");
+
         private string langPath = "";
 
         public override void OnInitializeMelon()
         {
+            // We want full stacktraces to be printed in case of exception
+            Application.logMessageReceived += (text, trace, type) => {
+                if (type == LogType.Exception) {
+                    MelonLogger.Error($"[Unity {type}] {text}\n{trace}");
+                }
+            };
+            
             // Initialize preferences
             var prefCategory = MelonPreferences.CreateCategory("GloomSlation");
             prefCategory.SetFilePath(Path.Combine(modPath, "cfg.toml"));
@@ -65,22 +76,29 @@ namespace GloomSlation
             }
         }
 
+        /// Patch all scene's GameObjects
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             var scene = SceneManager.GetSceneByBuildIndex(buildIndex);
 
             foreach (var obj in scene.GetRootGameObjects())
             {
-                PatchGameObjectFonts(obj);
+                PatchGameObject(obj);
             }
         }
 
-        public void PatchGameObjectFonts(GameObject obj)
+        /// Construct localization entry ID from GameObject name and original text
+        public static string ConstructLocaleKey(string objName, string origText) {
+            return notIdentRex.Replace($"{objName}@{origText}", "_");
+        }
+
+        /// Patch single GameObject
+        public void PatchGameObject(GameObject obj)
         {
-            // Recursively patch all fonts found
+            // Recursively patch all texts found
             foreach (var tmp in obj.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
             {
-                // Do not remap twice
+                // Remap fonts, do not remap twice
                 if (tmp.font != null && !ourFonts.Contains(tmp.font.name))
                 {
                     TMP_FontAsset font;
@@ -94,9 +112,45 @@ namespace GloomSlation
                         tmp.font = font;
                     }
                 }
+
+                // For every object that doesn't have localization component or key, 
+                // add one and generate key
+                var tmpObj = tmp.gameObject;
+                var component = tmpObj.GetComponent<TextBehaviour>();
+                if (
+                    (component != null && component.LocalizationId.Length == 0 || component == null) 
+                    && tmp.text != null && tmp.text.Length > 0
+                ) {
+                    var localeKey = ConstructLocaleKey(tmp.gameObject.name, tmp.text);
+
+                    // Create new if necessary
+                    if (component == null) {
+                        component = tmpObj.AddComponent<TextBehaviour>();
+                    }
+
+                    // This private fields are set in serialized asset and inacessible without reflection
+                    typeof(TextBehaviour)
+                        .GetField("localizedID", BindingFlags.NonPublic | BindingFlags.Instance)
+                        .SetValue(component, localeKey);
+                    typeof(TextBehaviour)
+                        .GetField("startLocalizedID", BindingFlags.NonPublic | BindingFlags.Instance)
+                        .SetValue(component, localeKey);
+                    typeof(TextBehaviour)
+                        .GetField("localizedFormatId", BindingFlags.NonPublic | BindingFlags.Instance)
+                        .SetValue(component, localeKey);
+                        
+                    // Most of such texts are related to menu, so let's store there all of them
+                    typeof(TextBehaviour)
+                        .GetField("localizationType", BindingFlags.NonPublic | BindingFlags.Instance)
+                        .SetValue(component, LanguageDataTypes.Menus);
+                        
+                    // TODO: Make some kind of "debug mode" to only enable such helper logs in it
+                    MelonLogger.Msg($"Found unlocalized text: {localeKey} = \"{tmp.text}\";");                    
+                }
             }
         }
 
+        /// Read language data of selected language and LanguageDataTypes
         public Dictionary<string, string> ReadLanguageData(LanguageDataTypes dataType)
         {
             var entries = new Dictionary<string, string>();
@@ -122,7 +176,7 @@ namespace GloomSlation
                 return;
             }
 
-            Melon<GloomSlation>.Instance.PatchGameObjectFonts(__instance);
+            Melon<GloomSlation>.Instance.PatchGameObject(__instance);
         }
     }
 
