@@ -1,0 +1,14 @@
+NONE							= "";
+
+CREDIT_AND						= "And";
+CREDIT_PRESENTS					= "Presents";
+CREDIT_PUBLISHER				= "New Blood Interactive";
+CREDIT_ROLE_LEADDEVELOPER		= "Lead Developer";
+CREDIT_ROLE_DEVELOPER			= "Developer";
+CREDIT_ROLE_CODEVELOPER			= "Co-Developer";
+CREDIT_ROLE_COMPOSER			= "Music";
+
+// Names
+CREDIT_LEADDEVELOPER_1_NAME		= "Dillon Rogers";
+CREDIT_CODEVELOPER_1_NAME		= "David Szymanski";
+CREDIT_COMPOSER_NAME			= "Taylor Shechet";

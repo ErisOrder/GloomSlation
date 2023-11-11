@@ -1,0 +1,369 @@
+NULL							= "";
+NONE							= "None";
+
+// Item Slots
+SLOT_MELEE						= "Melee";
+SLOT_OFFHAND					= "Offhand";
+SLOT_HEAD						= "Head";
+SLOT_EYE						= "Eye";
+SLOT_RING						= "Ring";
+SLOT_CURRENCY					= "Gold";
+SLOT_JOURNAL					= "Journal";
+
+// Condition
+CONDITION						= "Condition";
+CONDITION_FINE					= "Fine";
+CONDITION_CAUTION				= "Caution";
+CONDITION_DANGER				= "Danger";
+
+// Shop
+SHOP_DISCOUNT					= "Discount!";
+SHOP_SOLDOUT					= "Sold Out!";
+
+// Item Actions
+ITEM_EQUIP						= "Equip";
+ITEM_UNEQUIP					= "Unequip";
+ITEM_DRAW						= "Draw";
+ITEM_USE						= "Use";
+ITEM_EXAMINE					= "Examine";
+ITEM_HOLD						= "Hold";
+ITEM_UNLOAD						= "Unload";
+ITEM_SPLIT						= "Unpack";
+ITEM_DROP						= "Drop";
+ITEM_QUANTITY					= "Quantity";
+ITEM_LOADEDTYPE					= "Ammo Type";
+ITEM_LOADEDQUANTITY				= "Ammo Count";
+
+// Item Action Names
+ITEM_INJECT						= "Inject";
+ITEM_OPEN						= "Open";
+ITEM_EAT						= "Gorge";
+ITEM_DRINK						= "Quaff";
+ITEM_READ						= "Read";
+ITEM_ZOOM						= "Zoom";
+
+ACTIVATE_FULLHEALTH				= "At Max Health";
+ACTIVATE_FULLINVENTORY			= "Cannot Carry Any More of That";
+ACTIVATE_SAVEGAME				= "Save Game";
+
+// Item groups
+ITEMGROUP_ALL					= "All";
+ITEMGROUP_EQUIPMENT				= "Equipment";
+ITEMGROUP_CONSUMABLES			= "Consumables";
+ITEMGROUP_FOOD					= "Food";
+ITEMGROUP_WEAPONS				= "Weapons";
+ITEMGROUP_AMMO					= "Ammo";
+ITEMGROUP_KEYS					= "Keys";
+ITEMGROUP_CURRENCY				= "Currency";
+ITEMGROUP_NOTES					= "Notes";
+
+// Items
+ITEM_BACKPACK_NAME				= "Backpack";
+ITEM_BACKPACK_DESC				= "A bag to carry all your items in";
+
+ITEM_BLOODVIAL_NAME				= "Blood Vial";
+ITEM_BLOODVIAL_DESC				= "A sampling of the doctor's blood to test for trauma, toxins and illnesses.";
+
+ITEM_JOURNAL_NAME				= "Journal";
+ITEM_JOURNAL_DESC				= "A journal containing various notes, documents and maps of the city.";
+
+ITEM_HANDLANTERN_NAME			= "Handlantern";
+ITEM_HANDLANTERN_DESC			= "An electrical handlantern that can illuminate the darkness at the cost of high visibility. Local steamboat captains rumor that such lamps can repel the ghostly fog that seeps in from the sea.";
+
+ITEM_HANDLANTERN_BROKEN_NAME	= "Broken Handlantern";
+ITEM_HANDLANTERN_BROKEN_DESC	= "A broken electrical handlantern. Not much use for it now.";
+
+ITEM_LIGHTGEMRING_NAME			= "Light Gem Ring";
+ITEM_LIGHTGEMRING_DESC			= "A ring with a crystal that reacts to nearby light.";
+
+ITEM_KEYRING_NAME				= "Key Ring";
+ITEM_KEYRING_DESC				= "A ring that contains all of your found keys.";
+
+ITEM_MEDHYPO_NAME				= "Vitalizing Tonic";
+ITEM_MEDHYPO_DESC				= "A hypodermic syringe containing a concoction of strong analgesics and anticoagulants. The tincture's signature glow comes from a native herb in the southern swamplands.";
+
+ITEM_MEDKIT_NAME				= "Medikit";
+ITEM_MEDKIT_DESC				= "Fully restores health";
+
+ITEM_MONOCLE_NAME				= "Monocle";
+ITEM_MONOCLE_DESC				= "Has an extendable lens for zooming";
+
+ITEM_MUSICBOX_NAME				= "Music Box";
+ITEM_MUSICBOX_DESC				= "Wind handle to save the game";
+
+ITEM_WAXCYLINDER_NAME			= "Wax Cylinder";
+ITEM_WAXCYLINDER_DESC			= "A wax cylinder for the Phonograph. Used to save the current progress. Consumed when used.";
+
+// Food
+ITEM_CHEESE_NAME				= "Cheese Wheel";
+ITEM_CHEESE_DESC				= "A strong scented cheese wheel. The majority of the region's dairy comes from nose-horned goats that migrated from the eastern mountains.";
+
+ITEM_APPLE_NAME					= "Apple";
+ITEM_APPLE_DESC					= "A somewhat moldy apple.";
+
+ITEM_LEVER_HANDLE_NAME			= "Lever Handle";
+ITEM_LEVER_HANDLE_DESC			= "A handle for a mechanical lever";
+
+// Ammo
+ITEM_REVOLVERROUND_NAME			= "Revolver Cartridge";
+ITEM_REVOLVERROUND_DESC			= "A single, revolver cartridge. The casing appears to have been reused. May create a decent distraction in a pinch.";
+
+ITEM_REVOLVERROUNDSPENT_NAME	= "Spent Revolver Round";
+ITEM_REVOLVERROUNDSPENT_DESC	= "An empty, spent revolver casing. May suffice as an impromptu distraction in a pinch.";
+
+ITEM_REVOLVERROUNDBOX_NAME		= "Revolver Cartridges";
+ITEM_REVOLVERROUNDBOX_DESC		= "A worn, soggy box of common revolver cartridges. A faint marking of the Constabulary approval stamp is barely legible on the front.";
+
+ITEM_SHOTGUNSHELL_NAME			= "Shotgun Shell";
+ITEM_SHOTGUNSHELL_DESC			= "A buckshot shell for the shotgun. May suffice as an impromptu distraction in a pinch.";
+
+ITEM_SHOTGUNSHELLSPENT_NAME		= "Spent Shotgun Shell";
+ITEM_SHOTGUNSHELLSPENT_DESC		= "An empty, spent shell. May suffice as an impromptu distraction in a pinch.";
+
+ITEM_SHOTGUNSHELLBOX_NAME		= "Shotgun Shell Box";
+ITEM_SHOTGUNSHELLBOX_DESC		= "A decayed box of shotgun shells. Once outlawed in this region, shotgun ammunition returned to usage as the city relied more on game over imported goods.";
+
+ITEM_UNDERTAKER_SLUG_NAME		= "Slug Bolt";
+ITEM_UNDERTAKER_SLUG_DESC		= "A heavy slug round for the Undertaker pistol. Can activate buttons and shatter glass and lights.";
+
+ITEM_UNDERTAKER_CHOKE_NAME		= "Choke Bolt";
+ITEM_UNDERTAKER_CHOKE_DESC		= "A vapor-filled round for the Undertaker pistol. Can extinguish fire sources and induce brief coughing fits in creatures.";
+
+ITEM_UNDERTAKER_INCENDIARY_NAME	= "Incendiary Bolt";
+ITEM_UNDERTAKER_INCENDIARY_DESC	= "A flammable round for the Undertaker pistol. Can ignite objects and instantly combust explosive sources.";
+
+ITEM_UNDERTAKER_SHOCK_NAME		= "Flash Bolt";
+ITEM_UNDERTAKER_SHOCK_DESC		= "A blinding round for the Undertaker pistol.";
+
+ITEM_GUNPOWDER_NAME				= "Gunpowder";
+ITEM_GUNPOWDER_DESC				= "";
+
+// Junk
+ITEM_BOTTLE_NAME				= "Glass Bottle";
+ITEM_BOTTLE_DESC				= "An empty, glass liquor bottle that is capable of creating a loud distraction. The faded label of the Ashbrew Brewery wraps the front.";
+
+ITEM_CAN_FISH_NAME				= "Can of Fish";
+ITEM_CAN_FISH_DESC				= "A can labeled with a 'Croup Fisheries' sticker. A salty, sickly smell emanates from the wrapper.";
+
+ITEM_CAN_FISH_EMPTY_NAME		= "Can of Fish (Empty)";
+ITEM_CAN_FISH_EMPTY_DESC		= "An empty can labeled with a 'Croup Fisheries' sticker. The inside of the can is stained with a slimy residue.";
+
+ITEM_CAN_BEANS_NAME				= "Can of Beans";
+ITEM_CAN_BEANS_DESC				= "A can labeled with a 'Doctor Smithy's Pork and Beans' sticker. An unmistakable nostalgic scent eminates.";
+
+ITEM_CAN_BEANS_EMPTY_NAME		= "Can of Beans (Empty)";
+ITEM_CAN_BEANS_EMPTY_DESC		= "An empty can labeled with a 'Doctor Smithy's Pork and Beans' sticker. The only thing left inside is the pain of having nothing. It hurts.";
+
+ITEM_RIFLE_BROKEN_NAME			= "Huntsmans' Rifle";
+ITEM_RIFLE_BROKEN_DESC			= "A makeshift, shoddy hunting rifle. The grips are built for the distorted proportions of the huntsmen and cannot be handled by average humans.";
+
+// Giblets
+ITEM_GIBLET_WOODSMAN_HEAD_NAME		= "Woodsman Head";
+ITEM_GIBLET_WOODSMAN_HEAD_DESC		= "(Not Researched)";
+
+ITEM_GIBLET_WOODSMAN_ARM_LEFT_NAME	= "Woodsman Arm (Left)";
+ITEM_GIBLET_WOODSMAN_ARM_LEFT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_WOODSMAN_ARM_RIGHT_NAME	= "Woodsman Arm (Right)";
+ITEM_GIBLET_WOODSMAN_ARM_RIGHT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_WOODSMAN_LEG_LEFT_NAME	= "Woodsman Leg (Left)";
+ITEM_GIBLET_WOODSMAN_LEG_LEFT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_WOODSMAN_LEG_RIGHT_NAME	= "Woodsman Leg (Right)";
+ITEM_GIBLET_WOODSMAN_LEG_RIGHT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_HUNTSMAN_HEAD_NAME		= "Huntsman Head";
+ITEM_GIBLET_HUNTSMAN_HEAD_DESC		= "(Not Researched)";
+
+ITEM_GIBLET_HUNTSMAN_ARM_LEFT_NAME	= "Huntsman Arm (Left)";
+ITEM_GIBLET_HUNTSMAN_ARM_LEFT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_HUNTSMAN_ARM_RIGHT_NAME	= "Huntsman Arm (Right)";
+ITEM_GIBLET_HUNTSMAN_ARM_RIGHT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_HUNTSMAN_LEG_LEFT_NAME	= "Huntsman Leg (Left)";
+ITEM_GIBLET_HUNTSMAN_LEG_LEFT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_HUNTSMAN_LEG_RIGHT_NAME	= "Huntsman Leg (Right)";
+ITEM_GIBLET_HUNTSMAN_LEG_RIGHT_DESC	= "(Not Researched)";
+
+ITEM_GIBLET_CITIZEN_MAN_HEAD_NAME	= "Citizen Man Head";
+ITEM_GIBLET_CITIZEN_MAN_HEAD_DESC	= "(Not Researched)";
+
+ITEM_GOATMAN_HORN_LEFT_NAME			= "Goatman Horn (Left)";
+ITEM_GOATMAN_HORN_LEFT_DESC			= "(Not Researched)";
+
+ITEM_GOATMAN_HORN_RIGHT_NAME		= "Goatman Horn (Right)";
+ITEM_GOATMAN_HORN_RIGHT_DESC		= "(Not Researched)";
+
+// Weapons
+ITEM_CANESWORD_NAME					= "Canesword";
+ITEM_CANESWORD_DESC					= "A durable canesword with an ivory handle and silver coated blade. A powered thrust to an unaware, unarmored enemy will deal critical damage.";
+
+ITEM_REVOLVER_NAME					= "Revolver";
+ITEM_REVOLVER_DESC					= "Break-action revolver with six chambers. Steel-casted and chambered for a cartridge round local to the city.";
+
+ITEM_SHOTGUN_NAME					= "Shotgun";
+ITEM_SHOTGUN_DESC					= "A collapsable pump shotgun. A favorite among the trappers who desired an easily carryable close-range weapon for their excursions past the bulwark.";
+
+ITEM_LEGTRAP_NAME					= "Leg-hold Trap";
+ITEM_LEGTRAP_DESC					= "A trap that can be used to snare the target's leg.";
+
+ITEM_UNDERTAKER_NAME				= "Undertaker Pistol";
+ITEM_UNDERTAKER_DESC				= "A custom, single-shot pistol with a silencer. The chamber is shaped for a special canister type that delivers various gasses and liquids. ";
+
+ITEM_FLASHBOMB_NAME					= "Flashbomb";
+ITEM_FLASHBOMB_DESC					= "A throwable bomb that emits a blinding flash, rendering nearby creatures unable to see or attack. A newly introduced tool used by the Constabulary to quell riots and protests.";
+
+// Tools
+ITEM_BUTTON_PRESSER_NAME			= "Button Cap";
+ITEM_BUTTON_PRESSER_DESC			= "A cap for a button presser. Can be used to repair certain devices.";
+
+ITEM_VALVE_NAME						= "Handvalve";
+ITEM_VALVE_DESC						= "A handvalve for manually operating various devices. Can be installed into an appropriate valve seat.";
+
+ITEM_CANNONBALL_NAME				= "Cannonball";
+ITEM_CANNONBALL_DESC				= "Cannonball that can be loaded into a cannon. There's a thin layer of rust covering it.";
+
+ITEM_CANNON_FUSE_NAME				= "Cannon Fuse";
+ITEM_CANNON_FUSE_DESC				= "A fuse string for a cannon.";
+
+ITEM_POWDERFLASK_NAME				= "Powderflask Horn";
+ITEM_POWDERFLASK_DESC				= "A small container made from an animal horn. Useful for pouring gunpowder into older, muzzle-loaded weapons like muskets and cannons.";
+
+// Keys
+KEY_NONE_NAME						= "None";
+KEY_NONE_DESC						= "No keys have been found.";
+
+KEY_TESTKEY1_NAME					= "Test Key";
+KEY_TESTKEY1_DESC					= "The first test key.";
+
+KEY_TESTKEY2_NAME					= "Second Test Key";
+KEY_TESTKEY2_DESC					= "The second test key.";
+
+KEY_EMBLEM_CROW_NAME				= "Emblem of the Crow";
+KEY_EMBLEM_CROW_DESC				= "Engraved with the symbol of a Crow";
+
+KEY_EMBLEM_RAT_NAME					= "Emblem of the Rat";
+KEY_EMBLEM_RAT_DESC					= "Engraved symbol of a Rat";
+
+KEY_DEMO_SAFEHOUSE_NAME				= "Safehouse Key";
+KEY_DEMO_SAFEHOUSE_DESC				= "For the safehouse front door";
+
+KEY_DEMO_COURTYARD_NAME				= "Warden Court Key";
+KEY_DEMO_COURTYARD_DESC				= "For the door near the Jailhouse entrance";
+
+KEY_DEMO_GUARDHOUSE_NAME			= "Guardhouse Key";
+KEY_DEMO_GUARDHOUSE_DESC			= "For the guardhouse near the Market gate";
+
+KEY_FISHERY_SUPPLYROOM_NAME			= "Fishery Supply Room Key";
+KEY_FISHERY_SUPPLYROOM_DESC			= "Key to the supply room at Mr. Croup's Fishery.";
+
+KEY_FISHERY_MANAGER_NAME			= "Fishery Manager's Key";
+KEY_FISHERY_MANAGER_DESC			= "Manager's key at Mr. Croup's Fishery.";
+
+KEY_FISHERY_ROOFTOP_NAME			= "Fishery Rooftop Key";
+KEY_FISHERY_ROOFTOP_DESC			= "Key for the rooftop at Mr. Croup's Fishery.";
+
+KEY_FISHERY_POWERROOM_NAME			= "Fishery Power Room";
+KEY_FISHERY_POWERROOM_DESC			= "Key for the power room at Mr. Croup's Fishery.";
+
+KEY_FISHERY_POWERGENERATOR_NAME		= "Fishery Generator Key";
+KEY_FISHERY_POWERGENERATOR_DESC		= "Key to the Fishery power generator.";
+
+KEY_FISHERY_CARRIAGE_BACKDOOR_NAME	= "Fishery Carriage Station Backdoor";
+KEY_FISHERY_CARRIAGE_BACKDOOR_DESC	= "Key to the backdoor of the Fishery Carriage Station.";
+
+KEY_COAST_FISHERY_CABIN_NAME		= "Fishery Cabin Key";
+KEY_COAST_FISHERY_CABIN_DESC		= "Key to the cabin overlooking Mr. Croup's Fishery.";
+
+KEY_CAVES_POWERGENERATOR_NAME		= "Mines Generator Key";
+KEY_CAVES_POWERGENERATOR_DESC		= "Key to the generator room in the coastal mines.";
+
+KEY_CAVES_STORAGE_NAME				= "Mines Storage Key";
+KEY_CAVES_STORAGE_DESC				= "Key to the storage room in the coastal mines. A faint scent of blood is stained into the metal.";
+
+KEY_COAST_HOUSE_1_NAME				= "Coast Desolated House Key";
+KEY_COAST_HOUSE_1_DESC				= "Key to a desolated house along the coastal road.";
+
+KEY_PADLOCK_COAST_CLIFF_WALL_NAME	= "Lighthouse Path Padlock Door";
+KEY_PADLOCK_COAST_CLIFF_WALL_DESC	= "Key to the padlock door wall on the path up to the Lighthouse.";
+
+KEY_COAST_TAVERN_GUNCASE_NAME		= "Slaughtered Goat Guncase Key";
+KEY_COAST_TAVERN_GUNCASE_DESC		= "Key to the mounted guncase in the Slaughtered Goat Tavern.";
+
+KEY_COAST_TAVERN_BASEMENT_NAME		= "Slaughtered Goat Basement Key";
+KEY_COAST_TAVERN_BASEMENT_DESC		= "Key to the basement of the Slaughtered Goat Tavern.";
+
+KEY_COAST_TAVERN_ROOMS_NAME			= "Slaughtered Goat Room Key";
+KEY_COAST_TAVERN_ROOMS_DESC			= "Key to the guest rooms at the Slaughtered Goat Tavern.";
+
+KEY_COAST_GUARDTOWER_NAME			= "Coastal Guardtower Key";
+KEY_COAST_GUARDTOWER_DESC			= "Key to the coastal guard tower outside the city gates.";
+
+KEY_COAST_GATEHOUSE_STORAGE_NAME	= "City Gatehouse Storage Key";
+KEY_COAST_GATEHOUSE_STORAGE_DESC	= "Key to the storage room in the city gatehouse.";
+
+KEY_MARKET_SHACK_1_NAME = "Fishing Hut Door Key";
+KEY_MARKET_SHACK_1_DESC = "Key to the door of a locked fishing hut in in the Market District.";
+
+KEY_MARKET_GUNSHOP_FRONTDOOR_NAME	= "Gunshop Front Door Key";
+KEY_MARKET_GUNSHOP_FRONTDOOR_DESC	= "Key to the front door of the gunshop in the Market District.";
+
+KEY_MARKET_GUNSHOP_CASHIER_NAME		= "Gunshop Cashier Key";
+KEY_MARKET_GUNSHOP_CASHIER_DESC		= "Key to the cashier desk of the gunshop in the Market District.";
+
+KEY_MARKET_GUNSHOP_DISPLAYCASE_NAME	= "Gunshop Display Case Key";
+KEY_MARKET_GUNSHOP_DISPLAYCASE_DESC	= "Key to the display cases in the gunshop in the Market District.";
+
+KEY_MARKET_DOCK_POWERSTATION_NAME	= "Market Power Station Key";
+KEY_MARKET_DOCK_POWERSTATION_DESC	= "Key to the power station near the dock in the Market District.";
+
+KEY_MARKET_BARBERSHOP_BASEMENT_NAME	= "Barbershop Basement Key";
+KEY_MARKET_BARBERSHOP_BASEMENT_DESC	= "Key to the basement of the Barbershop in the Market District.";
+
+KEY_MARKET_MANOR_BACKDOOR_1_NAME	= "Manor Backdoor Key";
+KEY_MARKET_MANOR_BACKDOOR_1_DESC	= "Key to the back door of a manor in the Market District.";
+
+KEY_MARKET_RESTROOM_FRONTDOOR_NAME	= "Market Restroom Key";
+KEY_MARKET_RESTROOM_FRONTDOOR_DESC	= "Key to the public restroom in the Market District. Quite smelly.";
+
+KEY_MARKET_MANOR_2_FRONTDOOR_NAME	= "Lord Marwyn's Manor Key";
+KEY_MARKET_MANOR_2_FRONTDOOR_DESC	= "Key to the front door of a manor in the Market District. The name 'Lord Marwyn' is inscribed on the head.";
+
+// Currency
+CURRENCY_GOLD_NAME					= "Gold";
+CURRENCY_GOLD_DESC					= "Shiny coins and valuable trinkets";
+
+// Treasure
+ITEM_BROOCH_1_NAME					= "Red Gem Brooch";
+ITEM_BROOCH_1_DESC					= "A red gem-stone brooch. Could fetch a high price from the right buyer.";
+
+ITEM_GEM_WHITE_SMALL_NAME			= "White Gem (Small)";
+ITEM_GEM_WHITE_SMALL_DESC			= "A small, sparkling white gem. Can be sold.";
+
+ITEM_GEM_WHITE_LARGE_NAME			= "White Gem (Large)";
+ITEM_GEM_WHITE_LARGE_DESC			= "A large, sparkling white gem. Can be sold.";
+
+ITEM_GEM_BLOOD_TINY_NAME			= "Bloodstone (Tiny)";
+ITEM_GEM_BLOOD_TINY_DESC			= "A tiny, blood-trapped gemstone. Fairly valuable despite the small size.";
+
+ITEM_GEM_BLOOD_SMALL_NAME			= "Bloodstone (Small)";
+ITEM_GEM_BLOOD_SMALL_DESC			= "A small, blood-trapped gemstone. Quite rare and valuable in the city.";
+
+ITEM_GEM_EMERALD_LARGE_NAME			= "Emerald Gem (Large)";
+ITEM_GEM_EMERALD_LARGE_DESC			= "A large, glistening emerald gem. Can be sold. Emeralds are rumored to be the gemstone of the madman, inducing one to embrace chaos and furor.";
+
+ITEM_HORN_ULMAR_NAME				= "Horn of Ulmar";
+ITEM_HORN_ULMAR_DESC				= "A prized, ivory horn from the Old Kingdom. It is told that these horns could once sing across entire realms, but their power has long since faded.";
+
+ITEM_RING_EMERALD_NAME				= "Emerald Ring";
+ITEM_RING_EMERALD_DESC				= "A ring with an emerald gem. Emeralds are rumored to be the gemstone of the madman, inducing one to embrace chaos and furor.";
+
+//-------------------------------------------------------------
+// Seasonal
+
+// Halloween
+ITEM_JACKOLANTERN_NAME				= "Jack-o-Lantern";
+ITEM_JACKOLANTERN_DESC				= "A peculiar carved turnip in the shape of a face. A local, seasonal custom perhaps?";

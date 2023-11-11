@@ -1,0 +1,382 @@
+NONE					= "";
+TITLE_NEWGAME			= "New Game";
+TITLE_LOAD				= "Load";
+TITLE_SETTINGS			= "Settings";
+TITLE_QUIT				= "Quit";
+TITLE_STARTGAME			= "Embark";
+
+// New Game Menu
+MENU_NEWGAME_TITLE		= "New Game";
+DIFFICULTY_SELECT		= "Select a difficulty";
+DIFFICULTY_NAME_EASY	= "Crescent";
+DIFFICULTY_NAME_MEDIUM	= "Half Moon";
+DIFFICULTY_NAME_HARD	= "Full Moon";
+DIFFICULTY_NAME_EXPERT	= "Blood Moon";
+DIFFICULTY_NAME_CUSTOM	= "Blue Moon";
+DIFFICULTY_DESC_EASY	= "For players who are unfamiliar with survival horror or just want to explore.";
+DIFFICULTY_DESC_MEDIUM	= "For players looking for a well-balanced experience.";
+DIFFICULTY_DESC_HARD	= "For players who are familiar with survival horror or are looking for a challenge.";
+DIFFICULTY_DESC_EXPERT	= "For survival horror veterans who want to be pushed to their limits.";
+DIFFICULTY_FEAT_EASY	= "-Abundant resources\n-Low enemy presence\n-Low enemy damage, speed and senses\n-Quicksave and Quickload is allowed";
+DIFFICULTY_FEAT_MEDIUM	= "-Standard resources\n-Standard enemy presence\n-Standard enemy damage, speed and senses\n-Can only save at Phonographs";
+DIFFICULTY_FEAT_HARD	= "-Few resources\n-High enemy presence\n-High enemy damage, speed and senses\n-Can only save at Phonographs";
+DIFFICULTY_FEAT_EXPERT	= "-Scarce resources\n-Very high enemy presence\n-Very high enemy damage, speed and senses\n-Can only save at Phonographs with Wax Cylinders";
+
+// Saved Game Message
+UI_SAVEMESSAGE			= "Game Saved";
+UI_QUICKSAVE_DISALLOW   = "Quicksaving Not Allowed";
+UI_AUTOSAVE				= "Auto Saved";
+
+// Brightness Menu
+MENU_BRIGHTNESS_TITLE	= "Brightness";
+MENU_BRIGHTNESS_PROMPT	= "Adjust the sliders until the left image is not visible";
+
+// Generic
+MENU_CONFIRM			= "Aye";
+MENU_CANCEL				= "Nay";
+MENU_NEXT				= "NEXT";
+MENU_BACK				= "BACK";
+
+// Load Game Menu
+MENU_LOAD_TITLE			= "Load Game";
+MENU_LOAD_FILE			= "File";
+MENU_LOAD_QUICKSAVE		= "Quick Save";
+
+// Pause Menu
+MENU_PAUSE_RESUME		= "Resume";
+MENU_PAUSE_LOAD			= "Load";
+MENU_PAUSE_SETTINGS		= "Settings";
+MENU_PAUSE_TITLE		= "Title Menu";
+MENU_PAUSE_QUIT			= "Quit Game";
+
+// Settings Menu
+MENU_SETTINGS_TITLE		= "SETTINGS";
+MENU_SETTINGS_GAMEPLAY	= "GAMEPLAY";
+MENU_SETTINGS_CAMERA	= "CAMERA";
+MENU_SETTINGS_VIDEO		= "VIDEO";
+MENU_SETTINGS_AUDIO		= "AUDIO";
+MENU_SETTINGS_CONTROLS	= "CONTROLS";
+MENU_SETTINGS_INPUT		= "INPUT";
+MENU_BCG_BRIGHTNESS		= "BRIGHTNESS / GAMMA";
+MENU_BCG_CONTRAST		= "CONTRAST";
+
+// Settings Gameplay Menu
+OPTION_FORMAT_BULLET	= "{0}:";
+OPTION_FORMAT_COLON		= "{0}:";
+OPTION_ENABLED			= "on";
+OPTION_DISABLED			= "off";
+OPTION_YES              = "yes";
+OPTION_NO               = "no";
+OPTION_TOGGLE           = "Toggle";
+OPTION_HOLD             = "Hold";
+OPTION_OFF				= "Off";
+OPTION_LOW				= "Low";
+OPTION_MEDIUM			= "Medium";
+OPTION_HIGH				= "High";
+OPTION_ULTRA			= "Ultra";
+OPTION_APPLY			= "Apply";
+OPTION_RESET			= "reset";
+OPTION_BACK				= "back";
+OPTION_TUTORIALS		= "Enable Tutorials";
+OPTION_QUICKSAVE		= "Allow Quicksave";
+OPTION_CROSSHAIR		= "Show Crosshair";
+OPTION_VISIONCONES		= "Show Vision Cones";
+OPTION_VC_OFF			= "Off";
+OPTION_VC_MONO			= "Monochrome";
+OPTION_VC_COLORED		= "Color";
+OPTION_HIGHLIGHTS		= "Enable Interaction Highlights";
+OPTION_HL_BRIGHTNESS	= "Brightness";
+OPTION_HL_COLOR			= "Color";
+OPTION_HL_COLOR_R		= "Red";
+OPTION_HL_COLOR_G		= "Green";
+OPTION_HL_COLOR_B		= "Blue";
+OPTION_INV_GR_OPACITY	= "Inventory Grid Opacity";
+OPTION_INV_HL_OPACITY	= "Inventory Select Opacity";
+OPTION_ACTIONLOG		= "Enable Action Log";
+OPTION_ACTLOG_OFF		= "Disabled";
+OPTION_ACTLOG_ON		= "Enabled";
+OPTION_SEASONALCONTENT	= "Enable Seasonal Content";
+OPTION_DEVCONSOLE		= "Enable Developer Console";
+
+// Settings Camera Menu
+OPTION_VIEW_FOV			= "Horizontal Field of View";
+OPTION_VIEW_SENSITIVITY	= "View Sensitivity";
+OPTION_VIEW_SMOOTHING	= "View Smoothing";
+OPTION_VIEW_INVERT_Y	= "View Invert Y";
+OPTION_VIEW_BOB			= "View Bob Amount";
+OPTION_VIEW_SWAY		= "View Sway Amount";
+
+// Settings Video Menu
+OPTION_DISPLAY			= "Display";
+OPTION_RESOLUTION		= "Resolution";
+OPTION_FULLSCREEN		= "Fullscreen";
+OPTION_FS_EXCLUSIVE		= "Exclusive Fullscreen";
+OPTION_FS_BORDERLESS	= "Borderless Fullscreen";
+OPTION_FS_WINDOWED		= "Windowed";
+OPTION_VSYNC			= "V-Sync";
+OPTION_FRAMERATE		= "Framerate Limit";
+OPTION_FOV				= "FOV";
+OPTION_BRIGHTNESS		= "Brightness";
+OPTION_CONTRAST			= "Contrast";
+OPTION_GAMMA			= "Gamma";
+OPTION_DYNSHAD			= "Dynamic Shadow Quality";
+OPTION_PROJSHAD_QUALITY	= "Projected Shadow Quality";
+OPTION_PROJSHAD_DIST	= "Projected Shadow Distance";
+OPTION_PROJSHAD_OFF		= "Off";
+OPTION_PROJSHAD_NEAR	= "Near";
+OPTION_PROJSHAD_FAR		= "Far";
+OPTION_TF				= "Texture Filtering";
+OPTION_TF_POINT			= "Point";
+OPTION_TF_BILINEAR		= "Bilinear";
+OPTION_LMR				= "Lightmap Resolution";
+OPTION_LMR_LOW			= "Low";
+OPTION_LMR_MEDIUM		= "Medium";
+OPTION_LMR_HIGH			= "High";
+OPTION_LMR_ULTRA		= "Ultra";
+OPTION_AA				= "Antialiasing Mode";
+OPTION_AA_OFF			= "Disabled";
+OPTION_AA_2X			= "2X";
+OPTION_AA_4X			= "4X";
+OPTION_AA_8X			= "8X";
+OPTION_LIGHTFLARES		= "Enable Light Flares";
+
+// Settings Audio Menu
+OPTION_SPEAKER_MODE		= "Speaker Mode";
+OPTION_SM_STEREO		= "Stereo";
+OPTION_SM_QUAD			= "Quad";
+OPTION_SM_SURROUND		= "Surround";
+OPTION_SM_5point1		= "Surround 5.1";
+OPTION_SM_7point1		= "Surround 7.1";
+OPTION_VOL_MASTER		= "Master Volume";
+OPTION_VOL_SFX			= "SFX Volume";
+OPTION_VOL_VOC			= "Vocal Volume";
+OPTION_VOL_AMB			= "Ambience Volume";
+OPTION_VOL_MUSIC		= "Music Volume";
+OPTION_SUB_MODE			= "Subtitle Mode";
+OPTION_SUB_MODE_NONE	= "None";
+OPTION_SUB_MODE_SUB		= "Dialogue";
+OPTION_SUB_MODE_FULL	= "General";
+
+// Settings Controls Menu
+OPTION_BINDINGS			= "Bindings";
+OPTION_GAMEPAD			= "Gamepad (soon)";
+OPTION_SNEAK			= "Sneak Toggle";
+OPTION_CROUCH			= "Crouch Toggle";
+OPTION_SWITCHDRAW		= "Switch Weapon Draw";
+
+// Brightness Menu
+OPTION_BRIGHT_PROMPT	= "Adjust the brightness until the moon on the left is no longer visible.\nIf necessary, adjust the gamma until the moon on the right is not too dim nor bright.";
+OPTION_CONTRAST_PROMPT	= "Adjust the contrast until the colors are rich but not overly vivid.";
+
+// Bindings Menu
+BINDINGS_PROMPT			= "Press any key to bind";
+BINDINGS_RESET			= "Binds have been set to default";
+BINDINGS_BIND			= "has been bound to";
+INPUT_MOVE_FORWARD		= "Move Forward";
+INPUT_MOVE_BACKWARD		= "Move Backward";
+INPUT_MOVE_LEFT			= "Move Left";
+INPUT_MOVE_RIGHT		= "Move Right";
+INPUT_MOVE_CAMERA		= "Move Camera";
+INPUT_LEAN_LEFT			= "Lean Left";
+INPUT_LEAN_RIGHT		= "Lean Right";
+INPUT_JUMP				= "Jump / Mantle";
+INPUT_CROUCH			= "Crouch";
+INPUT_SNEAK				= "Sneak";
+INPUT_INTERACT			= "Interact";
+INPUT_INVENTORY			= "Inventory";
+INPUT_JOURNAL			= "Journal";
+INPUT_LANTERN			= "Lantern";
+INPUT_ZOOM				= "Zoom";
+INPUT_NEXT_WEAPON		= "Next Weapon";
+INPUT_PREVIOUS_WEAPON	= "Previous Weapon";
+INPUT_LAST_WEAPON		= "Last Weapon";
+INPUT_HOLSTER_WEAPON	= "Holster Weapon";
+INPUT_RELOAD_WEAPON		= "Reload Weapon";
+INPUT_CHANGE_AMMO_TYPE	= "Change Ammo Type";
+INPUT_PRIMARY_FIRE		= "Primary Fire";
+INPUT_SECONDARY_FIRE	= "Secondary Fire";
+INPUT_WEAPON_0			= "Weapon 0";
+INPUT_WEAPON_1			= "Weapon 1";
+INPUT_WEAPON_2			= "Weapon 2";
+INPUT_WEAPON_3			= "Weapon 3";
+INPUT_WEAPON_4			= "Weapon 4";
+INPUT_WEAPON_5			= "Weapon 5";
+INPUT_WEAPON_6			= "Weapon 6";
+INPUT_WEAPON_7			= "Weapon 7";
+INPUT_WEAPON_8			= "Weapon 8";
+INPUT_WEAPON_9			= "Weapon 9";
+INPUT_SCREENSHOT		= "Screenshot";
+INPUT_QUICKSAVE			= "Quicksave";
+INPUT_QUICKLOAD			= "Quickload";
+INPUT_MOUSE_BUTTON_0	= "Left Mouse Button";
+INPUT_MOUSE_BUTTON_1	= "Right Mouse Button";
+INPUT_MOUSE_WHEEL_UP	= "Mouse Wheel Up";
+INPUT_MOUSE_WHEEL_DOWN	= "Mouse Wheel Down";
+
+// Title Confirm
+MENU_TITLE_PROMPT		= "RETURN to TITLE MENU";
+
+// Quit Confirm
+MENU_QUIT_PROMPT		= "Abandon this wretched town?";
+
+// Modifiers
+KEY_NONE				= "None";
+KEY_SHIFT				= "Shift";
+KEY_ALT					= "Alt";
+KEY_CONTROL				= "Ctrl";
+
+// Mouse
+KEY_MOUSE				= "Mouse";
+KEY_MOUSE_X				= "Mouse X";
+KEY_MOUSE_Y				= "Mouse Y";
+KEY_MOUSE_SCROLLWHEEL	= "Mouse Scroll Wheel";
+KEY_MOUSEWHEELUP		= "Mouse Wheel Up";
+KEY_MOUSEWHEELDOWN		= "Mouse Wheel Down";
+KEY_MOUSE0				= "Left Mouse";
+KEY_MOUSE1				= "Right Mouse";
+KEY_MOUSE2				= "MB2";
+KEY_MOUSE3				= "MB3";
+KEY_MOUSE4				= "MB4";
+KEY_MOUSE5				= "MB5";
+KEY_MOUSE6				= "MB6";
+
+// Keyboard
+KEY_BACKSPACE			= "Backspace";
+KEY_DELETE				= "Delete";
+KEY_TAB					= "Tab";
+KEY_CLEAR				= "Clear";
+KEY_RETURN				= "Enter";
+KEY_PAUSE				= "Pause";
+KEY_ESCAPE				= "Escape";
+KEY_SPACE				= "Space";
+KEY_KEYPAD0				= "Numpad 0";
+KEY_KEYPAD1				= "Numpad 1";
+KEY_KEYPAD2				= "Numpad 2";
+KEY_KEYPAD3				= "Numpad 3";
+KEY_KEYPAD4				= "Numpad 4";
+KEY_KEYPAD5				= "Numpad 5";
+KEY_KEYPAD6				= "Numpad 6";
+KEY_KEYPAD7				= "Numpad 7";
+KEY_KEYPAD8				= "Numpad 8";
+KEY_KEYPAD9				= "Numpad 9";
+KEY_KEYPADPERIOD		= "Numpad .";
+KEY_KEYPADDIVIDE		= "Numpad /";
+KEY_KEYPADMULTIPLY		= "Numpad *";
+KEY_KEYPADMINUS			= "Numpad -";
+KEY_KEYPADPLUS			= "Numpad +";
+KEY_KEYPADENTER			= "Numpad Enter";
+KEY_KEYPADEQUALS		= "Numpad    =";
+KEY_UPARROW				= "Up";
+KEY_DOWNARROW			= "Down";
+KEY_RIGHTARROW			= "Right";
+KEY_LEFTARROW			= "Left";
+KEY_INSERT				= "Insert";
+KEY_HOME				= "Home";
+KEY_END					= "End";
+KEY_PAGEUP				= "Page Up";
+KEY_PAGEDOWN			= "Page Down";
+KEY_F1					= "F1";
+KEY_F2					= "F2";
+KEY_F3					= "F3";
+KEY_F4					= "F4";
+KEY_F5					= "F5";
+KEY_F6					= "F6";
+KEY_F7					= "F7";
+KEY_F8					= "F8";
+KEY_F9					= "F9";
+KEY_F10					= "F10";
+KEY_F11					= "F11";
+KEY_F12					= "F12";
+KEY_ALPHA0				= "0";
+KEY_ALPHA1				= "1";
+KEY_ALPHA2				= "2";
+KEY_ALPHA3				= "3";
+KEY_ALPHA4				= "4";
+KEY_ALPHA5				= "5";
+KEY_ALPHA6				= "6";
+KEY_ALPHA7				= "7";
+KEY_ALPHA8				= "8";
+KEY_ALPHA9				= "9";
+KEY_EXCLAIM				= "!";
+KEY_DOUBLEQUOTE			= "\"";
+KEY_HASH				= "#";
+KEY_DOLLAR				= "$";
+KEY_PERCENT				= "%";
+KEY_AMPERSAND			= "&";
+KEY_QUOTE				= "'";
+KEY_LEFTPAREN			= "(";
+KEY_RIGHTPAREN			= ")";
+KEY_ASTERISK			= "*";
+KEY_PLUS				= "+";
+KEY_COMMA				= ",";
+KEY_MINUS				= "-";
+KEY_PERIOD				= ".";
+KEY_SLASH				= "/";
+KEY_COLON				= ":";
+KEY_SEMICOLON			= ";";
+KEY_LESS				= "<";
+KEY_EQUALS				= "=";
+KEY_GREATER				= ">";
+KEY_QUESTION			= "?";
+KEY_AT					= "@";
+KEY_LEFTBRACKET			= "[";
+KEY_BACKSLASH			= "\\";
+KEY_RIGHTBRACKET		= "]";
+KEY_CARET				= "^";
+KEY_UNDERSCORE			= "_";
+KEY_BACKQUOTE			= "`";
+KEY_A					= "A";
+KEY_B					= "B";
+KEY_C					= "C";
+KEY_D					= "D";
+KEY_E					= "E";
+KEY_F					= "F";
+KEY_G					= "G";
+KEY_H					= "H";
+KEY_I					= "I";
+KEY_J					= "J";
+KEY_K					= "K";
+KEY_L					= "L";
+KEY_M					= "M";
+KEY_N					= "N";
+KEY_O					= "O";
+KEY_P					= "P";
+KEY_Q					= "Q";
+KEY_R					= "R";
+KEY_S					= "S";
+KEY_T					= "T";
+KEY_U					= "U";
+KEY_V					= "V";
+KEY_W					= "W";
+KEY_X					= "X";
+KEY_Y					= "Y";
+KEY_Z					= "Z";
+KEY_LEFTCURLYBRACKET	= "{";
+KEY_PIPE				= "|";
+KEY_RIGHTCURLYBRACKET	= "}";
+KEY_TILDE				= "~";
+KEY_NUMLOCK				= "Num Lock";
+KEY_CAPSLOCK			= "Caps Lock";
+KEY_SCROLLLOCK			= "Scroll Lock";
+KEY_RIGHTSHIFT			= "Right Shift";
+KEY_LEFTSHIFT			= "Left Shift";
+KEY_RIGHTCONTROL		= "Right Control";
+KEY_LEFTCONTROL			= "Left Control";
+KEY_RIGHTALT			= "Right Alt";
+KEY_LEFTALT				= "Left Alt";
+KEY_LEFTCOMMAND			= "Left Command";
+KEY_LEFTAPPLE			= "Left Apple";
+KEY_LEFTWINDOWS			= "Left Windows";
+KEY_RIGHTCOMMAND		= "Right Command";
+KEY_RIGHTAPPLE			= "Right Apple";
+KEY_RIGHTWINDOWS		= "Right Windows";
+KEY_ALTGR				= "Alt Gr";
+KEY_HELP				= "Help";
+KEY_PRINT				= "Print";
+KEY_SYSREQ				= "Sys Req";
+KEY_BREAK				= "Break";
+KEY_MENU				= "Menu";
+
+// Intro
+INTRO_NEWBLOOD					= "New Blood Interactive\npresents";
+INTRO_DEVELOPERS				= "A game by\nDillon Rogers and David Szymanski";

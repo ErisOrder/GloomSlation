@@ -1,0 +1,7 @@
+NONE							= "";
+
+// Status Health
+CONDITION						= "Condition";
+CONDITION_FINE					= "Fine";
+CONDITION_CAUTION				= "Caution";
+CONDITION_DANGER				= "Danger";

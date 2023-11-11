@@ -1,0 +1,383 @@
+NONE							= "";
+AI_STRANGER_ID					= "Stranger";
+
+//-------------------------------------------------------------
+// Merchant 
+
+AI_MERCHANT_ID						= "Grezzo";
+VO_MERCHANT_FISHERY_INTRO_START		= "Ah, good doctor. What an unfortunate predicament you found yourself in: kidnapped and brought here of all places. Hehe. Well, if you listen to me, you may yet survive this night.";
+VO_MERCHANT_INTRO_EXIT				= "I'm off. Can't stay here. Look for the old lighthouse on the coast. I've left instructions there. Good luck, Doctor. There's more to this city than you can possibly imagine!";
+VO_MERCHANT_JAILBREAK_LIGHTHOUSE	= "I'm off. Can't stay here. Look for the old lighthouse on the coast. I've left instructions there.";
+VO_MERCHANT_JAILBREAK_GOODLUCK		= "Good luck, Doctor. There's more to this city than you can possibly imagine.";
+VO_MERCHANT_RING_GIVE				= "Here. This ring should help you stay out of the light. You have many enemies here - the darkness will shroud you from them.";
+VO_MERCHANT_RING_WAIT				= "There's no time to waste, Doctor. Pick that up! The guards will be back soon.";
+VO_MERCHANT_WELCOME_1				= "Inside at last, are ya? Welcome!";
+VO_MERCHANT_LAUGH_1					= "Heh heh heh...";
+VO_MERCHANT_LIGHTHOUSE_MESSAGE		= "If you're reading this, that means you made it safely to the lighthouse. Good! My store is in the market district -- it's not far from here. Rest if you need to but don't delay, and whatever you do, don't look in the mirror.";
+VO_MERCHANT_INFIGHT_1_1				= "Doctor, come now!";
+VO_MERCHANT_INFIGHT_1_2				= "That's not how you treat a dear friend now, is it?!";
+VO_MERCHANT_SHOP_BANTER_1			= "*Mumbling*";
+VO_MERCHANT_SHOP_BUY_FAIL_1			= "Come back when you've lined those pockets...";
+VO_MERCHANT_SHOP_BUY_SUCCESS_1		= "Is that all?";
+VO_MERCHANT_SHOP_BUY_SUCCESS_2		= "You know we don't take returns...";
+VO_MERCHANT_SHOP_BUY_SUCCESS_3		= "I trust you'll find it in your favor.";
+VO_MERCHANT_SHOP_ENTER_1			= "What are ya buyin'?";
+VO_MERCHANT_SHOP_ENTER_2			= "Ah, my favorite new patron!";
+VO_MERCHANT_SHOP_ENTER_3			= "Ah, my favorite new patron!";
+VO_MERCHANT_SHOP_ENTER_4			= "Come, come. No harm will find you here.";
+VO_MERCHANT_SHOP_ENTER_5			= "It's good to see you're still with us, Doctor!";
+VO_MERCHANT_SHOP_ENTER_6			= "Inside at last, are ya?";
+VO_MERCHANT_SHOP_INTRO_1			= "Ugh, you looked in the mirror, didn't ya?";
+VO_MERCHANT_SHOP_INTRO_2			= "That was the Countess. Everything awful that has happened to this town can be linked back to her and that ghastly High Manor she roosts in.";
+VO_MERCHANT_SHOP_INTRO_3			= "Doctor, we must get you into that manor, to find and end the source of this madness.";
+VO_MERCHANT_SHOP_INTRO_4			= "Now your first task is collecting the stone seals that will give you passage through the old city gate to the mountains around her manor.";
+VO_MERCHANT_SHOP_INTRO_5			= "Each district contains a seal, a symbol of when the old noble families shared control of the city.";
+VO_MERCHANT_SHOP_INTRO_6			= "In the back room, there's an old map of the city I managed to dig up. That should help, but it's rather outdated I fear.";
+VO_MERCHANT_SHOP_REST				= "There's a room upstairs that I used to rent out to travelers. Feel free to take it and rest as you need to. You are safe within these walls.";
+VO_MERCHANT_SHOP_SELL_FAIL_1		= "Get your junk off my counter!";
+VO_MERCHANT_SHOP_SELL_START_1		= "What are ya sellin'?";
+VO_MERCHANT_SHOP_SELL_SUCCESS_1		= "Oh, this I like... better.";
+VO_MERCHANT_SHOP_SELL_SUCCESS_2		= "A fine addition to my collection.";
+VO_MERCHANT_SHOP_SELL_SUCCESS_3		= "I shan't refuse.";
+VO_MERCHANT_SHOP_SELL_SUCCESS_4		= "Curious! It intrigues me.";
+VO_MERCHANT_SHOP_SELL_SUCCESS_5		= "Very nice!";
+VO_MERCHANT_SHOP_SELL_SUCCESS_6		= "Ah, lovely...";
+VO_MERCHANT_SHOP_SELL_SUCCESS_7		= "Excellent!";
+
+//-------------------------------------------------------------
+// Countess
+
+AI_COUNTESS_ID							= "Countess";
+VO_COUNTESS_CON_LIGHTHOUSE_INTRODUCTION = "Hello, Doctor...";
+VO_COUNTESS_CON_LIGHTHOUSE_CARRIAGE		= "I will have one of my trusted servants pick you up by carriage.";
+VO_COUNTESS_CON_LIGHTHOUSE_MARKETPLAZA	= "Come to the Market Plaza before midnight.";
+VO_COUNTESS_CON_LIGHTHOUSE_MEETESTATE	= "I had hoped for us to meet at my estate.";
+VO_COUNTESS_CON_LIGHTHOUSE_NOMATTER		= "No matter...";
+VO_COUNTESS_CON_LIGHTHOUSE_OUTSIDERS	= "The townsfolk are not fond of outsiders."; 
+VO_COUNTESS_CON_LIGHTHOUSE_PROMISE		= "a promise few others here can make.";
+VO_COUNTESS_CON_LIGHTHOUSE_SAFEARRIVAL	= "I can guarantee your safe arrival,";
+VO_COUNTESS_CON_LIGHTHOUSE_WAITING		= "I'll be waiting...";
+
+//-------------------------------------------------------------
+// Edward (Fishery)
+
+AI_EDWARD_ID						= "Edward";
+VO_EDWARD_CON_FISHERY_INTRO_1		= "Hey, Doc. They put your fancy sword and things in the room back there. They might still be there, if the rats haven't gotten to it. ...worse every day...";
+VO_EDWARD_CON_FISHERY_DISTRACT_1	= "Guard! Guard!";
+VO_EDWARD_CON_FISHERY_DISTRACT_2	= "This fish is clearly rotten!";
+VO_EDWARD_CON_FISHERY_OUTRO_1		= "Hehe. Good luck, Doc. You're gonna need it.";
+
+//-------------------------------------------------------------
+// Oliver (Market)
+
+AI_OLIVER_ID						= "Oliver";
+VO_OLIVER_CON_MARKET_INTRODUCTION_1 = "Hmm. You're a new face around here aren't you? You sure picked a fine time to visit our city, lad. It's a veritable horrorshow.";
+VO_OLIVER_CON_MARKET_INTRODUCTION_2 = "Everyone is either fighting over rubble, dead, or turned into something horrible.";
+VO_OLIVER_CON_MARKET_INTRODUCTION_3 = "The constables operate from a station in the Old Quarter, and control the Bank and Cathedral Row, while the huntsmen have fought their way into the rest of the Market and Underport. Nobody goes into the Sootworks anymore. *cough*";
+VO_OLIVER_CON_MARKET_INTRODUCTION_4 = "There's a merchant shop down in the lower east end of the Market before the plaza. The proprietor is a strange fellow, but he may be one of the last few actual humans left in this accursed town.";
+VO_OLIVER_CON_MARKET_INTRODUCTION_5 = "*cough* Whatever you're here to do, accomplish it quickly and get out while you can. I tried to do good here, but now... Well, perhaps you'll have better luck than me.";
+VO_OLIVER_CON_MARKET_INTRODUCTION_6 = "This malaise seeps out from every brick and cobblestone and claws itself into the flesh until it has taken roost. I'm afraid that none of us have much time left at all. *cough cough*";
+VO_OLIVER_CON_MARKET_SHOO			= "Go on, lad. These bars are more for your safety than they are for mine.";
+
+//-------------------------------------------------------------
+// Huntsman
+
+AI_HUNTSMAN_ID						= "Huntsman";
+SFX_HUNTSMAN_AMBIENT_IDLE_1			= "*Rasping breaths*";
+SFX_HUNTSMAN_ALERT_ZERO_HEAR		= "All seems quiet now...";
+SFX_HUNTSMAN_ALERT_ZERO_SIGHT		= "It appears to have been nothing...";
+SFX_HUNTSMAN_ALERT_ONE_HEAR_1		= "A curious sound...";
+SFX_HUNTSMAN_ALERT_ONE_HEAR_2		= "What was that noise?";
+SFX_HUNTSMAN_ALERT_ONE_SIGHT_1		= "Do I spy something?";
+SFX_HUNTSMAN_ALERT_ONE_SIGHT_2		= "Do my eyes deceive me?";
+SFX_HUNTSMAN_ALERT_ONE_SMELL_1		= "Agh, what is that smell? Is that me?";
+SFX_HUNTSMAN_ALERT_TWO_HEAR_1		= "I heard that, my clumsy friend!";
+SFX_HUNTSMAN_ALERT_TWO_HEAR_2		= "Who made that noise just now? Come on out!";
+SFX_HUNTSMAN_ALERT_TWO_SIGHT		= "I saw that! Show yourself!";
+SFX_HUNTSMAN_ALERT_THREE_1			= "What?!";
+SFX_HUNTSMAN_ALERT_THREE_2			= "Agh!";
+SFX_HUNTSMAN_ALERT_THREE_3			= "Agh!";
+SFX_HUNTSMAN_ALERT_THREE_4			= "Agh!";
+SFX_HUNTSMAN_COUGH_1				= "*Cough*";
+SFX_HUNTSMAN_COUGH_2				= "*Cough*";
+SFX_HUNTSMAN_COUGH_3				= "*Cough* Ahem!";
+SFX_HUNTSMAN_COUGH_4				= "*Cough* Ack!";
+SFX_HUNTSMAN_COUGH_5				= "*Hack* *Snort* *Cough*";
+SFX_HUNTSMAN_COUGH_6				= "*Snort* Blagh! *Cough*";
+SFX_HUNTSMAN_GRUNT_LIGHT_1			= "Agh!";
+SFX_HUNTSMAN_GRUNT_LIGHT_2			= "Agh!";
+SFX_HUNTSMAN_GRUNT_LIGHT_3			= "Agh!";
+SFX_HUNTSMAN_GRUNT_MEDIUM_1			= "Agh!";
+SFX_HUNTSMAN_GRUNT_MEDIUM_2			= "Ragh!";
+SFX_HUNTSMAN_GRUNT_MEDIUM_3			= "Ragh!";
+SFX_HUNTSMAN_GRUNT_HEAVY_1			= "Raagh!";
+SFX_HUNTSMAN_GRUNT_HEAVY_2			= "Raaaagh!";
+SFX_HUNTSMAN_GRUNT_HEAVY_3			= "Raaaa-agh!";
+SFX_HUNTSMAN_SEARCH_TAUNT_1			= "You cannot hide for long...";
+SFX_HUNTSMAN_SEARCH_TAUNT_2			= "I love a good hunt!";
+SFX_HUNTSMAN_SEARCH_TAUNT_3			= "Come out, come out...";
+SFX_HUNTSMAN_SEARCH_TAUNT_4			= "Don't you want to go home, outsider? I can help you!";
+SFX_HUNTSMAN_SEARCH_FAIL			= "Pity...";
+SFX_HUNTSMAN_REACT_ENEMY			= "I've found him!";
+SFX_HUNTSMAN_REACT_PLAYER			= "I've found him!";
+SFX_HUNTSMAN_REACT_MONSTER_1		= "Unholy abomination!";
+SFX_HUNTSMAN_REACT_MONSTER_2		= "Ah! Back to the abyss with you, demon!";
+SFX_HUNTSMAN_REACT_MONSTER_3		= "I will send you back to hell, blight-bearer!";
+SFX_HUNTSMAN_REACT_MONSTER_4		= "Cretin!";
+SFX_HUNTSMAN_REACT_CORPSE			= "Murder...";
+SFX_HUNTSMAN_REACT_LIGHT_BROKEN_1	= "Who snuffed out the light?";
+SFX_HUNTSMAN_REACT_LIGHT_BROKEN_2	= "This darkness won't save you.";
+SFX_HUNTSMAN_REACT_SUSPICIOUS		= "This is not how I left this.";
+SFX_HUNTSMAN_COMBAT_ALLYDEATH_1		= "Damn you!";
+SFX_HUNTSMAN_COMBAT_ALLYDEATH_2		= "Damn you!";
+SFX_HUNTSMAN_COMBAT_ALLYDEATH_3		= "Damn you!";
+SFX_HUNTSMAN_COMBAT_ALLYDEATH_4		= "No!";
+SFX_HUNTSMAN_COMBAT_ALLYDEATH_5		= "No!";
+SFX_HUNTSMAN_COMBAT_ALLYDEATH_6		= "No!";
+SFX_HUNTSMAN_COMBAT_TAUNT_1			= "Muahahahaha!";
+SFX_HUNTSMAN_COMBAT_TAUNT_2			= "Muhaha ha ha ha!";
+SFX_HUNTSMAN_COMBAT_TAUNT_3			= "Muhahaha!";
+SFX_HUNTSMAN_COMBAT_OUTOFREACH_1	= "Damn you!";
+SFX_HUNTSMAN_COMBAT_OUTOFREACH_2	= "Damn you!";
+SFX_HUNTSMAN_COMBAT_OUTOFREACH_3	= "Damn you!";
+SFX_HUNTSMAN_COMBAT_KILL_PLAYER		= "Not so clever anymore!";
+SFX_HUNTSMAN_CONDITION_BLIND_1		= "Ahh! My eyes! I can't see!";
+SFX_HUNTSMAN_CONDITION_BLIND_2		= "Agh! I'm blind! Where are you!?";
+SFX_HUNTSMAN_CONDITION_CHOKE		= "*Cough* Ack!";
+SFX_HUNTSMAN_CONDITION_FIRE			= "Aghhh! It burns! It burns!";
+SFX_HUNTSMAN_CONDITION_TRAP			= "Blagh! Someone help me get this off!";
+SFX_HUNTSMAN_PAIN_LIGHT_1			= "Umph!";
+SFX_HUNTSMAN_PAIN_LIGHT_2			= "Ragh!";
+SFX_HUNTSMAN_PAIN_LIGHT_3			= "Gah!";
+SFX_HUNTSMAN_PAIN_MEDIUM_1			= "Agh!";
+SFX_HUNTSMAN_PAIN_MEDIUM_2			= "Uagh!";
+SFX_HUNTSMAN_PAIN_MEDIUM_3			= "Agh!";
+SFX_HUNTSMAN_PAIN_HEAVY_1			= "Augh!";
+SFX_HUNTSMAN_PAIN_HEAVY_2			= "Agh!";
+SFX_HUNTSMAN_PAIN_HEAVY_3			= "Agggh!";
+SFX_HUNTSMAN_DEATH_QUIET_1			= "Agh!";
+SFX_HUNTSMAN_DEATH_QUIET_2			= "Agh!";
+SFX_HUNTSMAN_DEATH_QUIET_3			= "Agh!";
+SFX_HUNTSMAN_DEATH_1				= "Agh! Curse upon you...";
+SFX_HUNTSMAN_DEATH_2				= "You bastard...";
+SFX_HUNTSMAN_DEATH_3				= "Agh...";
+SFX_HUNTSMAN_DEATH_4				= "Agh! Finish him, brothers...";
+SFX_HUNTSMAN_GIB_1					= "Blagh!";
+SFX_HUNTSMAN_GIB_2					= "Blagh!";
+SFX_HUNTSMAN_GIB_3					= "Blagh!";
+
+VO_HUNTSMAN_CON_BACKPAIN_1				= "Gah! I think I threw out my back.";
+VO_HUNTSMAN_CON_FISHERY_CARRIAGE_1		= "Prepare a carriage. They want us to bring him to the city gates.";
+VO_HUNTSMAN_CON_FISHERY_HOUNDS_1		= "The hounds seem anxious tonight.";
+VO_HUNTSMAN_CON_FISHERY_DROPOFF_1		= "Don't know. I just want to get the job done, get paid and not go anywhere near her mansion after that.";
+VO_HUNTSMAN_CON_FISHERY_DROPOFF_2		= "Yeah. We're supposed to hand him off to the Spymaster.";
+VO_HUNTSMAN_CON_FISHERY_DROPOFF_3		= "Best you don't let anyone hear you say that.";
+VO_HUNTSMAN_CON_FISHERY_WATCHTOWER_1	= "No. Apparently one of the prisoners escaped and locked himself in there.";
+VO_HUNTSMAN_CON_FISHERY_WATCHTOWER_2	= "A week about. We're making him stay up there and starve to death.";
+VO_HUNTSMAN_CON_FISHERY_ROAD_1			= "There. Now there's no way the outsider can escape.";
+VO_HUNTSMAN_CON_FISHERY_ROAD_2			= "But now we've made sure he can't get away!";
+VO_HUNTSMAN_CON_FISHERY_ROAD_3			= "We'll build a new bridge!";
+VO_HUNTSMAN_CON_COAST_TORCHES_1			= "Get the torches and search the caves!";
+VO_HUNTSMAN_CON_COAST_COUNTESS_1		= "She's going to have our heads if we don't find him.";
+VO_HUNTSMAN_CON_COAST_LIGHTHOUSE_1		= "Should we go check the old lighthouse?";
+VO_HUNTSMAN_CON_COAST_CANNON_FIRE_1		= "There's the outsider! Fire the cannon!";
+VO_HUNTSMAN_CON_COAST_CANNON_LOAD_1		= "We need more gunpowder and cannonballs. Go up to the storage room in the gatehouse and bring them down.";
+VO_HUNTSMAN_CON_COAST_CANNON_LOAD_2		= "Then go get it from his room in the guard tower.";
+VO_HUNTSMAN_CON_COAST_CANNON_LOAD_3		= "You useless worm!";
+VO_HUNTSMAN_CON_TAVERN_CAUGHT_1			= "Are you coming to the Slaughtered Goat?";
+VO_HUNTSMAN_CON_TAVERN_CAUGHT_2			= "The night watch said they caught something. They won't say what, just that everybody should come see.";	
+VO_HUNTSMAN_CON_TAVERN_BEAST_1			= "You first.";
+VO_HUNTSMAN_CON_TAVERN_TRAP_1			= "He fell for it! Muhahaha. He won't last a second with that accursed beast.";
+VO_HUNTSMAN_CON_MARKET_BATBARBER_1		= "Stay back! There's something lurking down here. It just took brother Joren!";
+VO_HUNTSMAN_CON_MARKET_ALONE_1			= "I don't think we're alone...";
+VO_HUNTSMAN_CON_MARKET_CONSTABLES_1		= "Yeah, this seemed too easy. Almost felt like they wanted to let us into the city.";
+VO_HUNTSMAN_CON_MARKET_CONSTABLES_2		= "I don't know. Just watch your back... and mine, too.";
+VO_HUNTSMAN_CON_MARKET_SHOP_1			= "Yeah, and it's full of overpriced junk. Who needs merchants when there's no constables around to stop us from taking what we want?";
+VO_HUNTSMAN_CON_MARKET_SHOP_2			= "Relinquish the old man of his burdens.";
+VO_HUNTSMAN_CON_MARKET_SHOP_3			= "Basically saints! Hehe.";
+VO_HUNTSMAN_CON_BEANS_1					= "Anything good in there?";
+
+//-------------------------------------------------------------
+// Woodsman
+
+AI_WOODSMAN_ID						= "Woodsman";
+SFX_WOODSMAN_ALERT_ZERO_HEAR		= "All seems quiet now...";
+SFX_WOODSMAN_ALERT_ZERO_SIGHT		= "It appears to have been nothing...";
+SFX_WOODSMAN_ALERT_ONE_HEAR_1		= "A curious sound...";
+SFX_WOODSMAN_ALERT_ONE_HEAR_2		= "What was that noise?";
+SFX_WOODSMAN_ALERT_ONE_SIGHT_1		= "Do I spy something?";
+SFX_WOODSMAN_ALERT_ONE_SIGHT_2		= "Do my eyes deceive me?";
+SFX_WOODSMAN_ALERT_ONE_SMELL_1		= "Agh, what horrid stench is that?";
+SFX_WOODSMAN_ALERT_TWO_HEAR_1		= "I heard that!";
+SFX_WOODSMAN_ALERT_TWO_HEAR_2		= "Who made that noise just now? Come on out!";
+SFX_WOODSMAN_ALERT_TWO_SIGHT_1		= "I see you there!";
+SFX_WOODSMAN_ALERT_TWO_SIGHT_2		= "I saw that! Show yourself!";
+SFX_WOODSMAN_ALERT_THREE_1			= "What?!";
+SFX_WOODSMAN_ALERT_THREE_2			= "Ah!";
+SFX_WOODSMAN_ALERT_THREE_3			= "Agh!";
+SFX_WOODSMAN_ALERT_THREE_4			= "Ah-ah!";
+SFX_WOODSMAN_REACT_ENEMY_1			= "I will chop you up!";
+SFX_WOODSMAN_REACT_ENEMY_2			= "I am going to cut you into pieces!";
+SFX_WOODSMAN_REACT_ENEMY_3			= "I can't wait to wear your skin!";
+SFX_WOODSMAN_REACT_ENEMY_4			= "I've got you now!";
+SFX_WOODSMAN_REACT_PLAYER_1			= "I've found him!";
+SFX_WOODSMAN_REACT_PLAYER_2			= "Peekaboo!";
+SFX_WOODSMAN_REACT_MONSTER_1		= "I will send you back to hell, blight bearer!";
+SFX_WOODSMAN_REACT_MONSTER_2		= "Gah! Back to the abyss with you, demon!";
+SFX_WOODSMAN_REACT_MONSTER_3		= "Cretin!";
+SFX_WOODSMAN_REACT_MONSTER_4		= "Foul ghoul!";
+SFX_WOODSMAN_REACT_MONSTER_5		= "Unholy abomination!";
+SFX_WOODSMAN_REACT_CORPSE			= "One of our brothers was just killed!";
+SFX_WOODSMAN_REACT_LIGHT_BROKEN_1	= "Who snuffed out the light?";
+SFX_WOODSMAN_REACT_LIGHT_BROKEN_2	= "This darkness won't save you.";
+SFX_WOODSMAN_REACT_SUSPICIOUS		= "This is not how I left this.";
+SFX_WOODSMAN_COUGH_INTRO			= "*HACKING COUGH*";
+SFX_WOODSMAN_COUGH_1				= "*Cough*";
+SFX_WOODSMAN_COUGH_2				= "Ack! *Cough*";
+SFX_WOODSMAN_COUGH_3				= "Ack! *Cough* *Spit*";
+SFX_WOODSMAN_COUGH_4				= "*Snort* Blagh! Ack!";
+SFX_WOODSMAN_COUGH_5				= "*Cough* *Snort* Ack!";
+SFX_WOODSMAN_COUGH_6				= "*Snort* Yagh! Ack!";
+SFX_WOODSMAN_GRUNT_LIGHT_1			= "Ha!";
+SFX_WOODSMAN_GRUNT_LIGHT_2			= "Hagh!";
+SFX_WOODSMAN_GRUNT_LIGHT_3			= "Ragh!";
+SFX_WOODSMAN_GRUNT_MEDIUM_1			= "Hagh!";
+SFX_WOODSMAN_GRUNT_MEDIUM_2			= "Ragh!";
+SFX_WOODSMAN_GRUNT_MEDIUM_3			= "Sh-agh!";
+SFX_WOODSMAN_GRUNT_HEAVY_1			= "Hagh!";
+SFX_WOODSMAN_GRUNT_HEAVY_2			= "Haagh!";
+SFX_WOODSMAN_GRUNT_HEAVY_3			= "Haaaagh!";
+SFX_WOODSMAN_SEARCH_TAUNT_1			= "You cannot hide for long.";
+SFX_WOODSMAN_SEARCH_TAUNT_2			= "I love a good hunt.";
+SFX_WOODSMAN_SEARCH_TAUNT_3			= "Come out, come out...";
+SFX_WOODSMAN_SEARCH_FAIL			= "Slipped right through my grasp...";
+SFX_WOODSMAN_COMBAT_CHARGE_1		= "Ahhhhhh!";
+SFX_WOODSMAN_COMBAT_CHARGE_2		= "Ahhhhhh!";
+SFX_WOODSMAN_COMBAT_TAUNT_1			= "Hahahaha!";
+SFX_WOODSMAN_COMBAT_TAUNT_2			= "Tah-hahahaha";
+SFX_WOODSMAN_COMBAT_TAUNT_3			= "Hahahaha!";
+SFX_WOODSMAN_COMBAT_OUTOFREACH_1	= "Coward!";
+SFX_WOODSMAN_COMBAT_ALLYDEATH_1		= "No!";
+SFX_WOODSMAN_COMBAT_ALLYDEATH_2		= "No!";
+SFX_WOODSMAN_COMBAT_ALLYDEATH_3		= "No!";
+SFX_WOODSMAN_COMBAT_ALLYDEATH_4		= "No!";
+SFX_WOODSMAN_COMBAT_KILL_PLAYER_1	= "Too easy!";
+SFX_WOODSMAN_COMBAT_KILL_PLAYER_2	= "The Countess will be pleased!";
+SFX_WOODSMAN_CONDITION_BLIND_1		= "Ahh! My eyes! I can't see!";
+SFX_WOODSMAN_CONDITION_BLIND_2		= "Agh! I'm blind! Where are you!? Aggh!";
+SFX_WOODSMAN_CONDITION_CHOKE		= "*Choke*";
+SFX_WOODSMAN_CONDITION_FIRE			= "Fire! I'm on fire! Help me, brothers!";
+SFX_WOODSMAN_CONDITION_TRAP			= "Ah-agh! Someone help me get this off!";
+SFX_WOODSMAN_PAIN_LIGHT_1			= "Agh!";
+SFX_WOODSMAN_PAIN_LIGHT_2			= "Agh!";
+SFX_WOODSMAN_PAIN_LIGHT_3			= "Agh!";
+SFX_WOODSMAN_PAIN_LIGHT_4			= "Ugh!";
+SFX_WOODSMAN_PAIN_LIGHT_5			= "Agh!";
+SFX_WOODSMAN_PAIN_LIGHT_6			= "Agh!";
+SFX_WOODSMAN_PAIN_MEDIUM_1			= "Omph!";
+SFX_WOODSMAN_PAIN_MEDIUM_2			= "Ugh!";
+SFX_WOODSMAN_PAIN_MEDIUM_3			= "Agh!";
+SFX_WOODSMAN_PAIN_HEAVY_1			= "Uh-agh!";
+SFX_WOODSMAN_PAIN_HEAVY_2			= "Oh-agh!";
+SFX_WOODSMAN_PAIN_HEAVY_3			= "Gah-agh!";
+SFX_WOODSMAN_DEATH_QUIET_1			= "Agh!";
+SFX_WOODSMAN_DEATH_QUIET_2			= "Agh!";
+SFX_WOODSMAN_DEATH_1				= "Agh!";
+SFX_WOODSMAN_DEATH_2				= "Agh!";
+SFX_WOODSMAN_DEATH_3				= "Agh... finish him, brothers...";
+SFX_WOODSMAN_DEATH_4				= "Agh... I can't believe this...";
+SFX_WOODSMAN_DEATH_5				= "Agh... you bastard...";
+SFX_WOODSMAN_DEATH_6				= "Agh... curse upon you...";
+SFX_WOODSMAN_GIB_1					= "Agh!";
+SFX_WOODSMAN_GIB_2					= "Blagh!";
+SFX_WOODSMAN_GIB_3					= "Agh!";
+SFX_WOODSMAN_GIB_4					= "Blagh!";
+SFX_WOODSMAN_GIB_5					= "Agh!";
+
+VO_WOODSMAN_CON_FISHERY_DISTRACT_1		= "What is it this time?!";
+VO_WOODSMAN_CON_FISHERY_DISTRACT_2		= "You're lucky I feed you at all! The other guards would sooner dump your lifeless husk into that pit! Don't bother me again!";
+VO_WOODSMAN_CON_FISHERY_DROPOFF_1		= "What does the Countess want with him anyways?";
+VO_WOODSMAN_CON_FISHERY_DROPOFF_2		= "And the drop-off point is the old city gate, right?";
+VO_WOODSMAN_CON_FISHERY_DROPOFF_3		= "That guy? He gives me the creeps.";
+VO_WOODSMAN_CON_FISHERY_HOUNDS_1		= "It's the outsider. They don't like his stench.";
+VO_WOODSMAN_CON_FISHERY_WATCHTOWER_1	= "Has anyone found the key up to the watchtower yet?";
+VO_WOODSMAN_CON_FISHERY_WATCHTOWER_2	= "Hah! How long has he been up there?";
+VO_WOODSMAN_CON_FISHERY_WATCHTOWER_3	= "At least he has a good view. What a fool!";
+VO_WOODSMAN_CON_FISHERY_ROAD_1			= "You dunderhead, why did you do that?! They didn't ring the alarm!";
+VO_WOODSMAN_CON_FISHERY_ROAD_2			= "How do you think they're going to cart him to the city now?";
+VO_WOODSMAN_CON_FISHERY_ROAD_3			= "Shut up!";
+VO_WOODSMAN_CON_FISHERY_ESCAPE_1		= "Which idiot was watching the cell? The outsider has escaped!";
+VO_WOODSMAN_CON_COAST_CITYWATCH_1		= "We've signalled the city watch. The outsider will never get past the gates.";
+VO_WOODSMAN_CON_COAST_COUNTESS_1		= "Keep quiet, fool. She has spies everywhere.";
+VO_WOODSMAN_CON_COAST_MEAT_1			= "Axe goes in, blood comes out! Axe goes in, blood comes out!";
+VO_WOODSMAN_CON_COAST_LIGHTHOUSE_1		= "Nah. The path to it has collapsed. No one has been able to make contact with the keeper in months.";
+VO_WOODSMAN_CON_COAST_GATE_1			= "The outsider is sure to come this way. Make sure to keep the gate closed.";
+VO_WOODSMAN_CON_COAST_CANNON_LOAD_1		= "Me? I don't have the captain's key.";
+VO_WOODSMAN_CON_COAST_CANNON_LOAD_2		= "Meh. Sounds like too much work.";
+VO_WOODSMAN_CON_TAVERN_CAUGHT_1			= "No. Why? Should I?";
+VO_WOODSMAN_CON_TAVERN_CAUGHT_2			= "It better be more exciting than that overgrown rabbit they showed last time. A bear hound? What a bunch of morons.";
+VO_WOODSMAN_CON_TAVERN_BEAST_1			= "Are you joking? Did you see the claws on that thing? I'm not going anywhere near it until the others bring the dynamite.";
+VO_WOODSMAN_CON_TAVERN_DEATH_1			= "Please, no! Aghhh...";
+VO_WOODSMAN_CON_MARKET_PANIC_1			= "Brothers? Brothers! Don't leave me!";
+VO_WOODSMAN_CON_MARKET_SHUSH_1			= "Shush!";
+VO_WOODSMAN_CON_MARKET_CONSTABLES_1		= "The constables have retreated back to the Old Quarter and National Bank.";
+VO_WOODSMAN_CON_MARKET_CONSTABLES_2		= "Why, though? It doesn't make any sense.";
+VO_WOODSMAN_CON_MARKET_SHOP_1			= "Isn't there some weird antique shop around here?";
+VO_WOODSMAN_CON_MARKET_SHOP_2			= "Maybe we should check out some of his wares, eh? Help him with his hoarding problem.";
+VO_WOODSMAN_CON_MARKET_SHOP_3			= "We're so thoughtful, aren't we?";
+VO_WOODSMAN_CON_BEANS_1					= "No, it's been picked clean. All I've found are these cans of beans.";
+
+//-------------------------------------------------------------
+// Fishdog
+
+AI_FISHDOG_ID				= "Fishdog";
+SFX_FISHDOG_BARK_1			= "*Bark*";
+SFX_FISHDOG_BARK_2			= "*Bark*";
+SFX_FISHDOG_BARK_3			= "*Bark*";
+SFX_FISHDOG_EAT_1			= "*Chew*";
+SFX_FISHDOG_EAT_2			= "*Chew*";
+SFX_FISHDOG_EAT_3			= "*Chew*";
+SFX_FISHDOG_GROWL			= "*Growl*";
+SFX_FISHDOG_HOWL			= "*Howl*";
+SFX_FISHDOG_SNIFF_1			= "*Sniff*";
+SFX_FISHDOG_SNIFF_2			= "*Sniff*";
+SFX_FISHDOG_SNIFF_3			= "*Sniff*";
+SFX_FISHDOG_BITE_ACTIVE		= "*Bite*";
+SFX_FISHDOG_PAIN			= "*Whine*";
+SFX_FISHDOG_DEATH_LOUD		= "*Whimper*";
+
+//-------------------------------------------------------------
+// Goatman
+
+AI_GOATMAN_ID				= "Goatman";
+SFX_GOATMAN_ALERT_ONE		= "*Muttering*";
+SFX_GOATMAN_ALERT_TWO		= "*Unintelligible*";
+SFX_GOATMAN_ALERT_THREE		= "*Roar*";
+SFX_GOATMAN_SNARL			= "*Snarl*";
+SFX_GOATMAN_GRUNT_1			= "*Grunt*";
+SFX_GOATMAN_GRUNT_2			= "*Grunt*";
+SFX_GOATMAN_PAIN			= "*Flinch*";
+SFX_GOATMAN_ROAR			= "*Roar*";
+SFX_GOATMAN_ROAR_FAR		= "*Distant Roar*";
+SFX_GOATMAN_DEATH			= "*Dies*";
+
+//-------------------------------------------------------------
+// Batbarber
+
+AI_BATBARBER_ID				= "Batbarber";
+SFX_BATBARBER_WAKE			= "*Snicker*";
+SFX_BATBARBER_ALERT_ONE		= "*Growl*";
+SFX_BATBARBER_REACT_ENEMY	= "*Screech*";
+SFX_BATBARBER_GRUNT_LIGHT_1	= "*Snarl*";
+SFX_BATBARBER_GRUNT_LIGHT_2	= "*Snarl*";
+SFX_BATBARBER_GRUNT_LIGHT_3	= "*Snarl*";
+SFX_BATBARBER_PAIN_1		= "*Hiss*";
+SFX_BATBARBER_PAIN_2		= "*Hiss*";
+SFX_BATBARBER_PAIN_3		= "*Hiss*";
+SFX_BATBARBER_DEATH_LOUD	= "*Scream*";
+
+//-------------------------------------------------------------
+// Crowman
+
+AI_CROWMAN_ID				= "Crowman";
+

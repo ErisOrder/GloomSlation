@@ -1,0 +1,155 @@
+NONE							= "";
+
+// Inventory
+NOTE_INVENTORY_MANUAL_NAME		= "Gentleman's Case Manual";
+NOTE_INVENTORY_MANUAL_BODY		= "Inventory Manual {INPUT:LEANLEFT}";
+
+// Readables
+NOTE_TEST_NAME					= "Test Note";
+NOTE_TEST_BODY					= "This is a test note.";
+
+NOTE_DEMO_INTRO_NAME			= "Mysterious Letter";
+NOTE_DEMO_INTRO_DESC			= "An unknown letter addressed to you";
+NOTE_DEMO_INTRO_CONTENT			= "Doctor, \n\n\tApologies that I could not encounter you in person.\n\nFor now, take this vial and find your way into the manor on the main street.\n\n\t\t\tI await your arrival.\n\t\t\t\t\t\t\t\t\t\t -G";
+
+NOTE_DEMO_GUARDHOUSE_NAME		= "Guardhouse Report";
+NOTE_DEMO_GUARDHOUSE_DESC		= "A report found in the guardhouse";
+NOTE_DEMO_GUARDHOUSE_TITLE		= "Report on Manor Sylvia";
+NOTE_DEMO_GUARDHOUSE_CONTENT	= "\nCaptain,\n\n\tThe men managed to confiscate one of the seals required to negate the dark magicks blocking Lady Sylvia's doors. We've reason to believe the foreigner is planning to take refuge within the Countess' high walls.\n\nThe seal has been placed in the jailhouse Evidence Locker.\n\nAs for the other seal, it continues to evade us. A local resident who once worked as a manor servant claims it was lost during the last flood and may have fallen to the tunnels beneath this district.\n\nAs such, we have several men searching around the cistern entrance by the docks.\n\n\t\t\t\tOur eyes remain open,\n\t\t\t\t\tNightwatcher Ramsey.";
+
+NOTE_DEMO_JAILHOUSE_CONTENT		= "The constables can't keep doing this. This is the third broken rifle this week.\n\nIt's bad enough that we have to guard our own district. They claim they lack the manpower, but we've seen how the Upper City estates are protected. No expense was spared for their equipment and fancy automated security devices.\n\nNow the only firepower we have access to are these shoddy, leftover munitions they gave us. These rifles break and jam if you just look at them too hard. And many of us have resorted to using our wood cutting axes to just fill in the gaps.\n\nHow are we supposed to stop the beasts now? Do they want our district to become like the Sootworks?";
+
+NOTE_DEMO_SHIPPING_TITLE		= "Shipping Manifest";
+NOTE_DEMO_SHIPPING_CONTENT		= "\n\n\n\t9AM - Timber from the Tithewild, two crates \n\n\t10AM - Blackwater Spinegators, one barrel \n\n\t12PM - Ash Brew, two barrels \n\n\t3PM - Highcleft Dark Plums, one sack \n\n\t5PM - Gold fee from Sir Winslow, one sack \n\n\t6PM - Redwood craft side table \n\t\t\t\t\t(Who ordered this? It's ugly as sin) \n\t\t\t\t\t\t\t-B. 'Burly' Johnathan";
+
+NOTE_DEMO_CISTERN_TITLE			= "ATTENTION!";
+NOTE_DEMO_CISTERN_CONTENT		= "\n\n\tBy order of the Constabulary, all entries to the city sewers are to be closed and boarded off. Several city servants and officers report of beastly infestations plaguing the tunnels.\n\nAny persons found to be breaking quarantine will face legal ramifications and the Constabulary will not expend brave officer lives to rescue them.";
+
+NOTE_DEMO_SEWER_NAME			= "Gate Instructions";
+NOTE_DEMO_SEWER_DESC			= "Instructions for the cistern gate levers";
+NOTE_DEMO_SEWER_TITLE			= "Cistern Gate Instructions";
+NOTE_DEMO_SEWER_CONTENT			= "For anyone left in this dreaded station, these levers control the pressure gates in this cistern. \n\nThe levers as they run leftmost to right: \n\t -CONTROL ROOM \n\t -STORAGE ROOM \n\t -MAIN CANAL/PUMP ROOM \n\nIf you are struggling to navigate to the corresponding gate, you can follow each of the pipes to their destination. \n\nTake care not to forget to fill the lantern as the 'crowmen' have been quite aggressive lately. I've dismantled the lever to the pump room and shelved it in the storage room after the last attack.";
+
+NOTE_DEMO_COIN_CONTENT			= "The word of tonight's happenings will be reaching the high manor soon. She will no doubt be displeased. I have managed to find an isolated place to camp and observe his movements. I have my guesses as to who brought him here, but I need proof.\n\nFortunately, the outsider has yet to spot me from the rooftops. There is something about him. The way he harnesses the shadow and the sword. It reminds me of my first time in the city all those years ago. It will be only a matter of time before he realizes the streets are too dangerous and we start sharing the parapets above. I'll see what he is truly capable of then.\n\nIt's time to begin.";
+
+NOTE_DEMO_MANOR_CONTENT			= "Steel boots gnash upon the gravel\n\nCoals of a furnace that spit and crackle\n\nDrawn by the stench of the rotting dead\n\nPlumes of soot follow its heavy tread\n\nCadavers charred by its godless will\n\nWhat face lies behind that blackened grill?\n\nWith wretched breath comes the vile Corpse Duster\n\nRun, hide or bring all that you can muster...";
+
+// Treasure Maps
+MAPSET_TREASURE_COAST_1_NAME	= "Treasure Map - Coast #1";
+MAP_TREASURE_COAST_1_NAME		= "Treasure Map - Coast #1";
+
+// Fishery
+NOTE_FISHERY_LIFTBUTTON_NAME	= "Fishery Lift Buttons";
+NOTE_FISHERY_LIFTBUTTON_BODY	= "All- \n\nA few of the lift buttons weren't working right, so I've taken them to my workshop down the hall for fixing. \n\n -Samuel";
+
+NOTE_FISHERY_POWERKEY_NAME		= "Fishery Generator Crank";
+NOTE_FISHERY_POWERKEY_BODY		= "Hobbs lost the crank to the power generator.\n\nSaid a spine eel came right up and took it off him. Tried to wrestle it from its jaws. 'Had wicked teeth! As long as your finger!' Sure.\nEither way, it's coming out of his pay.\n\nI sent a request to the Metalsmith in the Market Plaza to make us a new crank in the mean time.";
+
+NOTE_FISHERY_PRISONERLOG_NAME	= "Prisoner Log";
+NOTE_FISHERY_PRISONERLOG_BODY	= "Woman, middle-aged, sickly.  Found wandering the streets alone.  Sent ransom demand to addresses found in purse.  No reply.  Dumped corpse in waste pit.\n\n\nWoman, young, found hiding in Sootworks.  Starved for two days to gain information about surviving relatives.  Sent home when ransom was paid.\n\n\nMan, belligerent, refused to cooperate even under duress.  Fed to the hounds.\n\n\nMale, outsider.  Showed signs of infection after capture.  Immediately disposed of and thrown into the sea.\n\n\nMan, outsider, suspicious.  Client requests he be transported to the market unharmed.";
+
+NOTE_FISHERY_MANAGER_NAME		= "Mr. Croup's Confession";
+NOTE_FISHERY_MANAGER_BODY		= "Consider this my last will and my confession:\n\nI did everything she asked of me.\n\nWhen she wanted a seat on the mercantile council, I delivered.\n\nWhen she wanted some unsavory figure removed and discarded quietly? I provided.\n\nNow all hell has broken loose and I have yokel mercenaries besieging the factory floor. I only have line workers and sailors here, not soldiers. I haven't even fired that damn revolver in my safe.\n\nI kept my end of the bargain. Years of empty promises. Was I really this blind all along?\n\nCurse you, Sylvia. May this rotten town take you with it.";
+
+NOTE_FISHERY_ACCOUNTING_NAME	= "Bill of Expenses";
+NOTE_FISHERY_ACCOUNTING_BODY	= "Month of September:\n\nNetting Bags - 8\n\nGenerator Fuel - 20\n\nLift Button Repair - 3 <color=#840601><alpha=#EE>(Samuel is handling it)</color>\n\nRadium Paint - 17\n\nWindow Replacement (Storage) - 10\n\nSpare Bulbs - 8\n\nGrease Oil Barrel (x3) - 77\n\nNew Rowboat - 41\n\nMr. Carrington's Fees - 120\n\nPower Generator Crank - 0 <color=#840601><alpha=#EE>(Coming out of Hobbs' pay)</color>\n\nCarriage Wheels (x4) - 55\n\n\n\n\n\n\nTotal: $359\n\n\n<color=#840601><alpha=#EE>(Mr. Croup, do you want me to remove Mr. Carrington's fee as usual? -Ms. D)</color>\n\n\n\n\n\n\n\nMs. Daryl,\n\n\t Yes, please. And ensure the paint gets delivered to my office.\n\n\t-Mr. Croup";
+
+MAP_SKETCH_COUNTRYSIDE_1_NAME	= "Coastal Sketch #1";
+MAP_FISHERY_BASEMENT_NAME		= "Fishery Blueprint - Basement";
+MAP_FISHERY_F1_NAME				= "Fishery Blueprint - 1F";
+MAP_FISHERY_F2_NAME				= "Fishery Blueprint - 2F";
+
+MAPSET_FISHERY_BLUEPRINT_NAME	= "Fishery Blueprints";
+MAPSET_COUNTRYSIDE_SKETCH_NAME	= "Countryside Sketch";
+
+MAPSET_TREASURE_FISHERY_COVE_NAME	= "Treasure Map #1";
+MAPSET_TREASURE_FISHERY_COVE_BODY	= "Treasure Map";
+
+NOTE_FISHERY_HOBBSCHEESE_NAME   = "Hobbs' Cheese Collection";
+NOTE_FISHERY_HOBBSCHEESE_BODY   = "These are my cheeses.  \n\nDO NOT TOUCH.  \n\nI am hiding them here so the dogs do not find them.  I can see the desire for cheese in their eyes.  Oh, such desire they have for this delicious cheese... those foul fishy dogs and their accomplices, the bugs which feast upon electricity.  \n\nThey will not find the cheese here.  \n\nOh no they will not.\n\n-Hobbs";
+
+// Coast Caves
+NOTE_CAVES_POWERGENERATOR_NAME	= "Cave Power Generator";
+NOTE_CAVES_POWERGENERATOR_BODY	= "The dogs are loose again.  I certainly know how locks work, and I assume you knows how locks work, so my guess is that Hobbs is the one who keeps leaving the kennels unlocked.  Not a surprise, really.  \n\nI closed off the entrance to the kennels and electrified it, because Hobbs was in charge of feeding them this week so I assume they have not been fed and would be all too happy to gnaw on whatever face pokes into their new little subterranean dog paradise.  \n\nIf you need to get into the kennels... well, first pray.  Then, you'll have to turn off the generator.  I locked the generator room and left the key in the break room down the tunnel.  I figure locking it should keep Hobbs from going in and relieving himself in the fuel tank or anything like that.";
+
+NOTE_CAVES_BARRELDOOR_NAME      = "Stop It";
+NOTE_CAVES_BARRELDOOR_BODY      = "You apparently cannot summon the modicum of effort required to open this door and haul whatever junk you're carrying through it.  But perhaps you might coax that lump of boar fat you call a brain into comprehending that leaving said junk in front of said door BLOCKS IT FROM OPENING!  \n\nWhich means that nobody can get to the main elevator without going through the kennels, where in another wonderful display of door proficiency some other troglodyte keeps leaving the cages unlocked and allowing the dogs to roam around very free and very hungry.  \n\nSince you feel comfortable sentencing the rest of us to wander with those dogs, consider this a warning... if this happens again and if I find out who is responsible, they'll spend a night themselves locked in the kennels.  I guarantee it's easier to haul a box through the doorway than it is to hide from a ravenous hound.";
+
+NOTE_CAVES_ELEVATORPOWER_NAME	= "Elevator Power";
+NOTE_CAVES_ELEVATORPOWER_BODY	= "Remember, if the main generator isn't running, this elevator isn't running either.  Try resetting the power before you assume it's broken, or that there are 'bugs in the control box eating the wires' (easily the strangest maintenance report I have ever received, Hobbs).";
+
+NOTE_CAVES_FISHDOG_SCENT_NAME	= "Hounds Feeding Instructions";
+NOTE_CAVES_FISHDOG_SCENT_BODY	= "To whomever is on feeding duty - pay attention!\n\nThe hounds have a particularly keen sense of smell. If you find yourself unable to get one to budge when transferring them to another cage, lure it with an apple or bit of cheese.\n\nEnsure you do not get too close, however. They can also sniff out meat and will happily take off your arm.";
+
+NOTE_COAST_MINING_LOG_1_NAME	= "Waits Mining Co. Log #1";
+NOTE_COAST_MINING_LOG_1_BODY	= "Day 1: Arrived on site near the beachhead. Survey team and I mapped out potential deck and chute positions.\n\nDay 16: Breached the main atrium after about two weeks of digging. The Otto Elevator Company provided the equipment to construct down to at least water level, but going below that will be a challenge.\n\nDay 25: Shaft elevator now operational, but finding sufficient power is an obstacle. Bottlenecking the whole system to a single fuel generator is asking for blackouts.\n\nDay 28: Blasting shipment arrived from the Sootworks. About damn time.\n\nDay 29: First blackout. Two miners injured when the shaft elevator dropped.\n\nDay 32: Waits' partner came by and told us to cease using explosives. Unbelievable.\n\nDay 38: Silas told me today that he keeps hearing whispering in Tunnel Six. I assured him that we're just overworked. Sent him home early.\n\nDay 40: We've managed to dig around the aquifer and find dry bedrock again.\n\nDay 43: The second elevator shaft has begun construction, leading down to the atrium beneath the aquifer. I requested another power generator to handle the increased (and already stressed) demand.\n\nDay 45: I heard someone call my name while down in Tunnel Six last night. I checked and no one else was on shift at the time. Christ.\n\nDay 45: Blackout. The active crew was stranded in the dark for five hours. When we reached them, they were inconsolable. Tore their fingertips up real bad trying to scratch out. I've put them all on sick leave.\n\nDay 46: Felix and his crew just dug up a human skull. We are not moving a single pebble more until I get some answers.";
+
+NOTE_COAST_UNDERCITY_NAME		= "Discovery of Old Kingdom Site A";
+NOTE_COAST_UNDERCITY_BODY		= "I've found it.\n\nAfter months of the men digging tunnels, I'm staring at what is undoubtedly an entranceway to the Old Kingdom. It is truly a sight to behold!\n\nThe men are uneasy about it. They have clearly heard the childhood stories and wives' tales. In truth, I felt rather anxious as I took the relief sketches of the lithograph at the head of the ziggurat.\n\nHowever, it is not fear that guides my heart, but excitement. I still have the blood-stone that Wait found in the beach tidepool that started this whole operation. In the morning, I will lay out my plans to breach this edifice and unearth that which has not been seen in millenia.";
+
+// Coastal Cliffs
+NOTE_CLIFFS_HOUSE_1_NAME		= "Something Is Not Right";
+NOTE_CLIFFS_HOUSE_1_BODY		= "Something is not right.\n\nWe were hunting some wild boars earlier and one of the pigs got caught in the traps. I went up to bag it and one of the older hunters, Boris, just started going at it with the axe. He wouldn't stop until the meat was ruined and organs and bones were everywhere. When he turned back, he regained composure and couldn't remember any of it.\n\nWorst of all, none of us even did anything. We just... watched.\n\nI'm going up to the city tomorrow to see if someone - anyone - knows what's going on.";
+
+NOTE_CLIFFS_MERCHANT_NAME		= "Merchant's Lighthouse Note";
+NOTE_CLIFFS_MERCHANT_BODY		= "Doctor,\n\nI've left you a message on the Phonograph. Please listen to it. \n\nI've also prepared the basement area for you. Use it to your liking. \n\n\t\t\t\t\t\t\t\t\t\t\t\tSee you soon...\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t-G";
+
+NOTE_CLIFFS_CREDITS_NAME		= "Wanted by the City Guard";
+NOTE_CLIFFS_CREDITS_BODY		= "Dillon Rogers\nDavid Szymanski\nTaylor Shechet\nDave Oshry\nBen Moir\nLucas Varney\nTrey Powell\nRhiannon Mitchell\nRoy Graham\nScott Gurney\nCameron Martin\nDalia Figueroa\nTucker Wilkin\nStephen St Germain\nNathaniel Berens\nJames C Lambert\nLachlan Milne\nJacob McManamy\nFrancis Xie\nDomenico Antonazzo\nBlood Machine\nHarry Skingle\nLeon Zawada\nAndrew Hulshult\nChristian Antonio\nDaniel Gilby\nRichard James Cook\nAlexia Cronin\nGianni Matragrano\nStephen Weyte\nTerri Brosius\n\n\n\n\n\nReport any sightings of these individuals to the Constabulary for a potential reward";
+
+NOTE_CLIFFS_TAVERN_NAME         = "Warning";
+NOTE_CLIFFS_TAVERN_BODY         = "I've never seen men torn apart so fast.  Whatever it is they brought back, it's more than any of us bargained for.  \n\nDo not under any circumstances open this door, unless you're prepared to pay the new doorman with your limbs and entrails.  I will personally be paying him with dynamite, which I have gone to fetch, tavern be damned.  \n\nIf you absolutely must reach the city gates before I return, well... we tried our best to contain it to the first floor.  I can't promise that the basement is safe but it's certainly safer than the tavern proper.";
+
+NOTE_CLIFFS_CHAPEL_1_NAME		= "Chapel Interrogation Notes";
+NOTE_CLIFFS_CHAPEL_1_BODY		= "Interrogation Notes\n\nSubject: Mole we installed at the Fishery a year ago. Goes by 'Winston'.\n\nInquired about Croup's recent meeting with this 'Mr. Carrington'.\nBabbled about hidden pay stubs. Nothing of real value. Hot poker to the neck and arm pits.\n\nInquired about letters between Croup and the Countess.\nClaimed that Croup handled his private mail at his lockbox at the bank in the Market Square.\nPotential. Fed a scrap of rotten fish.\n\nDemanded answers about the Royal Spy.\nBroke down weeping like a child. The mole has outlived his usefulness. Removed tongue and fed it to the hounds.\n\nMy suggestion is that we need someone closer to Mr. Croup. Perhaps his accountant?\n\n\tSigned,\n\t\tInquisitor Daelen";
+
+NOTE_COAST_GUARDTOWER_1_NAME	= "Scouting Report of the Market";
+NOTE_COAST_GUARDTOWER_1_BODY	= "Our sharpshooters have infiltrated the main plaza and are scouting out the constables' main fortifications.\n\nWe have confirmed the following:<b><color=#840601>\n\n\t-1 Armored Wagon at Bank\n\t-1 Gattling Gun at Old Quarter Gate</color></b>\n\n\nAdditionally, we noted the bat beasts have thoroughly infested the lower market areas. I advise keeping our supply lines to the main road. \n\t\t\t\t\t\t\t\t\t\t\tOur eyes remain open,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWatcher Qil";
+
+NOTE_COAST_CANNON_NAME			= "Cannon Instructions";
+NOTE_COAST_CANNON_BODY			= "For any brothers posted at this point, here are the instructions for loading and firing the cannon. It may not be as advanced as the turrets the Constables have, but nothing will survive a direct hit from this old boy.\n\n1. Have the spotter rotate the valve so the cannon is facing the target. The last crew on watch stupidly fired the cannon at the gate door - hence the crack. We've brought up the iron portcullis to prevent that from happening again.\n\n2. Pour gunpowder into the mouth of the barrel. You'll need a powderflask horn to carry the gunpowder. \n\n3. Place a cannonball into the barrel.\n\n4. Attach the fuse at the back of the cannon.\n\n5. Pull the fuse rope when ready to fire.\n\nIf there's any accidents, clean up the mess and report directly to the Captain on duty.";
+
+NOTE_TAVERN_CODE_1_NAME			= "Tavern Safe Note";
+NOTE_TAVERN_CODE_1_BODY			= "A shot of whiskey and a mug of whaler's.\n\nA good combo to put any bad dreams to rest.";
+
+NOTE_TAVERN_BARRICADE_NAME		= "Tavern Barricade Note";
+NOTE_TAVERN_BARRICADE_BODY		= "It was a bloodbath up there. The abomination broke free of its restraints and suddenly the jubilations became chaos.\n\nThe Captain held the door open so several brothers could escape, but then locked it and went back up to take on the beast alone. I heard his sword clash against the monster as I leaned against the door. The fool!\n\nNow we've barricaded this entrance, but many of us are badly wounded. I managed to grab this bundle of flashbombs just in case the beast does break through. Brother Weyland and the others left from the side entrance to bring back reinforcements with black powder kegs.\n\nIf we cannot kill this unholy creature, then we shall bring the whole building down on top of it.";
+
+NOTE_TAVERN_SPAREKEY_NAME		= "Tavern Attic Note";
+NOTE_TAVERN_SPAREKEY_BODY		= "Staff,\n\nWhen my new safe was installed in the corner of my room, the nightstand cabinet that used to occupy that space was moved to the attic. Unfortunately, the top drawer of that cabinet had my spare key to the basement.\n\nDoes anyone remember where the switch to pull down the attic stairs is? I was told it was near the bottom of a wall support on the second floor, but I can't see anything with how dark it is. I'll need to get my lantern.";
+
+NOTE_TAVERN_BOUNTY_NAME			= "Help Needed in the Underport!";
+NOTE_TAVERN_BOUNTY_BODY			= "To any hunters or trappers with experience:\n\nSomething is living beneath our house. We heard movement in our cellar and thought nothing more of it than some critter that had become stuck in our crawlspace. My husband went to the shops to procure some mice traps.\n\nBut last night, we were woken up abruptly by a horrid stench. My husband opened the cellar door and, at the bottom of the staircase, we saw it. Two sunken eye holes looking up at us and a long, sharp beak for its mouth. It was almost as tall as a man. I quickly slammed the door shut. I've never seen my husband's face as pale as then.\n\nThe constables won't listen to us. They threatened to hand us over to Darrowcliff. \n\nBut we know what we saw.\n\nPlease, someone help us. We cannot bring ourselves to go back to our home.";
+
+NOTE_TAVERN_MURDERER_NAME		= "Rumbellow Square Murders";
+NOTE_TAVERN_MURDERER_BODY		= "The crime spree between 1884 and 1885, now known as the 'Rumbellow Square Murders', created intense pressure for the city's police force. The Chief Constable of the day, Sir Renauld Whitehall, was embroiled in controversy as the investigation continually failed to link any suspects to the increasingly grisly crime scenes.\n\nSeveral notable physicians, upon analyzing the carefully spaced torso and organ remains at each scene, disagreed on what level of anatomical expertise the culprit possessed. While the autopsies did reveal details about the murderer's cutting patterns, it was difficult to determine whether it was performed by a skilled surgeon or experienced knacker. The use of a tourniquet to stem hemorrhaging on two of the victims certainly suggested someone of the medical profession.\n\nBy the summer of 1885, the stream of recognizable murders had ended. The cases remain unsolved a decade later, and no further clues have come to light as to the identity and or whereabouts of the notorious killer.";
+
+NOTE_TAVERN_VALVE_NAME			= "Valve Repair Job";
+NOTE_TAVERN_VALVE_BODY			= "I've been hired to fix this old dump's plumbing system, but half this metalwork is either corroded beyond repair or built so long ago that they don't manufacture the parts anymore.\n\nThe valve I have here can be used all over the city's sewer system, but it's essentially scrap when it comes to this ancient heap of junk.\n\nI might as well go order another beer while I figure this out. Being up here alone gives me the creeps.";
+
+NOTE_MARKET_CONSTABLE_ORDER_1_NAME	= "Constabulary Order #1";
+NOTE_MARKET_CONSTABLE_ORDER_1_BODY	= "Direct order from Chief Constable Harland:\n\nSecond Brigade:\nHold south gate positions until three bells.\n\nThird Brigade:\nReinforce central plaza garrisons and cover second brigade's withdrawel.\n\nWorkshop Division has N.B. rigged and primed.\n\nDestroy this message upon reading.";
+
+NOTE_MARKET_GUNSHOP_1_NAME		= "Gunshop Owner Diary";
+NOTE_MARKET_GUNSHOP_1_BODY		= "I should have listened to Marta all those months ago.\n\nMoving from the country to the city has been great for business, but it's coming at a cost. People are losing their marbles and the Constables announcing another lockdown in the Sootworks and Underport is not helping.\n\nI'm handing every spitfire and looney a loaded gun and just waiting for the curtains to open.\n\nThe money is good, but what's the point if you can't spend it?";
+
+NOTE_MARKET_GUNSHOP_2_NAME		= "Out of Order Note";
+NOTE_MARKET_GUNSHOP_2_BODY		= "OUT OF ORDER\n\nNothing in this damn building works properly after I moved in.";
+
+NOTE_MARKET_POWER_TIMEOUT_NAME	= "Power Grid Timeout";
+NOTE_MARKET_POWER_TIMEOUT_BODY	= "To reset the local grid power breaker, please heed the following instructions:\n\n\t1. Flip the power breaker switch into the 'Off' position by pulling it up from the downward position.\n\n\t2) Ensure that power is no longer flowing to nearby mechanisms. For important lamps, a backup generator will initiate red lighting. Your work station should be stocked with sufficiently fueled handlanterns.\n\n\t3) After a period of 120 seconds, the power breaker will automatically flip itself back into the downward position and restore power.";
+
+NOTE_MARKET_BARBERSHOP_1_NAME	= "Merchants' Guild Letter";
+NOTE_MARKET_BARBERSHOP_1_BODY	= "To the proprietor of the Fleece Court Barbershop:\n\nWe represent the Merchants' Guild and have received numerous complaints about the smell emanating from your establishment.\n\nThe guild and its members recognize the difficulty in properly disposing of human hair, but our reports suggest you have multiple furnaces in constant operation. This is a violation of Zoning Code 16-B for businesses operating outside of the Sootworks.\n\nWe are sending one of our inspectors to assess your facility.\n\nWe expect full cooperation or there may be dire financial consequences.";
+
+NOTE_MARKET_BARBERSHOP_2_NAME	= "Barbershop Crematorium Note";
+NOTE_MARKET_BARBERSHOP_2_BODY	= "The gunshop owner survived the fall down the chute. Had a bone sticking right out of his neck! The poor sod spent his last few minutes begging.\n\nClaimed he had a nice pile of gold coin in his office safe. Said the code was six-two-something. It was hard to hear over the gurgling.\n\nI'll have one of my brood check it out. They've grown up so much since I found them. I long to join them myself.\n\nBut not yet.\n\nI have projects I wish to finish first.";
+
+NOTE_MARKET_MERCHANT_GATE_NAME	= "Emerald Terrace Lift";
+NOTE_MARKET_MERCHANT_GATE_BODY	= "Doctor,\n\n\tThe lift to my terrace has been locked so that it cannot be accessed by the riffraff wandering about Fleece Court.\n\nI've entrusted a special key to a local informant, one of many of my 'fingers' in this city. Once you retrieve the key, offer it to the vessel on the pedestal.\n\nSee you soon.";
+
+NOTE_MARKET_MANOR_KITCHEN_1_NAME = "Market Manor Kitchen Note";
+NOTE_MARKET_MANOR_KITCHEN_1_BODY = "Lord Kar now has a kitchen dumbwaiter!\n\nIt's bad enough that his staff has twice the kitchen space as we do, but now they have a dumbwaiter on top of the elevator they already have.\n\nWe've tried to explain to Lord Marwyn that it's not feasible to bring his meals up the tower stairwell, but he refuses to listen to reason.\n\nHe'd let these walls crumble down and bury us all if it saved him the dime.";
+
+NOTE_SHOP_ITEM_STORAGE_NAME		= "Item Storage";
+NOTE_SHOP_ITEM_STORAGE_BODY		= "Doctor,\n\nFeel free to leave behind any belongings in this room.\n\nThey'll be safe in my possession.";
