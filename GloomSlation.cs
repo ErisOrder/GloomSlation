@@ -33,12 +33,11 @@ namespace GloomSlation
 
     }
 
-    public class LocalizeMarker: MonoBehaviour {}
+    public class ProcessedMarker: MonoBehaviour {}
 
     public class GloomSlation : MelonMod
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
-        private readonly HashSet<string> ourFonts = new HashSet<string>();
        
         private static readonly string modPath = "Mods\\GloomSlation";
 
@@ -89,7 +88,6 @@ namespace GloomSlation
                 if (asset == null) {
                     LoggerInstance.Error($"Asset not found: {k}");
                 } else {
-                    ourFonts.Add(v);
                     fontMap.Add(k, asset);
                     DebugMsg($"{k} -> {v}");
                 }
@@ -124,8 +122,18 @@ namespace GloomSlation
             // Recursively patch all texts found
             foreach (var tmp in obj.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
             {
-                // Remap fonts, do not remap twice
-                if (tmp.font != null && !ourFonts.Contains(tmp.font.name))
+                var tmpObj = tmp.gameObject;
+
+                // If already processed, skip
+                if (tmpObj.GetComponent<ProcessedMarker>() != null) {
+                    return;
+                }
+
+                // Mark objects as already processed
+                tmpObj.AddComponent<ProcessedMarker>();
+                
+                // Remap fonts
+                if (tmp.font != null)
                 {
                     TMP_FontAsset font;
                     if (fontMap.TryGetValue(tmp.font.name, out font))
@@ -139,14 +147,12 @@ namespace GloomSlation
                     }
                 }
 
-                var tmpObj = tmp.gameObject;
                 var component = tmpObj.GetComponent<TextBehaviour>();
                 var localizedText = tmpObj.GetComponent<LocalizedText>();
                 
                 // For every object that doesn't have localization component or key, 
                 // generate key and try to get localization
-                if (tmpObj.GetComponent<LocalizeMarker>() == null
-                    && !tmp.text.NullOrEmpty()
+                if (!tmp.text.NullOrEmpty()
                     && (component == null || localizedText == null || !localizedText.enabled)
                 ) {
                     var localeKey = ConstructLocaleKey(tmpObj.name, tmp.text);
@@ -161,8 +167,6 @@ namespace GloomSlation
                     )) {
                         DebugMsg("Found localization!");
                         tmp.text = localized;
-
-                        tmpObj.AddComponent<LocalizeMarker>();
 
                         // This prevents anything from changing our text back
                         tmp.OnPreRenderText += (ti) => {
