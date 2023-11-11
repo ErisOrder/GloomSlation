@@ -193,6 +193,7 @@ namespace GloomSlation
                     out string localized
                 )) {
                     DebugMsg("Found localization!");
+                    var previousText = tmp.text;
                     tmp.text = localized;
 
                     // This prevents anything from changing our text back
@@ -211,9 +212,12 @@ namespace GloomSlation
                         )) {
                             // Update text in case there's something localized
                             DebugMsg("Found new localization!");
+                            previousText = ti.textComponent.text;
                             ti.textComponent.text = localizedNew;                               
                             localized = localizedNew;
                             ti.textComponent.ForceMeshUpdate(true, true);
+                        } else if (previousText != ti.textComponent.text) {
+                            // Do nothing; allow to change value
                         } else {
                             // Write previous value back
                             ti.textComponent.text = localized;
