@@ -45,6 +45,7 @@ namespace GloomSlation
         private static readonly Regex notIdentRex = new Regex("[^0-9a-zA-Z_]+");
 
         private string langPath = "";
+        private bool debugMode = false;
 
         public override void OnInitializeMelon()
         {
@@ -59,40 +60,48 @@ namespace GloomSlation
             var prefCategory = MelonPreferences.CreateCategory("GloomSlation");
             prefCategory.SetFilePath(Path.Combine(modPath, "cfg.toml"));
             var languageEntry = prefCategory.CreateEntry<string>("language", "Russian");
+            var debugEntry = prefCategory.CreateEntry<bool>("debug", false);
 
             langPath = Path.Combine(modPath, languageEntry.Value);
+            debugMode = debugEntry.Value;
 
             // Read font map
             var text = File.ReadAllText(Path.Combine(langPath, "fontMap.json"));
             if (!(JSON.Load(text) is ProxyObject fMap))
             {
-                LoggerInstance.Msg("failed to load fontMap.json");
+                LoggerInstance.Error("failed to load fontMap.json");
                 return;
             }
 
             // Load asset bundle
             var bundle = AssetBundle.LoadFromFile(Path.Combine(langPath, "font.bundle"));
-            LoggerInstance.Msg("Loaded asset bundle, available assets:");
+            DebugMsg("Loaded asset bundle, available assets:");
             foreach (var name in bundle.GetAllAssetNames())
             {
-                LoggerInstance.Msg(name);
+                DebugMsg(name);
             }
 
             // Load fonts
-            LoggerInstance.Msg("Font mapping:");
+            DebugMsg("Font mapping:");
             foreach (var (k, v) in fMap)
             {
                 var asset = (TMP_FontAsset)bundle.LoadAsset($"Assets/{v}.asset");
                 if (asset == null) {
-                    LoggerInstance.Msg($"Asset not found: {k}");
+                    LoggerInstance.Error($"Asset not found: {k}");
                 } else {
                     ourFonts.Add(v);
                     fontMap.Add(k, asset);
-                    LoggerInstance.Msg($"{k} -> {v}");
+                    DebugMsg($"{k} -> {v}");
                 }
             }
         }
-
+        
+        public void DebugMsg(object msg) {
+            if (debugMode) {
+                MelonLogger.Msg(msg);
+            }
+        }
+        
         /// Patch all scene's GameObjects
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
@@ -125,7 +134,7 @@ namespace GloomSlation
                     }
                     else if (fontMap.TryGetValue("FALLBACK_FONT", out font))
                     {
-                        LoggerInstance.Msg($"mapping {tmp.font.name} -> FALLBACK");
+                        DebugMsg($"mapping {tmp.font.name} -> FALLBACK");
                         tmp.font = font;
                     }
                 }
@@ -142,16 +151,15 @@ namespace GloomSlation
                 ) {
                     var localeKey = ConstructLocaleKey(tmpObj.name, tmp.text);
                         
-                    // TODO: Make some kind of "debug mode" to only enable such helper logs in it
-                    MelonLogger.Msg($"Found unlocalized text: {localeKey} = \"{tmp.text}\";");                    
-                    
+                    DebugMsg($"Found unlocalized text: {localeKey} = \"{tmp.text}\";");
+
                     // Most of such texts are related to menu, so let's store there all of them
                     if(GameManager.LanguageManager.TryGetLocalizedContent(
                         LanguageDataTypes.Menus,
                         localeKey,
                         out string localized
                     )) {
-                        MelonLogger.Msg("Found localization!");
+                        DebugMsg("Found localization!");
                         tmp.text = localized;
 
                         tmpObj.AddComponent<LocalizeMarker>();
@@ -164,13 +172,14 @@ namespace GloomSlation
                             }    
                         
                             var newLocaleKey = ConstructLocaleKey(tmpObj.name, ti.textComponent.text);
-                            MelonLogger.Msg($"{localeKey} -> {newLocaleKey}: \"{ti.textComponent.text}\"");
+                            DebugMsg($"Unlocalized change: {localeKey} -> {newLocaleKey}: \"{ti.textComponent.text}\"");
                             if(GameManager.LanguageManager.TryGetLocalizedContent(
                                 LanguageDataTypes.Menus,
                                 newLocaleKey,
                                 out string localizedNew
                             )) {
                                 // Update text in case there's something localized
+                                DebugMsg("Found new localization!");
                                 ti.textComponent.text = localizedNew;                               
                                 localized = localizedNew;
                                 ti.textComponent.ForceMeshUpdate(true, true);
@@ -200,7 +209,7 @@ namespace GloomSlation
             var text = File.ReadAllText(path);
             LanguageParser.Parse(text, entries);
 
-            LoggerInstance.Msg($"Loaded translation ({dataType})");
+            DebugMsg($"Loaded translation ({dataType})");
 
             return entries;
         }
