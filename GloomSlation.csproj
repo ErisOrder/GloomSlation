@@ -4,7 +4,20 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+  
+  <PropertyGroup>
+    <ExcludeGeneratedDebugSymbol>False</ExcludeGeneratedDebugSymbol>
+    <IncludeSymbols>True</IncludeSymbols>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>.\Gloomwood\MelonLoader\net35\0Harmony.dll</HintPath>
@@ -33,6 +46,16 @@
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>.\Gloomwood\Gloomwood_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>.\Gloomwood\Gloomwood_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>.\Gloomwood\Gloomwood_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>
