@@ -342,5 +342,27 @@ namespace GloomSlation
             lowercase = false;
         }
     }
+
+    [HarmonyPatch(typeof(ShopReceiptUI), "AddListing")]
+    static class PatchReceipt {
+        static void Postfix(
+            ref List<GameObject> ___spawnedElements
+        ) {
+            // It seems like receipt layout is hardcoded to 1 item = 1 text line
+            // somewhere. 
+            // Here we are fixing it to be more flexible and expand to several lines if needed
+            
+            // Item is pushed first, then value
+            var item = ___spawnedElements[___spawnedElements.Count - 2];
+            var value = ___spawnedElements[___spawnedElements.Count - 1];
+            var tmp = item.GetComponent<TextMeshProUGUI>();
+            var layoutItem = item.GetComponent<LayoutElement>();
+            var layoutValue = value.GetComponent<LayoutElement>();
+            
+            // Set layout mininmum height based on item text preferred height
+            layoutItem.minHeight = tmp.preferredHeight;
+            layoutValue.minHeight = tmp.preferredHeight;
+        }
+    }
 }
 
