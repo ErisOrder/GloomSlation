@@ -13,6 +13,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Gloomwood.Entity;
+using Gloomwood.Entity.Items;
 
 
 [assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.0", "pipo, nikvoid")]
@@ -365,6 +367,16 @@ namespace GloomSlation
             // Set layout mininmum height based on item text preferred height
             layoutItem.minHeight = tmp.preferredHeight;
             layoutValue.minHeight = tmp.preferredHeight;
+        }
+    }
+
+    /// Patch entity model when it is created, this fixes texture patching on first
+    /// examination in inventory (and probably not only in it)
+    /// TODO: Find a more general way to patch objects on creation? 
+    [HarmonyPatch(typeof(InventoryItemConfig), "CreateModel", new Type[] { typeof(Vector3), typeof(Quaternion), typeof(Transform) })] 
+    static class PatchEntityCreateModel {
+        static void Postfix(ref EntityModel __result) {
+            Melon<GloomSlation>.Instance.PatchGameObject(__result.gameObject);
         }
     }
 }
