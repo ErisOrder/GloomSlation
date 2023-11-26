@@ -235,19 +235,22 @@ namespace GloomSlation
 
         /// Patch main texture in renderer's material
         public void PatchRenderer(Renderer rend) {
-            var mat = rend.material;
-            if (mat == null) {
-                return;
-            }
-            foreach(var prop in mat.GetTexturePropertyNames()) {
-                if (prop != "_MainTex") {
-                    continue;
+            foreach(var mat in rend.materials) {
+                if (mat == null) {
+                    return;
                 }
-                
-                var tex = mat.GetTexture(prop);
-                if (tex != null && tex.name != null && textures.TryGetValue(tex.name, out Texture2D newTex)) {
-                    DebugMsg($"Patching texture {tex.name} in {mat.name}");
-                    mat.SetTexture(prop, newTex);
+                foreach(var prop in mat.GetTexturePropertyNames()) {
+                    if (prop != "_MainTex") {
+                        continue;
+                    }
+                    var tex = mat.GetTexture(prop);
+                    if (tex != null && tex.name != null 
+                        && textures.TryGetValue(tex.name, out Texture2D newTex)
+                    ) {
+                        DebugMsg($"Patching texture {tex.name} in {mat.name}");
+                        mat.SetTexture(prop, newTex);
+                        rend.UpdateGIMaterials();
+                    }
                 }
             }
         }
