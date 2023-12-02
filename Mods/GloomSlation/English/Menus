@@ -42,6 +42,12 @@ MENU_LOAD_TITLE			= "Load Game";
 MENU_LOAD_FILE			= "File";
 MENU_LOAD_QUICKSAVE		= "Quick Save";
 
+// Save Game Menu
+MENU_SAVE_TITLE				    = "Choose A Save Slot";
+MENU_SAVE_MODAL_DESC		    = "This action can not be undone!";
+MENU_SAVE_DELETE_MODAL_TITLE    = "Delete This Save?";
+MENU_SAVE_OVERWRITE_MODAL_TITLE = "Overwrite This Save?";
+
 // Pause Menu
 MENU_PAUSE_RESUME		= "Resume";
 MENU_PAUSE_LOAD			= "Load";

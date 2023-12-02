@@ -359,7 +359,7 @@ SFX_GOATMAN_GRUNT_2			= "*Grunt*";
 SFX_GOATMAN_PAIN			= "*Flinch*";
 SFX_GOATMAN_ROAR			= "*Roar*";
 SFX_GOATMAN_ROAR_FAR		= "*Distant Roar*";
-SFX_GOATMAN_DEATH			= "*Dies*";
+SFX_GOATMAN_DEATH			= "*Croak*";
 
 //-------------------------------------------------------------
 // Batbarber

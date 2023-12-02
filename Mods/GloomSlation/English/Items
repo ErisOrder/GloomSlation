@@ -124,16 +124,16 @@ ITEM_SHOTGUNSHELLBOX_NAME		= "Shotgun Shell Box";
 ITEM_SHOTGUNSHELLBOX_DESC		= "A decayed box of shotgun shells. Once outlawed in this region, shotgun ammunition returned to usage as the city relied more on game over imported goods.";
 
 ITEM_UNDERTAKER_SLUG_NAME		= "Slug Bolt";
-ITEM_UNDERTAKER_SLUG_DESC		= "A heavy slug round for the Undertaker pistol. Can activate buttons and shatter glass and lights.";
+ITEM_UNDERTAKER_SLUG_DESC		= "A heavy slug round for the Flare Pistol. Can activate buttons and shatter glass and lights.";
 
 ITEM_UNDERTAKER_CHOKE_NAME		= "Choke Bolt";
-ITEM_UNDERTAKER_CHOKE_DESC		= "A vapor-filled round for the Undertaker pistol. Can extinguish fire sources and induce brief coughing fits in creatures.";
+ITEM_UNDERTAKER_CHOKE_DESC		= "A vapor-filled round for the Flare Pistol pistol. Can extinguish fire sources and induce brief coughing fits in creatures.";
 
 ITEM_UNDERTAKER_INCENDIARY_NAME	= "Incendiary Bolt";
-ITEM_UNDERTAKER_INCENDIARY_DESC	= "A flammable round for the Undertaker pistol. Can ignite objects and instantly combust explosive sources.";
+ITEM_UNDERTAKER_INCENDIARY_DESC	= "A flammable round for the Flare Pistol pistol. Can ignite objects and instantly combust explosive sources.";
 
 ITEM_UNDERTAKER_SHOCK_NAME		= "Flash Bolt";
-ITEM_UNDERTAKER_SHOCK_DESC		= "A blinding round for the Undertaker pistol.";
+ITEM_UNDERTAKER_SHOCK_DESC		= "A blinding round for the Flare Pistol pistol.";
 
 ITEM_GUNPOWDER_NAME				= "Gunpowder";
 ITEM_GUNPOWDER_DESC				= "";
@@ -210,8 +210,8 @@ ITEM_SHOTGUN_DESC					= "A collapsable pump shotgun. A favorite among the trappe
 ITEM_LEGTRAP_NAME					= "Leg-hold Trap";
 ITEM_LEGTRAP_DESC					= "A trap that can be used to snare the target's leg.";
 
-ITEM_UNDERTAKER_NAME				= "Undertaker Pistol";
-ITEM_UNDERTAKER_DESC				= "A custom, single-shot pistol with a silencer. The chamber is shaped for a special canister type that delivers various gasses and liquids. ";
+ITEM_UNDERTAKER_NAME				= "Flare Pistol";
+ITEM_UNDERTAKER_DESC				= "A custom, single-shot pistol with a silencer. The chamber is shaped for a special canister type. The letters 'Undertaker' are engraved into the handle.";
 
 ITEM_FLASHBOMB_NAME					= "Flashbomb";
 ITEM_FLASHBOMB_DESC					= "A throwable bomb that emits a blinding flash, rendering nearby creatures unable to see or attack. A newly introduced tool used by the Constabulary to quell riots and protests.";
