@@ -265,6 +265,14 @@ namespace GloomSlation
                 img.sprite = sprite;
             }
         }
+
+        public void PatchSprite(ref Sprite sprite) {
+            if (textures.TryGetValue(sprite.texture.name, out Texture2D nTex)) {
+                var nSprite = Sprite.Create(nTex, sprite.rect, sprite.pivot);
+                DebugMsg($"Patching sprite in tex {sprite.texture.name}");
+                sprite = nSprite;
+            }
+        }
         
         /// Patch GameObject and all of its childen
         public void PatchGameObject(GameObject obj)
@@ -377,6 +385,16 @@ namespace GloomSlation
     static class PatchEntityCreateModel {
         static void Postfix(ref EntityModel __result) {
             Melon<GloomSlation>.Instance.PatchGameObject(__result.gameObject);
+        }
+    }
+
+    /// Handle some dynamic-ish image cases like maps in journal.
+    /// TODO: I'm not sure if regular PatchImage is needed anymore.
+    [HarmonyPatch(typeof(Image))]
+    [HarmonyPatch("sprite", MethodType.Setter)]
+    static class PatchSpriteSetter {
+        static void Prefix(ref Sprite value) {
+            Melon<GloomSlation>.Instance.PatchSprite(ref value);
         }
     }
 }
