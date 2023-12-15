@@ -397,5 +397,19 @@ namespace GloomSlation
             Melon<GloomSlation>.Instance.PatchSprite(ref value);
         }
     }
+
+    /// Force inventory item quantity, slot, etc. to be rendered as overlay.
+    /// TODO: This should be achievable through changing font asset in some way, 
+    /// but we currently haven't figured out, what to change exactly. 
+    [HarmonyPatch(typeof(TextIcon), "Awake")]
+    static class PatchTextIcon {
+        static void Prefix(ref TextBehaviour ___counterText) {
+            var tmp = ___counterText.ReadPrivateField<TextMeshProUGUI>("textMesh");
+            // It won't actually be applied other way
+            tmp.OnPreRenderText += (ti) => {
+                ti.textComponent.isOverlay = true;
+            };
+        }
+    }
 }
 
