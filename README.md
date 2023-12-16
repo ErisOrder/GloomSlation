@@ -4,7 +4,7 @@ An unofficial Gloomwood translation project.
 ## Languages
 This mod currently contains translation on:
 - English - original text, to be used like reference and starting point
-- Russian - by [@pipo-cxx](https://github.com/pipo-cxx)
+- [Russian](https://github.com/ErisOrder/GloomSlation-RU) - by [@pipo-cxx](https://github.com/pipo-cxx)
 
 ## Preferences
 Mod preferences are stored in file `Mods/GloomSlation/cfg.toml`. 
