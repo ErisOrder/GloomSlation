@@ -30,6 +30,8 @@ New-Item -Path .\Gloomwood -ItemType SymbolicLink -Value <path-to-your-Gloomwood
 For some reason `UnityExplorer`'s library, `UniverseLib`, cannot be loaded from `UserLibs`
 and needs to be placed in `Gloomwood_Data/Managed` folder
 
+### Versioning
+First part of the mod version is the latest tested game version, second part is mod version.
 
 ## Credits
 - `pipo-cxx` for initiating project and making russian translation.
