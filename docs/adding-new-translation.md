@@ -1,6 +1,7 @@
 # How to create new translation
 
-As a starting point, copy directory of language, from which you want to translate.
+As a starting point, copy directory of language from which you want to translate and initialize git repository. 
+Language directory e.g. `Mods/GloomSlation/Russian` must be repository root.
 
 ## Text
 Inside folder you can find text files such as `Menus`, `Journal`, etc.
