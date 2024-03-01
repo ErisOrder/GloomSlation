@@ -54,6 +54,12 @@ NOTE_FISHERY_MANAGER_BODY		= "Consider this my last will and my confession:\n\nI
 NOTE_FISHERY_ACCOUNTING_NAME	= "Bill of Expenses";
 NOTE_FISHERY_ACCOUNTING_BODY	= "Month of September:\n\nNetting Bags - 8\n\nGenerator Fuel - 20\n\nLift Button Repair - 3 <color=#840601><alpha=#EE>(Samuel is handling it)</color>\n\nRadium Paint - 17\n\nWindow Replacement (Storage) - 10\n\nSpare Bulbs - 8\n\nGrease Oil Barrel (x3) - 77\n\nNew Rowboat - 41\n\nMr. Carrington's Fees - 120\n\nPower Generator Crank - 0 <color=#840601><alpha=#EE>(Coming out of Hobbs' pay)</color>\n\nCarriage Wheels (x4) - 55\n\n\n\n\n\n\nTotal: $359\n\n\n<color=#840601><alpha=#EE>(Mr. Croup, do you want me to remove Mr. Carrington's fee as usual? -Ms. D)</color>\n\n\n\n\n\n\n\nMs. Daryl,\n\n\t Yes, please. And ensure the paint gets delivered to my office.\n\n\t-Mr. Croup";
 
+NOTE_FISHERY_CARRIAGE_BASEMENT_NAME	= "Some Friendly Advice for Your First Day";
+NOTE_FISHERY_CARRIAGE_BASEMENT_BODY	= "Batty,\n\nI'd say mind the stench down here but seeing as you came from the cannery this is probably country fresh air in comparison.\n\nWe don't expect you to be a master woodworker, you're mostly just here to keep the seat warm and maybe slap on a replacement wheel or two until Falmouth gets over his flu.\n\nMind you, this will sound silly, but steer clear of the mirror in the corner. I don't know what the story there is, but I do know that Mr. Croup was in a hurry to get the thing out of his office, and since then some of the boys swear it's haunted -- claiming phantom lights and voices and nonsense like that.\n\nYou know how they get, so take that with a grain of salt.";
+
+NOTE_FISHERY_WATCHTOWER_NAME	= "Watchman's Journal";
+NOTE_FISHERY_WATCHTOWER_BODY	= "DAY 1 (not sure what the date is):\n\nI can't believe that worked! I smell like fish guts but honestly that probably helped me sneak out unnoticed. I even managed to filch a few cans off the line to keep me going.\n\nDAY 2:\n\nRupert, you stupid prat, you didn't bring anything to open the cans! And Bugger me, I'm locked in. I don't know how they tracked me, but instead of escaping I've ended up in another cell. I could shoot off the lock... but I've only got one bullet, so it has to count. Getting hungry.\n\nDAY 3:\n\nSaw a group of those men in hats dragging someone toward the main gate. Must have been another prisoner caught trying to escape. Glad it wasn't me. They dragged him kicking and screaming to the main gate and handed him off to some tall, creepy gent who in white stood out like a sore thumb among all the black hats -- he gave me shivers all the way up here. Almost felt like he knew I was watching. I need to eat something, I'm starting to lose my mind.\n\nDay 5? 6?\n So hungry I had to stop myself from shooting one of the cans open. I might still do it. Don't care if I'm caught, I just need FOOD.";
+
 MAP_SKETCH_COUNTRYSIDE_1_NAME	= "Coastal Sketch #1";
 MAP_FISHERY_BASEMENT_NAME		= "Fishery Blueprint - Basement";
 MAP_FISHERY_F1_NAME				= "Fishery Blueprint - 1F";
@@ -107,7 +113,7 @@ NOTE_COAST_GUARDTOWER_1_NAME	= "Scouting Report of the Market";
 NOTE_COAST_GUARDTOWER_1_BODY	= "Our sharpshooters have infiltrated the main plaza and are scouting out the constables' main fortifications.\n\nWe have confirmed the following:<b><color=#840601>\n\n\t-1 Armored Wagon at Bank\n\t-1 Gattling Gun at Old Quarter Gate</color></b>\n\n\nAdditionally, we noted the bat beasts have thoroughly infested the lower market areas. I advise keeping our supply lines to the main road. \n\t\t\t\t\t\t\t\t\t\t\tOur eyes remain open,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWatcher Qil";
 
 NOTE_COAST_CANNON_NAME			= "Cannon Instructions";
-NOTE_COAST_CANNON_BODY			= "For any brothers posted at this point, here are the instructions for loading and firing the cannon. It may not be as advanced as the turrets the Constables have, but nothing will survive a direct hit from this old boy.\n\n1. Have the spotter rotate the valve so the cannon is facing the target. The last crew on watch stupidly fired the cannon at the gate door - hence the crack. We've brought up the iron portcullis to prevent that from happening again.\n\n2. Pour gunpowder into the mouth of the barrel. You'll need a powderflask horn to carry the gunpowder. \n\n3. Place a cannonball into the barrel.\n\n4. Attach the fuse at the back of the cannon.\n\n5. Pull the fuse rope when ready to fire.\n\nIf there's any accidents, clean up the mess and report directly to the Captain on duty.";
+NOTE_COAST_CANNON_BODY			= "For any brothers posted at this point, here are the instructions for loading and firing the cannon. It may not be as advanced as the turrets the Constables have, but nothing will survive a direct hit from this old boy.\n\n1. Have the spotter rotate the valve so the cannon is facing the target. The last crew on watch stupidly fired the cannon at the gate door - hence the crack. We've brought up the iron portcullis to prevent that from happening again.\n\n2. Pour gunpowder into the mouth of the barrel. You'll need a powderflask horn to carry the gunpowder. The guards at the fort entrance usually have one. \n\n3. Place a cannonball into the barrel. Cannonballs are kept in the demolitions storage room in the city gatehouse above.\n\n4. Attach the fuse at the back of the cannon. The fuses are cut up at the top of the fort watchtower.\n\n5. Pull the fuse rope when ready to fire.\n\nIf there's any accidents, clean up the mess and report directly to the Captain on duty.";
 
 NOTE_TAVERN_CODE_1_NAME			= "Tavern Safe Note";
 NOTE_TAVERN_CODE_1_BODY			= "A shot of whiskey and a mug of whaler's.\n\nA good combo to put any bad dreams to rest.";
@@ -146,10 +152,20 @@ NOTE_MARKET_BARBERSHOP_2_NAME	= "Barbershop Crematorium Note";
 NOTE_MARKET_BARBERSHOP_2_BODY	= "The gunshop owner survived the fall down the chute. Had a bone sticking right out of his neck! The poor sod spent his last few minutes begging.\n\nClaimed he had a nice pile of gold coin in his office safe. Said the code was six-two-something. It was hard to hear over the gurgling.\n\nI'll have one of my brood check it out. They've grown up so much since I found them. I long to join them myself.\n\nBut not yet.\n\nI have projects I wish to finish first.";
 
 NOTE_MARKET_MERCHANT_GATE_NAME	= "Emerald Terrace Lift";
-NOTE_MARKET_MERCHANT_GATE_BODY	= "Doctor,\n\n\tThe lift to my terrace has been locked so that it cannot be accessed by the riffraff wandering about Fleece Court.\n\nI've entrusted a special key to a local informant, one of many of my 'fingers' in this city. Once you retrieve the key, offer it to the vessel on the pedestal.\n\nSee you soon.";
+NOTE_MARKET_MERCHANT_GATE_BODY	= "Doctor,\n\n\tThe lift to my terrace has been locked so that it cannot be accessed by the riffraff wandering about Fleece Court.\n\nI've entrusted a special emerald ring to a local informant, one of many of my 'fingers' in this city. Once you retrieve the ring, offer it to the vessel on the pedestal.\n\nSee you soon.";
 
-NOTE_MARKET_MANOR_KITCHEN_1_NAME = "Market Manor Kitchen Note";
+NOTE_MARKET_MANOR_KITCHEN_1_NAME = "Lord Marwyn Manor Kitchen Note";
 NOTE_MARKET_MANOR_KITCHEN_1_BODY = "Lord Kar now has a kitchen dumbwaiter!\n\nIt's bad enough that his staff has twice the kitchen space as we do, but now they have a dumbwaiter on top of the elevator they already have.\n\nWe've tried to explain to Lord Marwyn that it's not feasible to bring his meals up the tower stairwell, but he refuses to listen to reason.\n\nHe'd let these walls crumble down and bury us all if it saved him the dime.";
+
+NOTE_MARKET_MANOR_KITCHEN_2_NAME = "Lord Kar Manor Kitchen Note";
+NOTE_MARKET_MANOR_KITCHEN_2_BODY = "Staff,\n\nA trespasser was caught in my altar room after sneaking in through the skylight. I've sent word to the metalsmith to forge some guards for those windows.\n\nIn the mean time, show our guest some Kar hospitality. You know how I like the meat prepared.";
 
 NOTE_SHOP_ITEM_STORAGE_NAME		= "Item Storage";
 NOTE_SHOP_ITEM_STORAGE_BODY		= "Doctor,\n\nFeel free to leave behind any belongings in this room.\n\nThey'll be safe in my possession.";
+
+// Mirror
+NOTE_MIRROR_ARCHAEOLOGY_1_NAME	= "";
+NOTE_MIRROR_ARCHAEOLOGY_1_BODY	= "WIP note about archaeology findings.";
+
+NOTE_MIRROR_LIGHTHOUSE_1_NAME	= "Mirror World Lighthouse Note #1";
+NOTE_MIRROR_LIGHTHOUSE_1_BODY	= "Please help.\n\nWe are sick.\n\nWe are dying.\n\nThe pain is unbearable. We tear at the bedsheets.\n\nWhy are you not helping us?\n\nAren't you supposed to be a doctor?\n\nWe don't want to close our eyes. Not again.";

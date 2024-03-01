@@ -101,6 +101,87 @@ ITEM_CHEESE_DESC				= "A strong scented cheese wheel. The majority of the region
 ITEM_APPLE_NAME					= "Apple";
 ITEM_APPLE_DESC					= "A somewhat moldy apple.";
 
+ITEM_BREADLOAF_1_NAME           = "Bread Loaf";
+ITEM_BREADLOAF_1_DESC           = "A stale loaf of bread.";
+
+ITEM_BREADLOAF_1_HALF_NAME      = "Bread Half-Loaf";
+ITEM_BREADLOAF_1_HALF_DESC      = "A stale half-loaf of bread.";
+
+ITEM_BREADLOAF_1_SLICE_NAME     = "Bread Slice";
+ITEM_BREADLOAF_1_SLICE_DESC     = "A stale slice of bread.";
+
+ITEM_CARROT_1_NAME              = "Carrot";
+ITEM_CARROT_1_DESC              = "An old carrot.";
+
+ITEM_CARROT_1_CHOPPED_NAME      = "Chopped Carrot";
+ITEM_CARROT_1_CHOPPED_DESC      = "An old chopped carrot.";
+
+ITEM_CARROT_2_NAME              = "Carrot";
+ITEM_CARROT_2_DESC              = "An old carrot.";
+
+ITEM_CARROT_3_NAME              = "Carrot";
+ITEM_CARROT_3_DESC              = "An old carrot.";
+
+ITEM_CHEESE_WEDGE_1_NAME        = "Cheese Wedge";
+ITEM_CHEESE_WEDGE_1_DESC        = "A strong scented cheese wedge.  The majority of the region's dairy comes from nose-horned goats that migrated from the eastern mountains.";
+
+ITEM_CORNCOB_1_NAME             = "Corn Cob";
+ITEM_CORNCOB_1_DESC             = "An old corn cob.";
+
+ITEM_DRIEDPEPPER_1_NAME         = "Dried Pepper";
+ITEM_DRIEDPEPPER_1_DESC         = "A dried pepper. Spicy.";
+
+ITEM_DRIEDPEPPER_2_NAME         = "Dried Pepper";
+ITEM_DRIEDPEPPER_2_DESC         = "A dried pepper. Spicy.";
+
+ITEM_MEAT_BRAIN_1_NAME          = "Brain";
+ITEM_MEAT_BRAIN_1_DESC          = "The brain of some unlucky creature. It smells sour.";
+
+ITEM_MEAT_OFFAL_1_NAME          = "Offal";
+ITEM_MEAT_OFFAL_1_DESC          = "A pile of braised intestines and organs of unknown origin.";
+
+ITEM_MEAT_SALAMI_SLICE_1_NAME   = "Salami Slice";
+ITEM_MEAT_SALAMI_SLICE_1_DESC   = "A slice of cured salami.";
+
+ITEM_MEAT_SALAMI_SLICE_2_NAME   = "Salami Slice";
+ITEM_MEAT_SALAMI_SLICE_2_DESC   = "A slice of cured salami.";
+
+ITEM_MEAT_SALAMI_SLICE_3_NAME   = "Salami Slice";
+ITEM_MEAT_SALAMI_SLICE_3_DESC   = "A slice of cured salami.";
+
+ITEM_MEAT_SALAMI_SLICE_4_NAME   = "Salami Slice";
+ITEM_MEAT_SALAMI_SLICE_4_DESC   = "A slice of cured salami.";
+
+ITEM_MUSHROOM_1_NAME            = "Mushroom";
+ITEM_MUSHROOM_1_DESC            = "An edible mushroom with a strong earthy scent.";
+
+ITEM_ONION_1_NAME               = "Onion";
+ITEM_ONION_1_DESC               = "An old onion.";
+
+ITEM_POTATO_1_NAME              = "Potato";
+ITEM_POTATO_1_DESC              = "An old potato.";
+
+ITEM_POTATO_2_NAME              = "Potato";
+ITEM_POTATO_2_DESC              = "An old potato.";
+
+ITEM_POTATO_3_NAME              = "Potato";
+ITEM_POTATO_3_DESC              = "An old chopped potato.";
+
+ITEM_POTATO_4_NAME              = "Potato";
+ITEM_POTATO_4_DESC              = "An old potato.";
+
+ITEM_SALSIFY_1_NAME             = "Salsify";
+ITEM_SALSIFY_1_DESC             = "An old salsify, a root vegetable.";
+
+ITEM_SANDWICH_BRAIN_1_NAME      = "Brain Sandwich";
+ITEM_SANDWICH_BRAIN_1_DESC      = "A brain between two slices of bread. The thought of eating it makes your stomach churn.";
+
+ITEM_TOAST_1_NAME               = "Toast";
+ITEM_TOAST_1_DESC               = "A stale slice of toast.";
+
+ITEM_TOAST_2_NAME               = "Toast";
+ITEM_TOAST_2_DESC               = "A stale, halved slice of toast.";
+
 ITEM_LEVER_HANDLE_NAME			= "Lever Handle";
 ITEM_LEVER_HANDLE_DESC			= "A handle for a mechanical lever";
 
@@ -123,17 +204,20 @@ ITEM_SHOTGUNSHELLSPENT_DESC		= "An empty, spent shell. May suffice as an impromp
 ITEM_SHOTGUNSHELLBOX_NAME		= "Shotgun Shell Box";
 ITEM_SHOTGUNSHELLBOX_DESC		= "A decayed box of shotgun shells. Once outlawed in this region, shotgun ammunition returned to usage as the city relied more on game over imported goods.";
 
-ITEM_UNDERTAKER_SLUG_NAME		= "Slug Bolt";
-ITEM_UNDERTAKER_SLUG_DESC		= "A heavy slug round for the Flare Pistol. Can activate buttons and shatter glass and lights.";
+ITEM_FLAREGUN_BATON_NAME		= "Baton Bolt";
+ITEM_FLAREGUN_BATON_DESC		= "A blunt, rubber-filled round for the Flare Pistol. Deals minimal damage, but can interact with buttons, shatter windows and break lightbulbs from a distance.";
 
-ITEM_UNDERTAKER_CHOKE_NAME		= "Choke Bolt";
-ITEM_UNDERTAKER_CHOKE_DESC		= "A vapor-filled round for the Flare Pistol pistol. Can extinguish fire sources and induce brief coughing fits in creatures.";
+ITEM_FLAREGUN_CHOKE_NAME		= "Choke Bolt";
+ITEM_FLAREGUN_CHOKE_DESC		= "A vapor-filled round for the Flare Pistol. Can extinguish fire sources and induce brief coughing fits in creatures.";
 
-ITEM_UNDERTAKER_INCENDIARY_NAME	= "Incendiary Bolt";
-ITEM_UNDERTAKER_INCENDIARY_DESC	= "A flammable round for the Flare Pistol pistol. Can ignite objects and instantly combust explosive sources.";
+ITEM_FLAREGUN_INCENDIARY_NAME	= "Incendiary Bolt";
+ITEM_FLAREGUN_INCENDIARY_DESC	= "A flammable round for the Flare Pistol. Can ignite objects and instantly combust explosive sources.";
 
-ITEM_UNDERTAKER_SHOCK_NAME		= "Flash Bolt";
-ITEM_UNDERTAKER_SHOCK_DESC		= "A blinding round for the Flare Pistol pistol.";
+ITEM_FLAREGUN_FLARE_NAME		= "Flare Bolt";
+ITEM_FLAREGUN_FLARE_DESC		= "A flare round for the Flare Pistol. Illuminates the target area for a period of time. This effect may lure nearby creatures.";
+
+ITEM_FLAREGUN_SHOCK_NAME		= "Flash Bolt";
+ITEM_FLAREGUN_SHOCK_DESC		= "A blinding round for the Flare Pistol.";
 
 ITEM_GUNPOWDER_NAME				= "Gunpowder";
 ITEM_GUNPOWDER_DESC				= "";
@@ -156,6 +240,9 @@ ITEM_CAN_BEANS_EMPTY_DESC		= "An empty can labeled with a 'Doctor Smithy's Pork 
 
 ITEM_RIFLE_BROKEN_NAME			= "Huntsmans' Rifle";
 ITEM_RIFLE_BROKEN_DESC			= "A makeshift, shoddy hunting rifle. The grips are built for the distorted proportions of the huntsmen and cannot be handled by average humans.";
+
+ITEM_CORPSE_RAT_NAME = "DEAD RAT";
+ITEM_CORPSE_RAT_DESC = "A dead rat. It smells bloody awful.";
 
 // Giblets
 ITEM_GIBLET_WOODSMAN_HEAD_NAME		= "Woodsman Head";
@@ -207,11 +294,11 @@ ITEM_REVOLVER_DESC					= "Break-action revolver with six chambers. Steel-casted 
 ITEM_SHOTGUN_NAME					= "Shotgun";
 ITEM_SHOTGUN_DESC					= "A collapsable pump shotgun. A favorite among the trappers who desired an easily carryable close-range weapon for their excursions past the bulwark.";
 
-ITEM_LEGTRAP_NAME					= "Leg-hold Trap";
+ITEM_LEGTRAP_NAME					= "Snare Trap";
 ITEM_LEGTRAP_DESC					= "A trap that can be used to snare the target's leg.";
 
-ITEM_UNDERTAKER_NAME				= "Flare Pistol";
-ITEM_UNDERTAKER_DESC				= "A custom, single-shot pistol with a silencer. The chamber is shaped for a special canister type. The letters 'Undertaker' are engraved into the handle.";
+ITEM_FLAREGUN_NAME					= "Flare Pistol";
+ITEM_FLAREGUN_DESC					= "A custom, single-shot pistol with a silencer. The chamber is shaped for a special bolt type. The name 'Undertaker' is etched into the handle.";
 
 ITEM_FLASHBOMB_NAME					= "Flashbomb";
 ITEM_FLASHBOMB_DESC					= "A throwable bomb that emits a blinding flash, rendering nearby creatures unable to see or attack. A newly introduced tool used by the Constabulary to quell riots and protests.";
@@ -272,8 +359,14 @@ KEY_FISHERY_POWERROOM_DESC			= "Key for the power room at Mr. Croup's Fishery.";
 KEY_FISHERY_POWERGENERATOR_NAME		= "Fishery Generator Key";
 KEY_FISHERY_POWERGENERATOR_DESC		= "Key to the Fishery power generator.";
 
+KEY_FISHERY_WATCHTOWER_NAME			= "Fishery Watchtower Key";
+KEY_FISHERY_WATCHTOWER_DESC			= "Key to the watchtower at Mr. Croup's Fishery.";
+
 KEY_FISHERY_CARRIAGE_BACKDOOR_NAME	= "Fishery Carriage Station Backdoor";
 KEY_FISHERY_CARRIAGE_BACKDOOR_DESC	= "Key to the backdoor of the Fishery Carriage Station.";
+
+KEY_FISHERY_CARRIAGE_BASEMENT_NAME	= "Fishery Carriage Basement Key";
+KEY_FISHERY_CARRIAGE_BASEMENT_DESC	= "Key to the basement garage of the Mr. Croup's Fishery carriage station.";
 
 KEY_COAST_FISHERY_CABIN_NAME		= "Fishery Cabin Key";
 KEY_COAST_FISHERY_CABIN_DESC		= "Key to the cabin overlooking Mr. Croup's Fishery.";
@@ -323,7 +416,7 @@ KEY_MARKET_DOCK_POWERSTATION_DESC	= "Key to the power station near the dock in t
 KEY_MARKET_BARBERSHOP_BASEMENT_NAME	= "Barbershop Basement Key";
 KEY_MARKET_BARBERSHOP_BASEMENT_DESC	= "Key to the basement of the Barbershop in the Market District.";
 
-KEY_MARKET_MANOR_BACKDOOR_1_NAME	= "Manor Backdoor Key";
+KEY_MARKET_MANOR_BACKDOOR_1_NAME	= "Lord Kar's Manor Back Key";
 KEY_MARKET_MANOR_BACKDOOR_1_DESC	= "Key to the back door of a manor in the Market District.";
 
 KEY_MARKET_RESTROOM_FRONTDOOR_NAME	= "Market Restroom Key";
@@ -331,6 +424,9 @@ KEY_MARKET_RESTROOM_FRONTDOOR_DESC	= "Key to the public restroom in the Market D
 
 KEY_MARKET_MANOR_2_FRONTDOOR_NAME	= "Lord Marwyn's Manor Key";
 KEY_MARKET_MANOR_2_FRONTDOOR_DESC	= "Key to the front door of a manor in the Market District. The name 'Lord Marwyn' is inscribed on the head.";
+
+KEY_MARKET_MANOR_3_FRONTDOOR_NAME	= "Lord Kar's Manor Front Key";
+KEY_MARKET_MANOR_3_FRONTDOOR_DESC	= "Key to the front door of a manor in the Market District. The name 'Lord Kar' is inscribed on the head.";
 
 // Currency
 CURRENCY_GOLD_NAME					= "Gold";
@@ -361,9 +457,16 @@ ITEM_HORN_ULMAR_DESC				= "A prized, ivory horn from the Old Kingdom. It is told
 ITEM_RING_EMERALD_NAME				= "Emerald Ring";
 ITEM_RING_EMERALD_DESC				= "A ring with an emerald gem. Emeralds are rumored to be the gemstone of the madman, inducing one to embrace chaos and furor.";
 
+ITEM_GOLD_CHALICE_1_NAME			= "Gold Chalice";
+ITEM_GOLD_CHALICE_1_DESC			= "An ornate golden chalice, adorned with engraved trims and set with blood-red gemstones.";
+
 //-------------------------------------------------------------
 // Seasonal
 
 // Halloween
 ITEM_JACKOLANTERN_NAME				= "Jack-o-Lantern";
 ITEM_JACKOLANTERN_DESC				= "A peculiar carved turnip in the shape of a face. A local, seasonal custom perhaps?";
+
+// Christmas
+ITEM_SNOWBALL_NAME					= "Snowball";
+ITEM_SNOWBALL_DESC					= "A clump of snow. Time to spread some jolly good fun.";

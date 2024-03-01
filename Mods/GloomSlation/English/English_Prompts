@@ -54,6 +54,8 @@ TUTORIAL_MONOCLE_ZOOM			= "Use {ZOOM} to Zoom in and out with the Monocle's Lens
 TUTORIAL_SHOP_SELL				= "Place your Valuables on the {PLACEMAT} to Sell Them";
 TUTORIAL_SHOP_SELL_PLACEMAT		= "Placemat";
 
+ACTIONLOG_INVENTORY_INVALIDPOS	= "Cannot place inventory here";
+ACTIONLOG_INVENTORY_FULL		= "Inventory is full";
 ACTIONLOG_PICKUP_READABLE		= "Added readable {READABLE}";
 ACTIONLOG_PICKUP_KEY			= "Added key {ITEM}";
 ACTIONLOG_PICKUP_REQUIREMENT	= "Requires {ITEM}";

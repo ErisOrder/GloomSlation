@@ -57,6 +57,7 @@ VO_COUNTESS_CON_LIGHTHOUSE_OUTSIDERS	= "The townsfolk are not fond of outsiders.
 VO_COUNTESS_CON_LIGHTHOUSE_PROMISE		= "a promise few others here can make.";
 VO_COUNTESS_CON_LIGHTHOUSE_SAFEARRIVAL	= "I can guarantee your safe arrival,";
 VO_COUNTESS_CON_LIGHTHOUSE_WAITING		= "I'll be waiting...";
+VO_COUNTESS_CON_SHOPKEEP_WARN_1			= "So it's that fool merchant that has been leading you astray. You trust that sniveling shopkeep? I had greater expectations from you, child.";
 
 //-------------------------------------------------------------
 // Edward (Fishery)
