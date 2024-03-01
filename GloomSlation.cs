@@ -17,7 +17,7 @@ using Gloomwood.Entity;
 using Gloomwood.Entity.Items;
 
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.230.05-modv0.3", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.233.12-modv0.3", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
