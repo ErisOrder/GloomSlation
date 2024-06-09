@@ -17,7 +17,7 @@ using Gloomwood.Entity;
 using Gloomwood.Entity.Items;
 
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.233.12-modv0.3", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.300.25-modv0.4", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
@@ -62,7 +62,8 @@ namespace GloomSlation
     public class GloomSlation : MelonMod
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
-        private readonly Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
+        private readonly HashSet<string> availableTextures = new HashSet<string>();
+        private readonly HashSet<string> specializedTex = new HashSet<string>();
 
         private static readonly string modPath = "Mods\\GloomSlation";
 
@@ -135,18 +136,16 @@ namespace GloomSlation
                         continue;
                     }
 
+                    name = PreparePatchName(name);
 
-                    var imageData = File.ReadAllBytes(path);
-                    var tex = new Texture2D(1, 1);
-                    if (!ImageConversion.LoadImage(tex, imageData, false))
-                    {
-                        MelonLogger.Error($"Could not load texture {name}");
+                    if (name.StartsWith("obj_")) {
+                        var objpath = name.Substring(4);
+                        specializedTex.Add(objpath);
+                        DebugMsg($"Available specialized texture for {objpath}");
                     }
-                    else
-                    {
-                        textures.Add(name, tex);
-                        DebugMsg($"Loaded texture {name}");
-                    }
+
+                    availableTextures.Add(name);
+                    DebugMsg($"Available texture {name}");
                 }
             }
         }
@@ -164,7 +163,12 @@ namespace GloomSlation
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             var scene = SceneManager.GetSceneByBuildIndex(buildIndex);
-
+            /// Patch all scene textures
+            foreach (var tex in Resources.FindObjectsOfTypeAll<Texture2D>()) {
+                DebugMsg($"found texture {tex.name}");
+                PatchTexture(tex);
+            }
+            
             foreach (var obj in scene.GetRootGameObjects())
             {
                 PatchGameObject(obj);
@@ -175,6 +179,43 @@ namespace GloomSlation
         public static string ConstructLocaleKey(string objName, string origText)
         {
             return notIdentRex.Replace($"{objName}@{origText}", "_");
+        }
+
+        /// Convert object/texture name to path
+        private string PreparePatchName(string original) {
+            return original.Replace("|", "_").ToLower();
+        }
+        
+        /// Construct texture path if patch exists from texture name and optionally object name
+        public string? GetTexturePath(string name, bool obj) {
+            string filename;
+            name = PreparePatchName(name);
+            if (obj) {
+                var objpath = name.Replace("/", "_");
+                
+                if (!specializedTex.Contains(objpath)) {
+                    return null;
+                }
+            
+                filename = $"obj_{objpath}";
+            } else {
+                if (!availableTextures.Contains(name)) {
+                    return null;
+                }
+            
+                filename = name;
+            }
+            return Path.Combine(langPath, $"Textures/{filename}.png");
+        }
+        
+        /// Load texture from disk
+        public void PatchTexture(Texture2D tex) {
+            if (GetTexturePath(tex.name, false) is string path)
+            {
+                tex.LoadImage(File.ReadAllBytes(path), true);
+                tex.name += " [patched]";
+                DebugMsg($"Patched texture {tex.name}");
+            }
         }
 
         /// Patch single TextMeshProUGUI
@@ -265,6 +306,18 @@ namespace GloomSlation
             }
         }
 
+        /// Get absolute path to gameobject
+        public static string GetGameObjectPath(GameObject obj)
+        {
+            string path = "/" + obj.name;
+            while (obj.transform.parent != null)
+            {
+                obj = obj.transform.parent.gameObject;
+                path = "/" + obj.name + path;
+            }
+            return path;
+        }
+        
         /// Patch main texture in renderer's material
         public void PatchRenderer(Renderer rend)
         {
@@ -280,37 +333,19 @@ namespace GloomSlation
                     {
                         continue;
                     }
+                    // Strip leading slash
+                    var objpath = GetGameObjectPath(rend.gameObject).Substring(1);
                     var tex = mat.GetTexture(prop);
                     if (tex != null && tex.name != null
-                        && textures.TryGetValue(tex.name, out Texture2D newTex)
+                        && GetTexturePath(objpath, true) is string nTexPath
                     )
                     {
-                        DebugMsg($"Patching texture {tex.name} in {mat.name}");
-                        mat.SetTexture(prop, newTex);
-                        rend.UpdateGIMaterials();
+                        DebugMsg($"Patching specialized texture in {objpath}");
+                        var nTex = new Texture2D(1, 1, TextureFormat.RGBA32, 0, false);
+                        nTex.LoadImage(File.ReadAllBytes(nTexPath), true);
+                        mat.SetTexture(prop, nTex);
                     }
                 }
-            }
-        }
-
-        /// Patch image sprite
-        public void PatchImage(Image img)
-        {
-            if (textures.TryGetValue(img.mainTexture.name, out Texture2D nTex))
-            {
-                var sprite = Sprite.Create(nTex, img.sprite.rect, img.sprite.pivot);
-                DebugMsg($"Patching sprite in {img.name}: {img.mainTexture.name}");
-                img.sprite = sprite;
-            }
-        }
-
-        public void PatchSprite(ref Sprite sprite)
-        {
-            if (textures.TryGetValue(sprite.texture.name, out Texture2D nTex))
-            {
-                var nSprite = Sprite.Create(nTex, sprite.rect, sprite.pivot);
-                DebugMsg($"Patching sprite in tex {sprite.texture.name}");
-                sprite = nSprite;
             }
         }
 
@@ -332,14 +367,6 @@ namespace GloomSlation
                 if (rend.gameObject.SetMarker<TextureProcessedMarker>())
                 {
                     PatchRenderer(rend);
-                }
-            }
-            // Patch all sprites
-            foreach (var img in obj.GetComponentsInChildren<Image>())
-            {
-                if (img.gameObject.SetMarker<SpriteProcessedMarker>())
-                {
-                    PatchImage(img);
                 }
             }
         }
@@ -434,18 +461,6 @@ namespace GloomSlation
         static void Postfix(ref EntityModel __result)
         {
             Melon<GloomSlation>.Instance.PatchGameObject(__result.gameObject);
-        }
-    }
-
-    /// Handle some dynamic-ish image cases like maps in journal.
-    /// TODO: I'm not sure if regular PatchImage is needed anymore.
-    [HarmonyPatch(typeof(Image))]
-    [HarmonyPatch("sprite", MethodType.Setter)]
-    static class PatchSpriteSetter
-    {
-        static void Prefix(ref Sprite value)
-        {
-            Melon<GloomSlation>.Instance.PatchSprite(ref value);
         }
     }
 
