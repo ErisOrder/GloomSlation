@@ -15,6 +15,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Gloomwood.Entity;
 using Gloomwood.Entity.Items;
+using System.Linq;
 
 
 [assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.300.25-modv0.4", "pipo, nikvoid")]
@@ -59,11 +60,73 @@ namespace GloomSlation
     public class SpriteProcessedMarker : Marker { }
     public class TextureProcessedMarker : Marker { }
 
+    // Recursively visit objects in scene and apply patches on matched paths
+    class AdjustVisitor {
+        Dictionary<String, List<(bool, Action<Component>, Type)>> adjustments = 
+            new Dictionary<string, List<(bool, Action<Component>, Type)>>();
+    
+        public void RunAdjustments(GameObject[] roots) {
+            foreach (var root in roots) {
+                if (VisitNeeded(root.name)) {
+                    AdjustObjectsRec(root, root.name);
+                }
+            }
+        }
+
+        bool VisitNeeded(string pathStart) {
+            return adjustments.Any((kv) => kv.Key.StartsWith(pathStart));
+        } 
+
+        void AdjustObjectsRec(GameObject obj, string path) {
+            foreach (Transform child in obj.transform) {
+                var childObj = child.gameObject;
+                var thisPath = $"{path}/{childObj.name}";
+                if (adjustments.TryGetValue(thisPath, out var list)) {
+                    foreach ((var children, var adjust, var ty) in list) {
+                        Component[] comps;
+                        if (children) {
+                            comps = childObj.GetComponentsInChildren(ty, true);
+                        } else {
+                            comps = childObj.GetComponents(ty);
+                        }
+                        
+                        foreach (var comp in comps) {
+                            Melon<GloomSlation>.Instance.DebugMsg($"adjusting {thisPath}");
+                            adjust(comp);
+                        }                           
+                    }
+                }
+                if (VisitNeeded(thisPath)) {
+                    AdjustObjectsRec(childObj, thisPath);
+                }
+            }
+        }
+
+        public void AddAdjustment<T>(bool children, string path, Action<T> adjust) where T: Component {
+            Action<Component> dynAdjust = (comp) => {
+                adjust((comp as T)!);
+            };
+            
+            if (adjustments.TryGetValue(path, out var val)) {
+                val.Add((children, dynAdjust, typeof(T)));
+            } else {
+                adjustments.Add(path, new List<(bool, Action<Component>, Type)> { (children, dynAdjust, typeof(T)) });
+            }
+        } 
+        
+        public void AddAdjustment<T>(bool recursive, string[] paths, Action<T> adjust) where T: Component {
+            foreach (var path in paths) {
+                AddAdjustment<T>(recursive, path, adjust);
+            }
+        } 
+    }
+    
     public class GloomSlation : MelonMod
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
         private readonly HashSet<string> availableTextures = new HashSet<string>();
         private readonly HashSet<string> specializedTex = new HashSet<string>();
+        private readonly AdjustVisitor postInitAdjustVisitor = new AdjustVisitor();
 
         private static readonly string modPath = "Mods\\GloomSlation";
 
@@ -148,6 +211,8 @@ namespace GloomSlation
                     DebugMsg($"Available texture {name}");
                 }
             }
+
+            InitAdjustments();
         }
 
         /// Log message only if debugMode active
@@ -168,11 +233,17 @@ namespace GloomSlation
                 DebugMsg($"found texture {tex.name}");
                 PatchTexture(tex);
             }
-            
+
             foreach (var obj in scene.GetRootGameObjects())
             {
                 PatchGameObject(obj);
             }
+        }
+
+        public override void OnSceneWasInitialized(int buildIndex, string sceneName)
+        {
+            var scene = SceneManager.GetSceneByBuildIndex(buildIndex);
+            postInitAdjustVisitor.RunAdjustments(scene.GetRootGameObjects());
         }
 
         /// Construct localization entry ID from GameObject name and original text
@@ -206,6 +277,61 @@ namespace GloomSlation
                 filename = name;
             }
             return Path.Combine(langPath, $"Textures/{filename}.png");
+        }
+
+        void InitAdjustments() {
+            // Cliffside title
+            // Aligned by moving label objects...
+            // ---A
+            // ------B
+            // ---C
+            // ----D
+            var cliffsideMenu = new [] {
+                ("TitleScreen/Menu_Title/Button_NewGameMenu", 248.85f),
+                ("TitleScreen/Menu_Title/Button_LoadGameMenu", 248.7f),
+                ("TitleScreen/Menu_Title/Button_SettingsMenu", 249f),
+                ("TitleScreen/Menu_Title/Button_QuitGame", 249f)
+            };
+            var posY = 23.7f;
+            foreach (var (btn, nx) in cliffsideMenu) {
+                var ny = posY;
+                postInitAdjustVisitor.AddAdjustment<TMPro.TextMeshProUGUI>(
+                    true,
+                    btn,
+                    tmp => {
+                        // Align all objects by central axis and set text alignment to Center
+                        var tf = tmp.gameObject.transform.parent;
+                        var pos = tf.position;
+                        pos.x = nx;
+                        pos.y = ny;
+                        tf.position = pos;
+                        tmp.alignment = TextAlignmentOptions.Center;
+                        var rtf = tmp.rectTransform;
+                        rtf.localPosition = Vector3.zero;
+                        // tmp.bounds;
+                    }
+                );
+                posY -= 0.5f;
+            }
+            
+            // Underport title
+            // New Game and Load buttons slightly misaligned
+            var underportMenu = new [] {
+                ("Menu_Title/Button_NewGameMenu", 59.05f),
+                ("Menu_Title/Button_LoadGameMenu", 59.21f)
+            };
+            foreach (var (btn, nx) in underportMenu) {
+                postInitAdjustVisitor.AddAdjustment<TMPro.TextMeshProUGUI>(
+                    true,
+                    btn,
+                    tmp => {
+                        var tf = tmp.gameObject.transform.parent;
+                        var pos = tf.position;
+                        pos.x = nx;
+                        tf.position = pos;
+                    }
+                );
+            }
         }
         
         /// Load texture from disk
