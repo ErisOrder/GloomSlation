@@ -160,10 +160,63 @@ NOTE_MARKET_MANOR_KITCHEN_1_BODY = "Lord Kar now has a kitchen dumbwaiter!\n\nIt
 NOTE_MARKET_MANOR_KITCHEN_2_NAME = "Lord Kar Manor Kitchen Note";
 NOTE_MARKET_MANOR_KITCHEN_2_BODY = "Staff,\n\nA trespasser was caught in my altar room after sneaking in through the skylight. I've sent word to the metalsmith to forge some guards for those windows.\n\nIn the mean time, show our guest some Kar hospitality. You know how I like the meat prepared.";
 
+//-------------------------------------------------------------
+// Underport
+
+MAPSET_UNDERPORT_POWER_1_NAME				= "Underport Power Grid Map";
+MAP_UNDERPORT_POWER_1_NAME					= "Underport Power Grid Map";
+
+NOTE_UNDERPORT_MANOR_1_NAME					= "Underport Manor Note #1";
+NOTE_UNDERPORT_MANOR_1_BODY					= "It's been two weeks since the disappearance of grandad.\n\nI can't sleep. It's the pipes. When I close my eyes, I feel their rusted appendages coil around me and drag me underneath. I try to scream, but my lungs are flooded with black water.\n\nI went for a walk this afternoon to clear my head. The city feels so empty, so many boarded windows and doors.\n\nI wish I had listened, grandad.";
+
+NOTE_UNDERPORT_PUMPSTATION_1_NAME			= "Brother Liam's Orders";
+NOTE_UNDERPORT_PUMPSTATION_1_BODY			= "Brother Liam,\n\nYour instructions are to assault and commandeer the Lampfire Power Plant and clear it of any mutants. The Underport is divided into sections that are linked with water bridges. Have your brothers raise the bridges and prepare for the arrival of additional forces from the forward camp. Be alert as reports suggest the tunnels are highly infested.\n\n-Captain Orlot";
+
+NOTE_UNDERPORT_MISSINGPERSONS_1_NAME		= "Missing Persons Notice";
+NOTE_UNDERPORT_MISSINGPERSONS_1_BODY		= "PUBLIC NOTICE.\n\nFROM THE CITY CONSTABULARY:\n\nAN OVERWHELMING INCREASE IN THE INCIDENCE OF MISSING PERSONS HAVING BEEN OBSERVED,\n\nTHE CONSTABULARY, BEING LIMITED IN ITS CAPACITY TO INVESTIGATE, IS REGRETTABLY UNABLE TO RESPOND INDIVIDUALLY TO NEW REPORTS,\n\nAND THUS COUNSELS CONCERNED CITIZENS TO POST BULLETINS REGARDING MISSING PERSONS DIRECTLY TO PUBLIC BOARDS.\n\n-Chief Constable Harland.";
+
+NOTE_UNDERPORT_WAREHOUSE_MANAGER_1_NAME		= "Mr. Van Der Meer's Note #1";
+NOTE_UNDERPORT_WAREHOUSE_MANAGER_1_BODY		= "I don't understand why you fools won't take this deal.\n\nI've made it clear: you bring me the guild seal found in the tunnels, I provide you with ammunition and firepower to continue your war with the Constabulary.\n\nInstead of fruitlessly attacking my lockdown bunker, we can come to an agreement that benefits both of us.\n\nI'll even sweeten the deal: the code to my safe in here is 115. Consider its contents a downpayment.";
+
+NOTE_UNDERPORT_WAREHOUSE_MANAGER_2_NAME		= "Mr. Van Der Meer's Note #2";
+NOTE_UNDERPORT_WAREHOUSE_MANAGER_2_BODY		= "You can't get good hired help anymore.\n\nI've been trying to retrieve that damned guild seal from the tunnels for months now. A group of mountain mercenaries, two accomplished treasure hunters and an exhibition shooter all could not dislodge that prize from the undercity's talons.\n\nI can't very well go down there myself. I am a businessman, not some rogue spoiling for a fight.\n\nPerhaps the order of the huntsmen has enough meatheads to take on such a perilous dive. I would just need to entice them with the right strategy...\n\nFor now, the crank is safe with me, so I won't have to worry about other thieves taking the seal.\n\nI've tried to contact Sylvia, but she isn't responding anymore in my mirror.\n\nDoes she no longer believe I am up to this task?";
+
+NOTE_UNDERPORT_PIT_1_NAME					= "Underport Pit Barricade";
+NOTE_UNDERPORT_PIT_1_BODY					= "I saw that Mr. Van Der Meer bring a bunch of his boys around and build this barricade here.\n\nWe all know them pigs ain't done squat about them missing folks.\n\nGood for Mr. Van Der Meer!\n\nThere's things down there they ain't telling us about.";
+
+NOTE_UNDERPORT_POWERPLANT_SUBFLOW_1_NAME	= "Underport Power Plant Switch Note";
+NOTE_UNDERPORT_POWERPLANT_SUBFLOW_1_BODY	= "We've lost contact with the workers down in the tunnels. Considering what we've heard from the Constabulary, they're likely a lost cause.\n\nManagement is giving the call to cut off the power down there. Let's hope for their sake that they've got a backup generator.";
+
 NOTE_SHOP_ITEM_STORAGE_NAME		= "Item Storage";
 NOTE_SHOP_ITEM_STORAGE_BODY		= "Doctor,\n\nFeel free to leave behind any belongings in this room.\n\nThey'll be safe in my possession.";
 
-// Mirror
+//-------------------------------------------------------------
+// Underport - Hive
+
+MAPSET_UNDERPORT_HIVE_1_NAME	= "Underport Hive Map";
+MAP_UNDERPORT_HIVE_1_NAME       = "Underport Hive Map";
+
+NOTE_UNDERPORT_HIVE_SUPERVISOR_NAME = "Sewer Supervisor Note";
+NOTE_UNDERPORT_HIVE_SUPERVISOR_BODY = "Clem,\n\nDo you have any idea what's going on in the vents? And before you say anything, it's not the rats. We all know what rats sound like.\n\nThe boys are getting spooked. I've never seen 'em like this, and frankly I don't blame 'em. We still haven't seen hide or hair of Bill since he went to Engineering.\n\nBollocks, I'm going to have to go check it out myself, aren't I?\n\nAll right. I'm going to head over to the maintenance tunnels to grab the full tunnel schematics and start checking out Engineering.";
+
+NOTE_UNDERPORT_HIVE_MONITORING_NAME = "Pump Monitoring Station Logs";
+NOTE_UNDERPORT_HIVE_MONITORING_BODY = "Tuesday\n\nPressure is nominal, no fluctuations +/- 10 PSI\n\nNote: Complained to the constables AGAIN about the riff-raff living down the way in waste treatment. Those laggards live in filth, always making a racket. Drives me nuts. Someone needs to beat some sense into them.\n\nWednesday\n\nPressure nominal, one small fluctuation @ 6:15 AM\n\nNote: Did the constables finally listen to me? I haven't heard a peep from those hooligans for the last two days. Peace at last.\n\nThursday\n\nPressure nominal, no fluctuations +/- 10 PSI\n\nNote: Saw something through the bars down the hall. I don't know what that was, but it didn't look human. Thank Christ there's no door valve on their side.";
+
+NOTE_UNDERPORT_HIVE_HIDING_NAME = "Note from Hiding Worker";
+NOTE_UNDERPORT_HIVE_HIDING_BODY = "I saw one of those bird... things and hid in this back room. I keep trying to run for it but they're everywhere now. This place is hell -- even the rats aren't right down here. Nothing to do but hunker down and wait for the right moment. If I can just keep out of the way, maybe I've got a chance.\n\nMaybe.\n\nIt's the waiting that's the worst part. Writing this down helps keep me from losing it. Gotta stay sharp if I want to see the sky again.";
+
+NOTE_UNDERPORT_HIVE_ELEVATOR_NAME = "Archaeologists' Note About Generator";
+NOTE_UNDERPORT_HIVE_ELEVATOR_BODY = "Professor,\n\nI pulled some strings with my father, who called in a favor with one of his company's suppliers and secured us our very own generator to power the lift and any other machinery we might need. One of the many benefits of having family in high places! Finally, we'll be free of the incessant blackouts from those dingbats at Lampfire Power. They couldn't keep a torch lit in an inferno.\n\nNow here's the important bit: if the generator runs low on fuel, we've set up a depot near the bathhouse ruins where you can get new canisters AND get them filled. Don't make the same mistake Peter did: make sure the canister is actually full before lugging it all the way over!\n\nWith the generator in place we'll no long be constrained by the whims of the power grid and we can finally make some serious progress on the excavation. Huzzah!";
+
+NOTE_UNDERPORT_HIVE_TOWER_NAME		= "Archaeologist Diary";
+NOTE_UNDERPORT_HIVE_TOWER_BODY		= "I am cataloging my observations here as, quite frankly, there isn't much else I can do while I'm stuck here. I was already in the tower to conduct the archaeological survey of the dam front when these fiends overran the camp. They must have been drawn to the noise of the cargo lift.\n\nDay 1\nUnfortunately for my colleagues, the beasts are nearly impossible to outrun. Take a lesson from our primal ancestors and exploit the fact that they can't climb. I managed to scrunge some supplies and weapons just by sneaking around and climbing away when one came stalking.\n\nDay 2?\nTheir morphology is certainly unique. As hatchlings, they more closely resemble an avian species, but the adult specimens are clearly bipedal. I also can't help but remark about the peculiar garments that adorn many of the adults. There is a bruteish variant that has no clothing, but I dare not go in for a closer look.\n\nFoolish. As I was making a trip to get more supplies from the fuel depot, one of the creatures must have followed me. Was it watching me come and go from the tower this whole time and just waited for the right moment?\n\nWell, friends. I suppose I wasn't too far off joining you after all.";
+
+NOTE_UNDERPORT_HIVE_SAFEROOM_NAME = "Waste Disposal Manager's Note";
+NOTE_UNDERPORT_HIVE_SAFEROOM_BODY = "I'm starting to wonder if it was a mistake getting involved with these archeo-whatsit types. Don't get me wrong, the scratch they're slipping me to let them use the waste disposal pit smells the same as any other, and it was fine when they were just bringing tools and equipment down.\n\nBut they've started bringing things back up. Very, very old things. Statues and bits and bobs that give me a funny feeling in my stomach to look at. And that's just what I DO see, since they mostly move stuff overnight when I'm not at my desk. I don't like thinking about what they don't want anyone to see.\n\nAnd what's more, other strange folk have been poking around. I got a visit from a queer fellow in a white mask who wanted me to let him down into the pit but wouldn't say why. I told him off, but I can't shake the feeling that he's someone well-connected (maybe even to the Spymaster) and that I'm in over my head here.\n\nAh, but the money IS nice. What to do, what to do?";
+
+//-------------------------------------------------------------
+// Dimension - Mirror
+
 NOTE_MIRROR_ARCHAEOLOGY_1_NAME	= "";
 NOTE_MIRROR_ARCHAEOLOGY_1_BODY	= "WIP note about archaeology findings.";
 

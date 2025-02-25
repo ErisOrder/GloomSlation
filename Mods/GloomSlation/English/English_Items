@@ -94,6 +94,20 @@ ITEM_MUSICBOX_DESC				= "Wind handle to save the game";
 ITEM_WAXCYLINDER_NAME			= "Wax Cylinder";
 ITEM_WAXCYLINDER_DESC			= "A wax cylinder for the Phonograph. Used to save the current progress. Consumed when used.";
 
+ITEM_LUGGAGE_UPGRADE_6X4_NAME   = "Inventory Upgrade (6x4)";
+ITEM_LUGGAGE_UPGRADE_6X4_DESC   = "An expanded storage container for the luggage case.";
+
+ITEM_LUGGAGE_UPGRADE_7X5_NAME   = "Inventory Upgrade (7x5)";
+ITEM_LUGGAGE_UPGRADE_7X5_DESC   = "An expanded storage container for the luggage case.";
+
+ITEM_LUGGAGE_UPGRADE_8X6_NAME   = "Inventory Upgrade (8x6)";
+ITEM_LUGGAGE_UPGRADE_8X6_DESC   = "An expanded storage container for the luggage case.";
+
+// Seals
+
+ITEM_SEAL_UNDERPORT_NAME		= "Seal of the Underport";
+ITEM_SEAL_UNDERPORT_DESC		= "";
+
 // Food
 ITEM_CHEESE_NAME				= "Cheese Wheel";
 ITEM_CHEESE_DESC				= "A strong scented cheese wheel. The majority of the region's dairy comes from nose-horned goats that migrated from the eastern mountains.";
@@ -222,9 +236,15 @@ ITEM_FLAREGUN_SHOCK_DESC		= "A blinding round for the Flare Pistol.";
 ITEM_GUNPOWDER_NAME				= "Gunpowder";
 ITEM_GUNPOWDER_DESC				= "";
 
+ITEM_HARPOON_ROPE_NAME			= "Harpoon";
+ITEM_HARPOON_ROPE_DESC			= "A sharp harpoon that can burrow into certain surfaces.";
+
+ITEM_HARPOON_ROPE_BUNDLE_NAME	= "Harpoon Bundle";
+ITEM_HARPOON_ROPE_BUNDLE_DESC	= "A bundle of harpoons.";
+
 // Junk
-ITEM_BOTTLE_NAME				= "Glass Bottle";
-ITEM_BOTTLE_DESC				= "An empty, glass liquor bottle that is capable of creating a loud distraction. The faded label of the Ashbrew Brewery wraps the front.";
+ITEM_BOTTLE_1_NAME				= "Glass Bottle";
+ITEM_BOTTLE_1_DESC				= "An empty, glass liquor bottle that is capable of creating a loud distraction. The faded label of the Ashbrew Brewery wraps the front.";
 
 ITEM_CAN_FISH_NAME				= "Can of Fish";
 ITEM_CAN_FISH_DESC				= "A can labeled with a 'Croup Fisheries' sticker. A salty, sickly smell emanates from the wrapper.";
@@ -241,8 +261,38 @@ ITEM_CAN_BEANS_EMPTY_DESC		= "An empty can labeled with a 'Doctor Smithy's Pork 
 ITEM_RIFLE_BROKEN_NAME			= "Huntsmans' Rifle";
 ITEM_RIFLE_BROKEN_DESC			= "A makeshift, shoddy hunting rifle. The grips are built for the distorted proportions of the huntsmen and cannot be handled by average humans.";
 
-ITEM_CORPSE_RAT_NAME = "DEAD RAT";
-ITEM_CORPSE_RAT_DESC = "A dead rat. It smells bloody awful.";
+ITEM_BOTTLE_WINE_1_NAME         = "Wine Bottle";
+ITEM_BOTTLE_WINE_1_DESC         = "An empty bottle of wine that would shatter easily if thrown. The label is torn off, so there's no way to tell how much you might have enjoyed what was inside.";
+
+ITEM_BRICK_1_NAME               = "Brick";
+ITEM_BRICK_1_DESC               = "A brick, broken off of a wall. This won't do much damage but will definitely get someone's attention.";
+
+ITEM_BOOT_1_LEFT_NAME           = "Boot";
+ITEM_BOOT_1_LEFT_DESC           = "A old, worn leather boot for the left foot. Smells strongly of sweaty toes and fungus.";
+
+ITEM_BOOT_1_RIGHT_NAME          = "Boot";
+ITEM_BOOT_1_RIGHT_DESC          = "A old, worn leather boot for the right foot. Smells strongly of sweaty toes and fungus.";
+
+ITEM_TINCAN_1_NAME              = "Tin Can";
+ITEM_TINCAN_1_DESC              = "A tin can without a label. You can't determine from the smell what it used to contain.";
+
+ITEM_TINCAN_2_NAME              = "Tin Can";
+ITEM_TINCAN_2_DESC              = "A tin can without a label. You can't determine from the smell what it used to contain.";
+
+ITEM_CORPSE_RAT_NAME = "RAT";
+ITEM_CORPSE_RAT_DESC = "A dead rat. It smells bloody awful";
+
+ITEM_CORPSE_RAT_BLACK_NAME = "BLACK RAT";
+ITEM_CORPSE_RAT_BLACK_DESC = "A dead black rat. It smells bloody awful";
+
+ITEM_CORPSE_RAT_GRAY_1_NAME = "LIGHT GRAY RAT";
+ITEM_CORPSE_RAT_GRAY_1_DESC = "A dead light gray rat. It smells bloody awful";
+
+ITEM_CORPSE_RAT_GRAY_2_NAME = "DARK GRAY RAT";
+ITEM_CORPSE_RAT_GRAY_2_DESC = "A dead dark gray rat. It smells bloody awful";
+
+ITEM_CORPSE_RAT_INFECTED_NAME = "INFECTED RAT";
+ITEM_CORPSE_RAT_INFECTED_DESC = "A dead rat oozing with pestilence.";
 
 // Giblets
 ITEM_GIBLET_WOODSMAN_HEAD_NAME		= "Woodsman Head";
@@ -303,12 +353,24 @@ ITEM_FLAREGUN_DESC					= "A custom, single-shot pistol with a silencer. The cham
 ITEM_FLASHBOMB_NAME					= "Flashbomb";
 ITEM_FLASHBOMB_DESC					= "A throwable bomb that emits a blinding flash, rendering nearby creatures unable to see or attack. A newly introduced tool used by the Constabulary to quell riots and protests.";
 
+ITEM_CHOKEBOMB_NAME					= "Chokebomb";
+ITEM_CHOKEBOMB_DESC					= "A throwable bomb that emits a cloud of noxious smoke capable of stunning creatures and extinguishing flames. A newly introduced tool used by the Constabulary to quell riots and protests.";
+
+ITEM_HARPOONGUN_NAME			    = "Harpoon Gun";
+ITEM_HARPOONGUN_DESC			    = "A harpoon gun powered by a novel steam exhaust system. While this weapon is usually employed for fishing purposes, one can use it on certain surfaces to create an extendable rope.";
+
 // Tools
 ITEM_BUTTON_PRESSER_NAME			= "Button Cap";
 ITEM_BUTTON_PRESSER_DESC			= "A cap for a button presser. Can be used to repair certain devices.";
 
-ITEM_VALVE_NAME						= "Handvalve";
-ITEM_VALVE_DESC						= "A handvalve for manually operating various devices. Can be installed into an appropriate valve seat.";
+ITEM_VALVE_WHEEL_NAME						= "Handvalve";
+ITEM_VALVE_WHEEL_DESC						= "A handvalve for manually operating various devices. Can be installed into an appropriate valve seat.";
+
+ITEM_CRANK_HANDLE_NAME				= "Crank Handle";
+ITEM_CRANK_HANDLE_DESC				= "A crank handle for manually operating various devices. Can be installed into an appropriate crank slot.";
+
+ITEM_CRANK_HANDLE_GOLD_NAME			= "Golden Crank Handle";
+ITEM_CRANK_HANDLE_GOLD_DESC			= "An ornate crank handle owned by Mr. Van Der Meer. A rather fancy key to open up the gruesome underbelly of the city.";
 
 ITEM_CANNONBALL_NAME				= "Cannonball";
 ITEM_CANNONBALL_DESC				= "Cannonball that can be loaded into a cannon. There's a thin layer of rust covering it.";
@@ -319,7 +381,9 @@ ITEM_CANNON_FUSE_DESC				= "A fuse string for a cannon.";
 ITEM_POWDERFLASK_NAME				= "Powderflask Horn";
 ITEM_POWDERFLASK_DESC				= "A small container made from an animal horn. Useful for pouring gunpowder into older, muzzle-loaded weapons like muskets and cannons.";
 
+//-------------------------------------------------------------
 // Keys
+
 KEY_NONE_NAME						= "None";
 KEY_NONE_DESC						= "No keys have been found.";
 
@@ -334,6 +398,9 @@ KEY_EMBLEM_CROW_DESC				= "Engraved with the symbol of a Crow";
 
 KEY_EMBLEM_RAT_NAME					= "Emblem of the Rat";
 KEY_EMBLEM_RAT_DESC					= "Engraved symbol of a Rat";
+
+KEY_SEAL_UNDERPORT_NAME				= "Seal of the Underport";
+KEY_SEAL_UNDERPORT_DESC				= "The seal of the Guild of Fishermen, who founded the first ports along the bluffs. Formerly nomadic sailors, these pioneers braved the horrors of the abyssal sea in search of fertile lands.";
 
 KEY_DEMO_SAFEHOUSE_NAME				= "Safehouse Key";
 KEY_DEMO_SAFEHOUSE_DESC				= "For the safehouse front door";
@@ -371,6 +438,9 @@ KEY_FISHERY_CARRIAGE_BASEMENT_DESC	= "Key to the basement garage of the Mr. Crou
 KEY_COAST_FISHERY_CABIN_NAME		= "Fishery Cabin Key";
 KEY_COAST_FISHERY_CABIN_DESC		= "Key to the cabin overlooking Mr. Croup's Fishery.";
 
+KEY_FISHERY_CABIN_SHORTCUT_NAME		= "Fishery Cabin Tunnel Key";
+KEY_FISHERY_CABIN_SHORTCUT_DESC		= "Key to the tunnel beneath the cabin overlooking Mr. Croup's Fishery.";
+
 KEY_CAVES_POWERGENERATOR_NAME		= "Mines Generator Key";
 KEY_CAVES_POWERGENERATOR_DESC		= "Key to the generator room in the coastal mines.";
 
@@ -398,35 +468,68 @@ KEY_COAST_GUARDTOWER_DESC			= "Key to the coastal guard tower outside the city g
 KEY_COAST_GATEHOUSE_STORAGE_NAME	= "City Gatehouse Storage Key";
 KEY_COAST_GATEHOUSE_STORAGE_DESC	= "Key to the storage room in the city gatehouse.";
 
-KEY_MARKET_SHACK_1_NAME = "Fishing Hut Door Key";
-KEY_MARKET_SHACK_1_DESC = "Key to the door of a locked fishing hut in in the Market District.";
+KEY_MARKET_SHACK_1_NAME				= "Fishing Hut Door Key";
+KEY_MARKET_SHACK_1_DESC				= "Key to the door of a locked fishing hut in in the Market District.";
 
-KEY_MARKET_GUNSHOP_FRONTDOOR_NAME	= "Gunshop Front Door Key";
-KEY_MARKET_GUNSHOP_FRONTDOOR_DESC	= "Key to the front door of the gunshop in the Market District.";
+KEY_MARKET_GUNSHOP_FRONTDOOR_NAME		= "Gunshop Front Door Key";
+KEY_MARKET_GUNSHOP_FRONTDOOR_DESC		= "Key to the front door of the gunshop in the Market District.";
 
-KEY_MARKET_GUNSHOP_CASHIER_NAME		= "Gunshop Cashier Key";
-KEY_MARKET_GUNSHOP_CASHIER_DESC		= "Key to the cashier desk of the gunshop in the Market District.";
+KEY_MARKET_GUNSHOP_CASHIER_NAME			= "Gunshop Cashier Key";
+KEY_MARKET_GUNSHOP_CASHIER_DESC			= "Key to the cashier desk of the gunshop in the Market District.";
 
-KEY_MARKET_GUNSHOP_DISPLAYCASE_NAME	= "Gunshop Display Case Key";
-KEY_MARKET_GUNSHOP_DISPLAYCASE_DESC	= "Key to the display cases in the gunshop in the Market District.";
+KEY_MARKET_GUNSHOP_DISPLAYCASE_NAME		= "Gunshop Display Case Key";
+KEY_MARKET_GUNSHOP_DISPLAYCASE_DESC		= "Key to the display cases in the gunshop in the Market District.";
 
-KEY_MARKET_DOCK_POWERSTATION_NAME	= "Market Power Station Key";
-KEY_MARKET_DOCK_POWERSTATION_DESC	= "Key to the power station near the dock in the Market District.";
+KEY_MARKET_DOCK_POWERSTATION_NAME		= "Market Power Station Key";
+KEY_MARKET_DOCK_POWERSTATION_DESC		= "Key to the power station near the dock in the Market District.";
 
-KEY_MARKET_BARBERSHOP_BASEMENT_NAME	= "Barbershop Basement Key";
-KEY_MARKET_BARBERSHOP_BASEMENT_DESC	= "Key to the basement of the Barbershop in the Market District.";
+KEY_MARKET_BARBERSHOP_BASEMENT_NAME		= "Barbershop Basement Key";
+KEY_MARKET_BARBERSHOP_BASEMENT_DESC		= "Key to the basement of the Barbershop in the Market District.";
 
-KEY_MARKET_MANOR_BACKDOOR_1_NAME	= "Lord Kar's Manor Back Key";
-KEY_MARKET_MANOR_BACKDOOR_1_DESC	= "Key to the back door of a manor in the Market District.";
+KEY_MARKET_MANOR_BACKDOOR_1_NAME		= "Lord Kar's Manor Back Key";
+KEY_MARKET_MANOR_BACKDOOR_1_DESC		= "Key to the back door of a manor in the Market District.";
 
-KEY_MARKET_RESTROOM_FRONTDOOR_NAME	= "Market Restroom Key";
-KEY_MARKET_RESTROOM_FRONTDOOR_DESC	= "Key to the public restroom in the Market District. Quite smelly.";
+KEY_MARKET_RESTROOM_FRONTDOOR_NAME		= "Market Restroom Key";
+KEY_MARKET_RESTROOM_FRONTDOOR_DESC		= "Key to the public restroom in the Market District. Quite smelly.";
 
-KEY_MARKET_MANOR_2_FRONTDOOR_NAME	= "Lord Marwyn's Manor Key";
-KEY_MARKET_MANOR_2_FRONTDOOR_DESC	= "Key to the front door of a manor in the Market District. The name 'Lord Marwyn' is inscribed on the head.";
+KEY_MARKET_MANOR_2_FRONTDOOR_NAME		= "Lord Marwyn's Manor Key";
+KEY_MARKET_MANOR_2_FRONTDOOR_DESC		= "Key to the front door of a manor in the Market District. The name 'Lord Marwyn' is inscribed on the head.";
 
-KEY_MARKET_MANOR_3_FRONTDOOR_NAME	= "Lord Kar's Manor Front Key";
-KEY_MARKET_MANOR_3_FRONTDOOR_DESC	= "Key to the front door of a manor in the Market District. The name 'Lord Kar' is inscribed on the head.";
+KEY_MARKET_MANOR_3_FRONTDOOR_NAME		= "Lord Kar's Manor Front Key";
+KEY_MARKET_MANOR_3_FRONTDOOR_DESC		= "Key to the front door of a manor in the Market District. The name 'Lord Kar' is inscribed on the head.";
+
+KEY_UNDERPORT_ENTRANCE_NAME				= "Underport Entrance Gate Key";
+KEY_UNDERPORT_ENTRANCE_DESC				= "Key to the entry gate to the Underport in the Market District.";
+
+KEY_UNDERPORT_PUMPSTATION_MAIN_NAME		= "Underport Pump Station Key";
+KEY_UNDERPORT_PUMPSTATION_MAIN_DESC		= "Key to the Public Pumpworks Station in the Underport.";
+
+KEY_UNDERPORT_WAREHOUSE_1F_NAME			= "Van Der Meer Warehouse 1F Key";
+KEY_UNDERPORT_WAREHOUSE_1F_DESC			= "Key to the first floor of the Van Der Meer Warehouse in the Underport.";
+
+KEY_UNDERPORT_WAREHOUSE_ARMORY_NAME		= "Van Der Meer Armory Key";
+KEY_UNDERPORT_WAREHOUSE_ARMORY_DESC		= "Key to the weapons and explosive storage room in the Van Der Meer Warehouse in the Underport.";
+
+KEY_UNDERPORT_WAREHOUSE_GATE_NAME		= "Van Der Meer Gate Key";
+KEY_UNDERPORT_WAREHOUSE_GATE_DESC		= "Key to the side gate of the Van Der Meer Warehouse in the Underport.";
+
+KEY_UNDERPORT_SEWER_B_BREAKROOM_NAME	= "Sewer Section B Break Room Key";
+KEY_UNDERPORT_SEWER_B_BREAKROOM_DESC	= "Key to the break room of the Sewer B section in the Underport.";
+
+KEY_UNDERPORT_TRAM_CHEST_NAME			= "Tram Unloading Room Key";
+KEY_UNDERPORT_TRAM_CHEST_DESC			= "Key to the chest in the Underport's tram unloading room.";
+
+KEY_UNDERPORT_CASTLE_GATE_NAME			= "Castle Gate Key";
+KEY_UNDERPORT_CASTLE_GATE_DESC			= "Key to the Underport's Castle Gate.";
+
+KEY_HIVE_SHANTYTOWN_NAME                = "Shanty Town Key";
+KEY_HIVE_SHANTYTOWN_DESC                = "Key to the shanty town gate in the Hive.";
+
+KEY_HIVE_ENGINEERING_NAME				= "Engineering Access Key";
+KEY_HIVE_ENGINEERING_DESC				= "Key to the Engineering Access area in the Hive.";
+
+KEY_HIVE_SUPERVISOR_NAME                = "Sewer Supervisor's Key";
+KEY_HIVE_SUPERVISOR_DESC                = "Key to the Gate Control Room and Supervisor's lockers in the Hive.";
 
 // Currency
 CURRENCY_GOLD_NAME					= "Gold";
@@ -457,8 +560,24 @@ ITEM_HORN_ULMAR_DESC				= "A prized, ivory horn from the Old Kingdom. It is told
 ITEM_RING_EMERALD_NAME				= "Emerald Ring";
 ITEM_RING_EMERALD_DESC				= "A ring with an emerald gem. Emeralds are rumored to be the gemstone of the madman, inducing one to embrace chaos and furor.";
 
-ITEM_GOLD_CHALICE_1_NAME			= "Gold Chalice";
-ITEM_GOLD_CHALICE_1_DESC			= "An ornate golden chalice, adorned with engraved trims and set with blood-red gemstones.";
+ITEM_CHALICE_1_GOLD_NAME			= "Gold Chalice";
+ITEM_CHALICE_1_GOLD_DESC			= "An ornate golden chalice, adorned with engraved trims and set with blood-red gemstones.";
+
+ITEM_POCKETWATCH_1_GOLD_NAME = "Gold Pocket Watch";
+ITEM_POCKETWATCH_1_GOLD_DESC = "A golden pocket watch assembled by the finest watchmakers in the city.";
+
+ITEM_CANOPIC_JAR_CROW_NAME = "Canopic Jar (Crow)";
+ITEM_CANOPIC_JAR_CROW_DESC = "An ancient jar used to preserve organs for the afterlife. The lid forms a crow's head with piercing eyes and a menacingly sharp beak, symbolizing death.";
+
+ITEM_CANOPIC_JAR_GOAT_NAME = "Canopic Jar (Goat)";
+ITEM_CANOPIC_JAR_GOAT_DESC = "An ancient jar used to preserve organs for the afterlife. A skilled artisan has sculpted a goat out of the jar's stone head as a symbol of virility.";
+
+ITEM_CANOPIC_JAR_LION_NAME = "Canopic Jar (Lion)";
+ITEM_CANOPIC_JAR_LION_DESC = "An ancient jar used to preserve organs for the afterlife. The stone lid is in the shape of a lion, evoking the strength and bravery of the one whose organs are contained within.";
+
+ITEM_COIN_ANCIENT_NAME              = "Ancient Coin";
+ITEM_COIN_ANCIENT_DESC              = "An ancient coin of hammered bronze. The obverse features a relief of an unknown man, and on the reverse a strange faceless figure and undecipherable runes.";
+
 
 //-------------------------------------------------------------
 // Seasonal
