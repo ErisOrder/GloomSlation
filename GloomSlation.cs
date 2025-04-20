@@ -13,12 +13,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 using Gloomwood.Entity;
 using Gloomwood.Entity.Items;
+using Gloomwood.UI.Journal;
 using System.Linq;
 
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.302.08-modv0.4", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.305.02-modv0.5", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
@@ -604,6 +606,36 @@ namespace GloomSlation
             {
                 ti.textComponent.isOverlay = true;
             };
+        }
+    }
+
+    /// Journal: automatically adjust data entries height
+    [HarmonyPatch(typeof(JournalResearchPanel), "TryGetOrCreateElement")]
+    static class PatchJournalData {
+        static void Prefix(
+            ref JournalResearchPanel __instance,
+            ref JournalDiagramElement ___elementPrefab,
+            ref VerticalLayoutGroup ___verticalLayoutGroup
+        ) {
+            // Lower original spacing - this is flex-ish layout now
+            ___verticalLayoutGroup.spacing = 0.01f;
+        }
+
+        static void Postfix(
+            ref JournalResearchPanel __instance,
+            ref List<JournalDiagramElement> ___elementList,
+            ref VerticalLayoutGroup ___verticalLayoutGroup
+        ) {
+            foreach(var elem in ___elementList) {
+                var tmp = elem.GetComponentInChildren<TMPro.TextMeshProUGUI>();    
+                var lpos = tmp.rectTransform.localPosition;
+                // Shift text higher to match <> marker
+                lpos.y = -0.005f;
+                tmp.rectTransform.localPosition = lpos;
+                // Resize outer box based on entry text height
+                var boxtf = elem.GetComponent<RectTransform>();
+                boxtf.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, tmp.preferredHeight);
+            }
         }
     }
 }

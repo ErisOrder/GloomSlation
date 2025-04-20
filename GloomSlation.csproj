@@ -8,6 +8,7 @@
   <PropertyGroup>
     <ExcludeGeneratedDebugSymbol>False</ExcludeGeneratedDebugSymbol>
     <IncludeSymbols>True</IncludeSymbols>
+    <EnableDefaultCompileItems>False</EnableDefaultCompileItems>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -17,6 +18,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>embedded</DebugType>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Include="GloomSlation.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="%2a%2a/%2a.resx" />
+  </ItemGroup>
   
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -51,6 +60,9 @@
     </Reference>
     <Reference Include="UnityEngine.UIModule">
       <HintPath>.\Gloomwood\Gloomwood_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>.\Gloomwood\Gloomwood_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   
