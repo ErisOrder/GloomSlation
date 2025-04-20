@@ -33,7 +33,15 @@ VO_MERCHANT_SHOP_INTRO_3			= "Doctor, we must get you into that manor, to find a
 VO_MERCHANT_SHOP_INTRO_4			= "Now your first task is collecting the stone seals that will give you passage through the old city gate to the mountains around her manor.";
 VO_MERCHANT_SHOP_INTRO_5			= "Each district contains a seal, a symbol of when the old noble families shared control of the city.";
 VO_MERCHANT_SHOP_INTRO_6			= "In the back room, there's an old map of the city I managed to dig up. That should help, but it's rather outdated I fear.";
-VO_MERCHANT_SHOP_REST				= "There's a room upstairs that I used to rent out to travelers. Feel free to take it and rest as you need to. You are safe within these walls.";
+VO_MERCHANT_SHOP_INTRO_7			= "There's a room upstairs that I used to rent out to travelers. Feel free to take it and rest as you need to. You are safe within these walls.";
+VO_MERCHANT_SHOP_REST				= "Now once you've gotten some rest, come back and see me. I may have a lead on the first seal you need.";
+VO_MERCHANT_SHOP_GHOST				= "What's wrong, doctor? You look as if you've seen a ghost!";
+VO_MERCHANT_SHOP_UNDERPORT_KEY_1	= "Here, take this key.";
+VO_MERCHANT_SHOP_UNDERPORT_KEY_2	= "You'll need it to get into the Underport.";
+VO_MERCHANT_SHOP_UNDERPORT_KEY_3	= "I've been told a seal is located within the tunnels there.";
+VO_MERCHANT_SHOP_UNDERPORT_KEY_4	= "Eh... stay dry, Doctor.";
+VO_MERCHANT_SHOP_UNDERPORT_SEAL_1	= "Ah, that was some dirty business down in the Underport, eh doctor? Staying dry, I hope!";
+VO_MERCHANT_SHOP_UNDERPORT_SEAL_2	= "But, more importantly, I see you got the seal. Well done.";
 VO_MERCHANT_SHOP_SELL_FAIL_1		= "Get your junk off my counter!";
 VO_MERCHANT_SHOP_SELL_START_1		= "What are ya sellin'?";
 VO_MERCHANT_SHOP_SELL_SUCCESS_1		= "Oh, this I like... better.";
@@ -43,6 +51,8 @@ VO_MERCHANT_SHOP_SELL_SUCCESS_4		= "Curious! It intrigues me.";
 VO_MERCHANT_SHOP_SELL_SUCCESS_5		= "Very nice!";
 VO_MERCHANT_SHOP_SELL_SUCCESS_6		= "Ah, lovely...";
 VO_MERCHANT_SHOP_SELL_SUCCESS_7		= "Excellent!";
+VO_MERCHANT_SHOP_INVENTORY_SIZE_1	= "Need space to carry more junk in your trunk? Heh heh heh heh heh... I've got just the thing!";
+VO_MERCHANT_SHOP_INVENTORY_SIZE_2	= "Look over on the counter. I've got a bigger briefcase for sale heh, if you need one.";
 
 //-------------------------------------------------------------
 // Countess
@@ -58,6 +68,9 @@ VO_COUNTESS_CON_LIGHTHOUSE_PROMISE		= "a promise few others here can make.";
 VO_COUNTESS_CON_LIGHTHOUSE_SAFEARRIVAL	= "I can guarantee your safe arrival,";
 VO_COUNTESS_CON_LIGHTHOUSE_WAITING		= "I'll be waiting...";
 VO_COUNTESS_CON_SHOPKEEP_WARN_1			= "So it's that fool merchant that has been leading you astray. You trust that sniveling shopkeep? I had greater expectations from you, child.";
+VO_COUNTESS_CON_UNDERPORT_1				= "I was just a little girl when the city built the first of the tunnels.";
+VO_COUNTESS_CON_UNDERPORT_2				= "I watched how the workers dug down deeper and deeper until the darkness suffocated every bit of their bodies.";
+VO_COUNTESS_CON_UNDERPORT_3				= "They brought back with them remnants of an ancient city that we only heard of in tales.";
 
 //-------------------------------------------------------------
 // Edward (Fishery)
@@ -129,12 +142,16 @@ SFX_HUNTSMAN_REACT_CORPSE			= "Murder...";
 SFX_HUNTSMAN_REACT_LIGHT_BROKEN_1	= "Who snuffed out the light?";
 SFX_HUNTSMAN_REACT_LIGHT_BROKEN_2	= "This darkness won't save you.";
 SFX_HUNTSMAN_REACT_SUSPICIOUS		= "This is not how I left this.";
+SFX_HUNTSMAN_REACT_TRICKERY_1		= "Parlor tricks!";
+SFX_HUNTSMAN_REACT_TRICKERY_2		= "Get back here!";
 SFX_HUNTSMAN_COMBAT_ALLYDEATH_1		= "Damn you!";
 SFX_HUNTSMAN_COMBAT_ALLYDEATH_2		= "Damn you!";
 SFX_HUNTSMAN_COMBAT_ALLYDEATH_3		= "Damn you!";
 SFX_HUNTSMAN_COMBAT_ALLYDEATH_4		= "No!";
 SFX_HUNTSMAN_COMBAT_ALLYDEATH_5		= "No!";
 SFX_HUNTSMAN_COMBAT_ALLYDEATH_6		= "No!";
+SFX_HUNTSMAN_COMBAT_FRIENDLYFIRE_1 = "You hit me, you idiot!";
+SFX_HUNTSMAN_COMBAT_FRIENDLYFIRE_2 = "Watch it!";
 SFX_HUNTSMAN_COMBAT_TAUNT_1			= "Muahahahaha!";
 SFX_HUNTSMAN_COMBAT_TAUNT_2			= "Muhaha ha ha ha!";
 SFX_HUNTSMAN_COMBAT_TAUNT_3			= "Muhahaha!";
@@ -197,6 +214,15 @@ VO_HUNTSMAN_CON_MARKET_SHOP_1			= "Yeah, and it's full of overpriced junk. Who n
 VO_HUNTSMAN_CON_MARKET_SHOP_2			= "Relinquish the old man of his burdens.";
 VO_HUNTSMAN_CON_MARKET_SHOP_3			= "Basically saints! Hehe.";
 VO_HUNTSMAN_CON_BEANS_1					= "Anything good in there?";
+VO_HUNTSMAN_CON_RAIN_1					= "I'm freezing my tits off out here.";
+VO_HUNTSMAN_CON_UNDERPORT_BRIDGES_1		= "Any word from Brother Griswald and his party?";
+VO_HUNTSMAN_CON_UNDERPORT_BRIDGES_2		= "How hard could it be to raise those bridges? I tire of these games. We need access to that power plant.";
+VO_HUNTSMAN_CON_UNDERPORT_DEATH_1		= "What in the hells are you? Get back! No no no no!";
+VO_HUNTSMAN_CON_UNDERPORT_PIT_1			= "It seems that someone has sealed the pit to the tunnels below. Fancy contraption. Looks like it needs some sort of special crank.";
+VO_HUNTSMAN_CON_UNDERPORT_PIT_2			= "It won't budge anyway. Hmm.";
+VO_HUNTSMAN_CON_UNDERPORT_PIT_3			= "There's some sort of growth on it... agh! It stinks!";
+VO_HUNTSMAN_CON_UNDERPORT_WATCHDOG_1	= "It must've been reprogrammed. The constables have these watchdogs all over the upper areas of the city. Whoever owned this warehouse must've been some big shot.";
+
 
 //-------------------------------------------------------------
 // Woodsman
@@ -232,6 +258,8 @@ SFX_WOODSMAN_REACT_CORPSE			= "One of our brothers was just killed!";
 SFX_WOODSMAN_REACT_LIGHT_BROKEN_1	= "Who snuffed out the light?";
 SFX_WOODSMAN_REACT_LIGHT_BROKEN_2	= "This darkness won't save you.";
 SFX_WOODSMAN_REACT_SUSPICIOUS		= "This is not how I left this.";
+SFX_WOODSMAN_REACT_TRICKERY_1		= "Agh! When I catch you I will...";
+SFX_WOODSMAN_REACT_TRICKERY_2		= "You think you're so clever, huh!?";
 SFX_WOODSMAN_COUGH_INTRO			= "*HACKING COUGH*";
 SFX_WOODSMAN_COUGH_1				= "*Cough*";
 SFX_WOODSMAN_COUGH_2				= "Ack! *Cough*";
@@ -262,6 +290,8 @@ SFX_WOODSMAN_COMBAT_ALLYDEATH_1		= "No!";
 SFX_WOODSMAN_COMBAT_ALLYDEATH_2		= "No!";
 SFX_WOODSMAN_COMBAT_ALLYDEATH_3		= "No!";
 SFX_WOODSMAN_COMBAT_ALLYDEATH_4		= "No!";
+SFX_WOODSMAN_COMBAT_FRIENDLYFIRE_1 = "Hit him not me, moron!";
+SFX_WOODSMAN_COMBAT_FRIENDLYFIRE_2 = "Look where you're aiming!";
 SFX_WOODSMAN_COMBAT_KILL_PLAYER_1	= "Too easy!";
 SFX_WOODSMAN_COMBAT_KILL_PLAYER_2	= "The Countess will be pleased!";
 SFX_WOODSMAN_CONDITION_BLIND_1		= "Ahh! My eyes! I can't see!";
@@ -283,6 +313,8 @@ SFX_WOODSMAN_PAIN_HEAVY_2			= "Oh-agh!";
 SFX_WOODSMAN_PAIN_HEAVY_3			= "Gah-agh!";
 SFX_WOODSMAN_DEATH_QUIET_1			= "Agh!";
 SFX_WOODSMAN_DEATH_QUIET_2			= "Agh!";
+SFX_WOODSMAN_DEATH_FALL_1			= "Nooooooooooooo!";
+SFX_WOODSMAN_DEATH_FALL_2			= "Ahhhhhhhhhhhhh!";
 SFX_WOODSMAN_DEATH_1				= "Agh!";
 SFX_WOODSMAN_DEATH_2				= "Agh!";
 SFX_WOODSMAN_DEATH_3				= "Agh... finish him, brothers...";
@@ -327,6 +359,14 @@ VO_WOODSMAN_CON_MARKET_SHOP_1			= "Isn't there some weird antique shop around he
 VO_WOODSMAN_CON_MARKET_SHOP_2			= "Maybe we should check out some of his wares, eh? Help him with his hoarding problem.";
 VO_WOODSMAN_CON_MARKET_SHOP_3			= "We're so thoughtful, aren't we?";
 VO_WOODSMAN_CON_BEANS_1					= "No, it's been picked clean. All I've found are these cans of beans.";
+VO_WOODSMAN_CON_RAIN_1					= "Ugh... this bloody rain.";
+VO_WOODSMAN_CON_POWEROUTAGE				= "Another blackout?! That generator is such rubbish.";
+VO_WOODSMAN_CON_UNDERPORT_BRIDGES_1		= "No, no one has come back from the expedition so far.";
+VO_WOODSMAN_CON_UNDERPORT_PIT_ALT_1		= "They probably did it for a good reason. Don't touch it, cobblehead.";
+VO_WOODSMAN_CON_UNDERPORT_PIT_ALT_2		= "What did I just say? You're going to get us in trouble again!";
+VO_WOODSMAN_CON_UNDERPORT_FLEE_1		= "To hell with this Order and to hell with the Countess! I'm outta here!";
+VO_WOODSMAN_CON_UNDERPORT_WATCHDOG_1 = "Uh... It's not barking at us.";
+VO_WOODSMAN_CON_UNDERPORT_WATCHDOG_2 = "Probably has a stash around here too. We should search that back office.";
 
 //-------------------------------------------------------------
 // Fishdog
