@@ -13,7 +13,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Gloomwood.Entity;
 using Gloomwood.Entity.Items;
 using Gloomwood.UI.Journal;
@@ -610,11 +609,9 @@ namespace GloomSlation
     }
 
     /// Journal: automatically adjust data entries height
-    [HarmonyPatch(typeof(JournalResearchPanel), "TryGetOrCreateElement")]
+    [HarmonyPatch(typeof(JournalAnalysisPanel), "ApplyMode")]
     static class PatchJournalData {
         static void Prefix(
-            ref JournalResearchPanel __instance,
-            ref JournalDiagramElement ___elementPrefab,
             ref VerticalLayoutGroup ___verticalLayoutGroup
         ) {
             // Lower original spacing - this is flex-ish layout now
@@ -622,9 +619,7 @@ namespace GloomSlation
         }
 
         static void Postfix(
-            ref JournalResearchPanel __instance,
-            ref List<JournalDiagramElement> ___elementList,
-            ref VerticalLayoutGroup ___verticalLayoutGroup
+            ref List<JournalDiagramElement> ___elementList
         ) {
             foreach(var elem in ___elementList) {
                 var tmp = elem.GetComponentInChildren<TMPro.TextMeshProUGUI>();    
