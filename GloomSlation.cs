@@ -19,7 +19,7 @@ using Gloomwood.UI.Journal;
 using System.Linq;
 
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.305.02-modv0.5", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.305.02-modv0.5.1", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
