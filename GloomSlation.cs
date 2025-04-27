@@ -621,6 +621,10 @@ namespace GloomSlation
         static void Postfix(
             ref List<JournalDiagramElement> ___elementList
         ) {
+            if (___elementList == null) {
+                return;
+            }
+            
             foreach(var elem in ___elementList) {
                 var tmp = elem.GetComponentInChildren<TMPro.TextMeshProUGUI>();    
                 var lpos = tmp.rectTransform.localPosition;
