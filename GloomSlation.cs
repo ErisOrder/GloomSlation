@@ -637,5 +637,15 @@ namespace GloomSlation
             }
         }
     }
+
+    /// Workaround for mirror that should display Countess
+    [HarmonyPatch(typeof(Gloomwood.Rendering.CountessMirror), "StartSequence")]
+    static class PatchMirror
+    {
+        static void Postfix(ref Gloomwood.Rendering.CountessMirror __instance)
+        {
+            __instance.SendMessage("Awake");
+        }
+    }
 }
 
