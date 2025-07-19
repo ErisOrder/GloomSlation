@@ -17,6 +17,7 @@ using Gloomwood.Entity;
 using Gloomwood.Entity.Items;
 using Gloomwood.UI.Journal;
 using System.Linq;
+using UnityEngine.Networking;
 
 
 [assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.308.19-modv0.6", "pipo, nikvoid")]
@@ -32,6 +33,14 @@ namespace GloomSlation
                 .GetType()
                 .GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
                 .GetValue(instance);
+        }
+
+        public static void WritePrivateField<T>(this object instance, string name, T val)
+        {
+            instance
+                .GetType()
+                .GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
+                .SetValue(instance, val);
         }
 
         public static bool NullOrEmpty(this string inst)
@@ -126,6 +135,8 @@ namespace GloomSlation
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
         private readonly HashSet<string> availableTextures = new HashSet<string>();
+        private readonly Dictionary<string, AudioClip> availableAudio = new Dictionary<string, AudioClip>();
+        private readonly HashSet<int> processedAudioIds = new HashSet<int>();
         private readonly HashSet<string> specializedTex = new HashSet<string>();
         private readonly AdjustVisitor postInitAdjustVisitor = new AdjustVisitor();
 
@@ -213,7 +224,54 @@ namespace GloomSlation
                 }
             }
 
+            // Load audio
+            var audioPath = Path.Combine(langPath, "Audio");
+            if (Directory.Exists(audioPath))
+            {
+                foreach (var path in Directory.EnumerateFiles(audioPath))
+                {
+                    var name = Path.GetFileNameWithoutExtension(path);
+                    if (Path.GetExtension(path) != ".mp3")
+                    {
+                        continue;
+                    }
+
+                    name = PreparePatchName(name);
+                    var clip = LoadAudioClip(path);
+                    availableAudio.Add(name, clip);
+                    DebugMsg($"Available audio {name}");
+                }
+            }
+
             InitAdjustments();
+        }
+
+        // FIXME: What a cursed way to load clip... 
+        AudioClip LoadAudioClip(string path)
+        {
+            // Create UnityWebRequest for the MP3 file
+            path = $"file:///{path}";
+            using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(path, AudioType.MPEG))
+            {
+                // Enable streaming to reduce memory usage
+                ((DownloadHandlerAudioClip)www.downloadHandler).streamAudio = true;
+
+                // Send the request and block until complete
+                www.SendWebRequest();
+                while (!www.isDone)
+                {
+                    System.Threading.Thread.Sleep(1);
+                }
+
+                // Check for errors
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+                {
+                    MelonLogger.Error("Error loading MP3: " + www.error);
+                }
+
+                // Return the AudioClip
+                return DownloadHandlerAudioClip.GetContent(www);
+            }
         }
 
         /// Log message only if debugMode active
@@ -512,6 +570,31 @@ namespace GloomSlation
 
             return entries;
         }
+
+        /// Replace all clips in asset
+        public void PatchSound(Gloomwood.Sound.SoundAsset asset) {
+            var id = asset.GetInstanceID();
+            // Skip processed
+            if (processedAudioIds.Contains(id)) {
+                return;
+            }
+            var patched = false;
+            for (var clipn = 0; clipn < asset.ClipCount; clipn++) {
+                var key = PreparePatchName($"{asset.name}_{clipn}");
+                if (availableAudio.TryGetValue(key, out var clip)) {
+                    DebugMsg($"Patch audio {asset.name}:{clipn}");
+                    // Replace clip
+                    var clips = asset.ReadPrivateField<AudioClip[]>("clips");
+                    clips[clipn] = clip;
+                    asset.WritePrivateField<AudioClip[]>("clips", clips);
+                    patched = true;
+                }
+            }
+            if (!patched) {
+                DebugMsg($"Audio patch not found: {asset.name}");
+            }
+            processedAudioIds.Add(id);
+        }
     }
 
     [HarmonyPatch(typeof(GameObject), "SetActive")]
@@ -643,6 +726,16 @@ namespace GloomSlation
         static void Postfix(ref Gloomwood.Rendering.CountessMirror __instance)
         {
             __instance.SendMessage("Awake");
+        }
+    }
+
+    /// Replace audio on first access
+    [HarmonyPatch(typeof(Gloomwood.Sound.SoundAsset), "get_Clips")]
+    static class PatchSoundAsset
+    {
+        static void Prefix(ref Gloomwood.Sound.SoundAsset __instance)
+        {
+            Melon<GloomSlation>.Instance.PatchSound(__instance);
         }
     }
 }
