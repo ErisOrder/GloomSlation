@@ -19,7 +19,7 @@ using Gloomwood.UI.Journal;
 using System.Linq;
 
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.305.02-modv0.5.1", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.308.19-modv0.6", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
@@ -591,24 +591,7 @@ namespace GloomSlation
         }
     }
 
-    /// Force inventory item quantity, slot, etc. to be rendered as overlay.
-    /// TODO: This should be achievable through changing font asset in some way, 
-    /// but we currently haven't figured out, what to change exactly. 
-    [HarmonyPatch(typeof(TextIcon), "Awake")]
-    static class PatchTextIcon
-    {
-        static void Prefix(ref TextBehaviour ___counterText)
-        {
-            var tmp = ___counterText.ReadPrivateField<TextMeshProUGUI>("textMesh");
-            // It won't actually be applied other way
-            tmp.OnPreRenderText += (ti) =>
-            {
-                ti.textComponent.isOverlay = true;
-            };
-        }
-    }
-
-    /// Journal: automatically adjust data entries height
+    /// Journal: automatically adjust data entries height; adjust serum texts
     [HarmonyPatch(typeof(JournalAnalysisPanel), "ApplyMode")]
     static class PatchJournalData {
         static void Prefix(
@@ -619,13 +602,16 @@ namespace GloomSlation
         }
 
         static void Postfix(
-            ref List<JournalDiagramElement> ___elementList
+            ref List<JournalDiagramElement> ___elementList,
+            ref TextBehaviour ___serumLabelPrefix,
+            ref TextBehaviour ___passiveLabelPrefix
         ) {
             if (___elementList == null) {
                 return;
             }
             
-            foreach(var elem in ___elementList) {
+            // Entries height
+            foreach (var elem in ___elementList) {
                 var tmp = elem.GetComponentInChildren<TMPro.TextMeshProUGUI>();    
                 var lpos = tmp.rectTransform.localPosition;
                 // Shift text higher to match <> marker
@@ -635,6 +621,18 @@ namespace GloomSlation
                 var boxtf = elem.GetComponent<RectTransform>();
                 boxtf.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, tmp.preferredHeight);
             }
+
+            // Serum and Effect texts
+            Action<TextBehaviour> adjustSerum = (prefix) => {
+                var tmp1 = prefix.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+                tmp1.autoSizeTextContainer = true;
+                // Increase layout spacing
+                var hl1 = prefix.gameObject.GetComponentInParent<HorizontalLayoutGroup>();
+                hl1.spacing = -0.03f;
+            };
+
+            adjustSerum(___serumLabelPrefix);
+            adjustSerum(___passiveLabelPrefix);            
         }
     }
 
