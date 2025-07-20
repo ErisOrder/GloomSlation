@@ -1,24 +1,27 @@
-﻿using Gloomwood.Languages;
-using Gloomwood.UI;
-using Gloomwood;
-using HarmonyLib;
-using MelonLoader;
-using MelonLoader.TinyJSON;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Reflection;
+using System.Linq;
+
+// Game/Melon/Unity
+using HarmonyLib;
+using MelonLoader;
+using Gloomwood;
+using Gloomwood.Languages;
+using Gloomwood.UI;
+using Gloomwood.Entity;
+using Gloomwood.Entity.Items;
+using Gloomwood.UI.Journal;
+using UnityEngine.Networking;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Gloomwood.Entity;
-using Gloomwood.Entity.Items;
-using Gloomwood.UI.Journal;
-using System.Linq;
-using UnityEngine.Networking;
 
+// External deps
+using Newtonsoft.Json;
 
 [assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.308.19-modv0.6", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
@@ -169,7 +172,8 @@ namespace GloomSlation
 
             // Read font map
             var text = File.ReadAllText(Path.Combine(langPath, "fontMap.json"));
-            if (!(JSON.Load(text) is ProxyObject fMap))
+            var fMap = JsonConvert.DeserializeObject<Dictionary<string, string>>(text);
+            if (fMap == null)
             {
                 LoggerInstance.Error("failed to load fontMap.json");
                 return;
