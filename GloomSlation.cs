@@ -578,7 +578,7 @@ namespace GloomSlation
             if (processedAudioIds.Contains(id)) {
                 return;
             }
-            var patched = false;
+            DebugMsg($"Audio asset discovered: name {asset.name} clips {asset.ClipCount} order {asset.Order}");
             for (var clipn = 0; clipn < asset.ClipCount; clipn++) {
                 var key = PreparePatchName($"{asset.name}_{clipn}");
                 if (availableAudio.TryGetValue(key, out var clip)) {
@@ -587,11 +587,7 @@ namespace GloomSlation
                     var clips = asset.ReadPrivateField<AudioClip[]>("clips");
                     clips[clipn] = clip;
                     asset.WritePrivateField<AudioClip[]>("clips", clips);
-                    patched = true;
                 }
-            }
-            if (!patched) {
-                DebugMsg($"Audio patch not found: {asset.name}");
             }
             processedAudioIds.Add(id);
         }
@@ -687,7 +683,9 @@ namespace GloomSlation
         static void Postfix(
             ref List<JournalDiagramElement> ___elementList,
             ref TextBehaviour ___serumLabelPrefix,
-            ref TextBehaviour ___passiveLabelPrefix
+            ref TextBehaviour ___passiveLabelPrefix,
+            ref TextBehaviour ___serumTextArea,
+            ref TextBehaviour ___passiveTextArea
         ) {
             if (___elementList == null) {
                 return;
@@ -698,15 +696,17 @@ namespace GloomSlation
                 var tmp = elem.GetComponentInChildren<TMPro.TextMeshProUGUI>();    
                 var lpos = tmp.rectTransform.localPosition;
                 // Shift text higher to match <> marker
-                lpos.y = -0.005f;
+                lpos.y = -0.007f;
                 tmp.rectTransform.localPosition = lpos;
+                // Make font smaller
+                tmp.fontSize = 0.03f;
                 // Resize outer box based on entry text height
                 var boxtf = elem.GetComponent<RectTransform>();
                 boxtf.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, tmp.preferredHeight);
             }
 
-            // Serum and Effect texts
-            Action<TextBehaviour> adjustSerum = (prefix) => {
+            // Serum and Effect labels
+            Action<TextBehaviour> adjustLabel = (prefix) => {
                 var tmp1 = prefix.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
                 tmp1.autoSizeTextContainer = true;
                 // Increase layout spacing
@@ -714,8 +714,19 @@ namespace GloomSlation
                 hl1.spacing = -0.03f;
             };
 
-            adjustSerum(___serumLabelPrefix);
-            adjustSerum(___passiveLabelPrefix);            
+            adjustLabel(___serumLabelPrefix);
+            adjustLabel(___passiveLabelPrefix);            
+
+            // Serum and Effect texts
+            Action<TextBehaviour> adjustText = (prefix) => {
+                var tmp1 = prefix.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+                tmp1.enableAutoSizing = true;
+                tmp1.fontSizeMin = 0.025f;
+                tmp1.fontSizeMax = 0.028f;
+            };
+
+            adjustText(___serumTextArea);
+            adjustText(___passiveTextArea);
         }
     }
 
