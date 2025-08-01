@@ -6,7 +6,7 @@ The `language directory` e.g. `Mods/GloomSlation/Russian` must be the repository
 ## Text
 Inside the `language directory` you can find text files such as `Menus`, `Journal`, etc.
 These files have simple format that looks like.
-```json
+```c
 /*
   Block comment
 */
