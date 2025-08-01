@@ -20,6 +20,11 @@ CONDITION_DANGER				= "Danger";
 SHOP_DISCOUNT					= "Discount!";
 SHOP_SOLDOUT					= "Sold Out!";
 
+// Research
+RESEARCH_AVAILABLE				= "Can Be Researched";
+RESEARCH_COMPLETE				= "Research Complete";
+RESEARCH_SUBSTANCE				= "May Have Scientific Value";
+
 // Item Actions
 ITEM_EQUIP						= "Equip";
 ITEM_UNEQUIP					= "Unequip";
@@ -199,7 +204,9 @@ ITEM_TOAST_2_DESC               = "A stale, halved slice of toast.";
 ITEM_LEVER_HANDLE_NAME			= "Lever Handle";
 ITEM_LEVER_HANDLE_DESC			= "A handle for a mechanical lever";
 
-// Ammo
+//-------------------------------------------------------------
+// Ammunition
+
 ITEM_REVOLVERROUND_NAME			= "Revolver Cartridge";
 ITEM_REVOLVERROUND_DESC			= "A single, revolver cartridge. The casing appears to have been reused. May create a decent distraction in a pinch.";
 
@@ -236,48 +243,17 @@ ITEM_FLAREGUN_SHOCK_DESC		= "A blinding round for the Flare Pistol.";
 ITEM_GUNPOWDER_NAME				= "Gunpowder";
 ITEM_GUNPOWDER_DESC				= "";
 
-ITEM_HARPOON_ROPE_NAME			= "Harpoon";
-ITEM_HARPOON_ROPE_DESC			= "A sharp harpoon that can burrow into certain surfaces.";
+ITEM_HARPOON_NAME				= "Harpoon - Phineas Spike";
+ITEM_HARPOON_DESC				= "A sharp railway spike that can burrow into certain surfaces. Particularly effective for cerebral damage.";
 
-ITEM_HARPOON_ROPE_BUNDLE_NAME	= "Harpoon Bundle";
+ITEM_HARPOON_BUNDLE_NAME		= "Harpoon Bundle - Phineas Spikes";
+ITEM_HARPOON_BUNDLE_DESC		= "A bundle of spike harpoons.";
+
+ITEM_HARPOON_ROPE_NAME			= "Harpoon - Rope";
+ITEM_HARPOON_ROPE_DESC			= "A harpoon that can burrow into certain surfaces. It can be connected to a rope.";
+
+ITEM_HARPOON_ROPE_BUNDLE_NAME	= "Harpoon Bundle - Rope";
 ITEM_HARPOON_ROPE_BUNDLE_DESC	= "A bundle of harpoons.";
-
-// Junk
-ITEM_BOTTLE_1_NAME				= "Glass Bottle";
-ITEM_BOTTLE_1_DESC				= "An empty, glass liquor bottle that is capable of creating a loud distraction. The faded label of the Ashbrew Brewery wraps the front.";
-
-ITEM_CAN_FISH_NAME				= "Can of Fish";
-ITEM_CAN_FISH_DESC				= "A can labeled with a 'Croup Fisheries' sticker. A salty, sickly smell emanates from the wrapper.";
-
-ITEM_CAN_FISH_EMPTY_NAME		= "Can of Fish (Empty)";
-ITEM_CAN_FISH_EMPTY_DESC		= "An empty can labeled with a 'Croup Fisheries' sticker. The inside of the can is stained with a slimy residue.";
-
-ITEM_CAN_BEANS_NAME				= "Can of Beans";
-ITEM_CAN_BEANS_DESC				= "A can labeled with a 'Doctor Smithy's Pork and Beans' sticker. An unmistakable nostalgic scent eminates.";
-
-ITEM_CAN_BEANS_EMPTY_NAME		= "Can of Beans (Empty)";
-ITEM_CAN_BEANS_EMPTY_DESC		= "An empty can labeled with a 'Doctor Smithy's Pork and Beans' sticker. The only thing left inside is the pain of having nothing. It hurts.";
-
-ITEM_RIFLE_BROKEN_NAME			= "Huntsmans' Rifle";
-ITEM_RIFLE_BROKEN_DESC			= "A makeshift, shoddy hunting rifle. The grips are built for the distorted proportions of the huntsmen and cannot be handled by average humans.";
-
-ITEM_BOTTLE_WINE_1_NAME         = "Wine Bottle";
-ITEM_BOTTLE_WINE_1_DESC         = "An empty bottle of wine that would shatter easily if thrown. The label is torn off, so there's no way to tell how much you might have enjoyed what was inside.";
-
-ITEM_BRICK_1_NAME               = "Brick";
-ITEM_BRICK_1_DESC               = "A brick, broken off of a wall. This won't do much damage but will definitely get someone's attention.";
-
-ITEM_BOOT_1_LEFT_NAME           = "Boot";
-ITEM_BOOT_1_LEFT_DESC           = "A old, worn leather boot for the left foot. Smells strongly of sweaty toes and fungus.";
-
-ITEM_BOOT_1_RIGHT_NAME          = "Boot";
-ITEM_BOOT_1_RIGHT_DESC          = "A old, worn leather boot for the right foot. Smells strongly of sweaty toes and fungus.";
-
-ITEM_TINCAN_1_NAME              = "Tin Can";
-ITEM_TINCAN_1_DESC              = "A tin can without a label. You can't determine from the smell what it used to contain.";
-
-ITEM_TINCAN_2_NAME              = "Tin Can";
-ITEM_TINCAN_2_DESC              = "A tin can without a label. You can't determine from the smell what it used to contain.";
 
 ITEM_CORPSE_RAT_NAME = "RAT";
 ITEM_CORPSE_RAT_DESC = "A dead rat. It smells bloody awful";
@@ -294,37 +270,6 @@ ITEM_CORPSE_RAT_GRAY_2_DESC = "A dead dark gray rat. It smells bloody awful";
 ITEM_CORPSE_RAT_INFECTED_NAME = "INFECTED RAT";
 ITEM_CORPSE_RAT_INFECTED_DESC = "A dead rat oozing with pestilence.";
 
-// Giblets
-ITEM_GIBLET_WOODSMAN_HEAD_NAME		= "Woodsman Head";
-ITEM_GIBLET_WOODSMAN_HEAD_DESC		= "(Not Researched)";
-
-ITEM_GIBLET_WOODSMAN_ARM_LEFT_NAME	= "Woodsman Arm (Left)";
-ITEM_GIBLET_WOODSMAN_ARM_LEFT_DESC	= "(Not Researched)";
-
-ITEM_GIBLET_WOODSMAN_ARM_RIGHT_NAME	= "Woodsman Arm (Right)";
-ITEM_GIBLET_WOODSMAN_ARM_RIGHT_DESC	= "(Not Researched)";
-
-ITEM_GIBLET_WOODSMAN_LEG_LEFT_NAME	= "Woodsman Leg (Left)";
-ITEM_GIBLET_WOODSMAN_LEG_LEFT_DESC	= "(Not Researched)";
-
-ITEM_GIBLET_WOODSMAN_LEG_RIGHT_NAME	= "Woodsman Leg (Right)";
-ITEM_GIBLET_WOODSMAN_LEG_RIGHT_DESC	= "(Not Researched)";
-
-ITEM_GIBLET_HUNTSMAN_HEAD_NAME		= "Huntsman Head";
-ITEM_GIBLET_HUNTSMAN_HEAD_DESC		= "(Not Researched)";
-
-ITEM_GIBLET_HUNTSMAN_ARM_LEFT_NAME	= "Huntsman Arm (Left)";
-ITEM_GIBLET_HUNTSMAN_ARM_LEFT_DESC	= "(Not Researched)";
-
-ITEM_GIBLET_HUNTSMAN_ARM_RIGHT_NAME	= "Huntsman Arm (Right)";
-ITEM_GIBLET_HUNTSMAN_ARM_RIGHT_DESC	= "(Not Researched)";
-
-ITEM_GIBLET_HUNTSMAN_LEG_LEFT_NAME	= "Huntsman Leg (Left)";
-ITEM_GIBLET_HUNTSMAN_LEG_LEFT_DESC	= "(Not Researched)";
-
-ITEM_GIBLET_HUNTSMAN_LEG_RIGHT_NAME	= "Huntsman Leg (Right)";
-ITEM_GIBLET_HUNTSMAN_LEG_RIGHT_DESC	= "(Not Researched)";
-
 ITEM_GIBLET_CITIZEN_MAN_HEAD_NAME	= "Citizen Man Head";
 ITEM_GIBLET_CITIZEN_MAN_HEAD_DESC	= "(Not Researched)";
 
@@ -334,9 +279,14 @@ ITEM_GOATMAN_HORN_LEFT_DESC			= "(Not Researched)";
 ITEM_GOATMAN_HORN_RIGHT_NAME		= "Goatman Horn (Right)";
 ITEM_GOATMAN_HORN_RIGHT_DESC		= "(Not Researched)";
 
+//-------------------------------------------------------------
 // Weapons
+
 ITEM_CANESWORD_NAME					= "Canesword";
 ITEM_CANESWORD_DESC					= "A durable canesword with an ivory handle and silver coated blade. A powered thrust to an unaware, unarmored enemy will deal critical damage.";
+
+ITEM_BONESAW_NAME					= "Bonesaw";
+ITEM_BONESAW_DESC					= "A surgical-grade steel bonesaw, with a hand of horn and wood. Useful for fashioning a larger specimen into conveniently portable samples for easy transportation.";
 
 ITEM_REVOLVER_NAME					= "Revolver";
 ITEM_REVOLVER_DESC					= "Break-action revolver with six chambers. Steel-casted and chambered for a cartridge round local to the city.";
@@ -344,8 +294,8 @@ ITEM_REVOLVER_DESC					= "Break-action revolver with six chambers. Steel-casted 
 ITEM_SHOTGUN_NAME					= "Shotgun";
 ITEM_SHOTGUN_DESC					= "A collapsable pump shotgun. A favorite among the trappers who desired an easily carryable close-range weapon for their excursions past the bulwark.";
 
-ITEM_LEGTRAP_NAME					= "Snare Trap";
-ITEM_LEGTRAP_DESC					= "A trap that can be used to snare the target's leg.";
+ITEM_BEARTRAP_NAME					= "Bear Trap";
+ITEM_BEARTRAP_DESC					= "A foothold trap that can be used to ensnare the leg of its victim, causing immediate damage, immobility and hemorrhaging. The local huntsmen are fond of these traps for their simple yet reliable operation.";
 
 ITEM_FLAREGUN_NAME					= "Flare Pistol";
 ITEM_FLAREGUN_DESC					= "A custom, single-shot pistol with a silencer. The chamber is shaped for a special bolt type. The name 'Undertaker' is etched into the handle.";
@@ -363,14 +313,17 @@ ITEM_HARPOONGUN_DESC			    = "A harpoon gun powered by a novel steam exhaust sys
 ITEM_BUTTON_PRESSER_NAME			= "Button Cap";
 ITEM_BUTTON_PRESSER_DESC			= "A cap for a button presser. Can be used to repair certain devices.";
 
-ITEM_VALVE_WHEEL_NAME						= "Handvalve";
-ITEM_VALVE_WHEEL_DESC						= "A handvalve for manually operating various devices. Can be installed into an appropriate valve seat.";
+ITEM_VALVE_WHEEL_NAME				= "Handvalve";
+ITEM_VALVE_WHEEL_DESC				= "A handvalve for manually operating various devices. Can be installed into an appropriate valve seat.";
 
 ITEM_CRANK_HANDLE_NAME				= "Crank Handle";
 ITEM_CRANK_HANDLE_DESC				= "A crank handle for manually operating various devices. Can be installed into an appropriate crank slot.";
 
 ITEM_CRANK_HANDLE_GOLD_NAME			= "Golden Crank Handle";
 ITEM_CRANK_HANDLE_GOLD_DESC			= "An ornate crank handle owned by Mr. Van Der Meer. A rather fancy key to open up the gruesome underbelly of the city.";
+
+ITEM_LEVER_PULLDOWN_HANDLE_NAME		= "Lever";
+ITEM_LEVER_PULLDOWN_HANDLE_DESC		= "A lever for manually operating various devices. Can be installed into an appropriate lever mechanism.";
 
 ITEM_CANNONBALL_NAME				= "Cannonball";
 ITEM_CANNONBALL_DESC				= "Cannonball that can be loaded into a cannon. There's a thin layer of rust covering it.";
@@ -498,6 +451,9 @@ KEY_MARKET_MANOR_2_FRONTDOOR_DESC		= "Key to the front door of a manor in the Ma
 KEY_MARKET_MANOR_3_FRONTDOOR_NAME		= "Lord Kar's Manor Front Key";
 KEY_MARKET_MANOR_3_FRONTDOOR_DESC		= "Key to the front door of a manor in the Market District. The name 'Lord Kar' is inscribed on the head.";
 
+KEY_MARKET_DRUNKEN_WATERFOWL_NAME       = "Drunken Waterfowl Key";
+KEY_MARKET_DRUNKEN_WATERFOWL_DESC       = "Key to the Drunken Waterfowl tavern in the Market District.";
+
 KEY_UNDERPORT_ENTRANCE_NAME				= "Underport Entrance Gate Key";
 KEY_UNDERPORT_ENTRANCE_DESC				= "Key to the entry gate to the Underport in the Market District.";
 
@@ -521,6 +477,9 @@ KEY_UNDERPORT_TRAM_CHEST_DESC			= "Key to the chest in the Underport's tram unlo
 
 KEY_UNDERPORT_CASTLE_GATE_NAME			= "Castle Gate Key";
 KEY_UNDERPORT_CASTLE_GATE_DESC			= "Key to the Underport's Castle Gate.";
+
+KEY_UNDERPORT_SAFEROOM_CELLAR_NAME      = "Saferoom Cellar Key";
+KEY_UNDERPORT_SAFEROOM_CELLAR_DESC      = "Key to the cellar under one of the saferooms in the Underport.";
 
 KEY_HIVE_SHANTYTOWN_NAME                = "Shanty Town Key";
 KEY_HIVE_SHANTYTOWN_DESC                = "Key to the shanty town gate in the Hive.";
@@ -563,21 +522,296 @@ ITEM_RING_EMERALD_DESC				= "A ring with an emerald gem. Emeralds are rumored to
 ITEM_CHALICE_1_GOLD_NAME			= "Gold Chalice";
 ITEM_CHALICE_1_GOLD_DESC			= "An ornate golden chalice, adorned with engraved trims and set with blood-red gemstones.";
 
-ITEM_POCKETWATCH_1_GOLD_NAME = "Gold Pocket Watch";
-ITEM_POCKETWATCH_1_GOLD_DESC = "A golden pocket watch assembled by the finest watchmakers in the city.";
+ITEM_POCKETWATCH_1_GOLD_NAME		= "Gold Pocket Watch";
+ITEM_POCKETWATCH_1_GOLD_DESC		= "A golden pocket watch assembled by the finest watchmakers in the city.";
 
-ITEM_CANOPIC_JAR_CROW_NAME = "Canopic Jar (Crow)";
-ITEM_CANOPIC_JAR_CROW_DESC = "An ancient jar used to preserve organs for the afterlife. The lid forms a crow's head with piercing eyes and a menacingly sharp beak, symbolizing death.";
+ITEM_CANOPIC_JAR_CROW_NAME			= "Canopic Jar (Crow)";
+ITEM_CANOPIC_JAR_CROW_DESC			= "An ancient jar used to preserve organs for the afterlife. The lid forms a crow's head with piercing eyes and a menacingly sharp beak, symbolizing death.";
 
-ITEM_CANOPIC_JAR_GOAT_NAME = "Canopic Jar (Goat)";
-ITEM_CANOPIC_JAR_GOAT_DESC = "An ancient jar used to preserve organs for the afterlife. A skilled artisan has sculpted a goat out of the jar's stone head as a symbol of virility.";
+ITEM_CANOPIC_JAR_GOAT_NAME			= "Canopic Jar (Goat)";
+ITEM_CANOPIC_JAR_GOAT_DESC			= "An ancient jar used to preserve organs for the afterlife. A skilled artisan has sculpted a goat out of the jar's stone head as a symbol of virility.";
 
-ITEM_CANOPIC_JAR_LION_NAME = "Canopic Jar (Lion)";
-ITEM_CANOPIC_JAR_LION_DESC = "An ancient jar used to preserve organs for the afterlife. The stone lid is in the shape of a lion, evoking the strength and bravery of the one whose organs are contained within.";
+ITEM_CANOPIC_JAR_LION_NAME			= "Canopic Jar (Lion)";
+ITEM_CANOPIC_JAR_LION_DESC			= "An ancient jar used to preserve organs for the afterlife. The stone lid is in the shape of a lion, evoking the strength and bravery of the one whose organs are contained within.";
 
 ITEM_COIN_ANCIENT_NAME              = "Ancient Coin";
 ITEM_COIN_ANCIENT_DESC              = "An ancient coin of hammered bronze. The obverse features a relief of an unknown man, and on the reverse a strange faceless figure and undecipherable runes.";
 
+//-------------------------------------------------------------
+// Junk
+
+ITEM_BOTTLE_NAME				= "Glass Bottle";
+ITEM_BOTTLE_DESC				= "An empty, glass liquor bottle that is capable of creating a loud distraction. The faded label of the Ashbrew Brewery wraps the front.";
+
+ITEM_BOTTLE_FLASK_NAME			= "Empty Flask";
+ITEM_BOTTLE_FLASK_DESC			= "An empty, glass flask that would shatter easily if thrown.";
+
+ITEM_BOTTLE_WINE_NAME			= "Wine Bottle";
+ITEM_BOTTLE_WINE_DESC			= "An empty bottle of wine that would shatter easily if thrown. The label is torn off, so there's no way to tell how much you might have enjoyed what was inside.";
+
+ITEM_BOTTLE_WHISKEY_NAME		= "Whiskey Bottle";
+ITEM_BOTTLE_WHISKEY_DESC		= "An empty bottle of whiskey that would shatter easily if thrown.";
+
+ITEM_BOTTLE_MEDICAL_NAME		= "Medical Bottle";
+ITEM_BOTTLE_MEDICAL_DESC		= "An empty, glass bottle that would shatter easily if thrown.";
+
+ITEM_CAN_FISH_NAME				= "Can of Fish";
+ITEM_CAN_FISH_DESC				= "A can labeled with a 'Croup Fisheries' sticker. A salty, sickly smell emanates from the wrapper.";
+
+ITEM_CAN_FISH_EMPTY_NAME		= "Can of Fish (Empty)";
+ITEM_CAN_FISH_EMPTY_DESC		= "An empty can labeled with a 'Croup Fisheries' sticker. The inside of the can is stained with a slimy residue.";
+
+ITEM_CAN_BEANS_NAME				= "Can of Beans";
+ITEM_CAN_BEANS_DESC				= "A can labeled with a 'Doctor Smithy's Pork and Beans' sticker. An unmistakable nostalgic scent eminates.";
+
+ITEM_CAN_BEANS_EMPTY_NAME		= "Can of Beans (Empty)";
+ITEM_CAN_BEANS_EMPTY_DESC		= "An empty can labeled with a 'Doctor Smithy's Pork and Beans' sticker. The only thing left inside is the pain of having nothing. It hurts.";
+
+ITEM_RIFLE_BROKEN_NAME			= "Huntsmans' Rifle";
+ITEM_RIFLE_BROKEN_DESC			= "A makeshift, shoddy hunting rifle. The grips are built for the distorted proportions of the huntsmen and cannot be handled by average humans.";
+
+ITEM_BRICK_1_NAME               = "Brick";
+ITEM_BRICK_1_DESC               = "A brick, broken off of a wall. This won't do much damage but will definitely get someone's attention.";
+
+ITEM_BOOT_1_LEFT_NAME           = "Boot";
+ITEM_BOOT_1_LEFT_DESC           = "A old, worn leather boot for the left foot. Smells strongly of sweaty toes and fungus.";
+
+ITEM_BOOT_1_RIGHT_NAME          = "Boot";
+ITEM_BOOT_1_RIGHT_DESC          = "A old, worn leather boot for the right foot. Smells strongly of sweaty toes and fungus.";
+
+ITEM_TINCAN_1_NAME              = "Tin Can";
+ITEM_TINCAN_1_DESC              = "A tin can without a label. You can't determine from the smell what it used to contain.";
+
+ITEM_TINCAN_2_NAME              = "Tin Can";
+ITEM_TINCAN_2_DESC              = "A tin can without a label. You can't determine from the smell what it used to contain.";
+
+ITEM_TORCH_NAME					= "Torch";
+ITEM_TORCH_DESC					= "A burnt out wooden torch. The huntsmen have relied on torches for centuries, both for its use during nightly hunts and against those who would fear its flame.";
+
+//-------------------------------------------------------------
+// Research
+
+ITEM_SERUM_FAILED_NAME				= "Failed Serum";
+ITEM_SERUM_FAILED_DESC				= "A distillate resulting from a failed experiment.";
+
+ITEM_SERUM_CROWMAN_NAME				= "Corvus Serum";
+ITEM_SERUM_CROWMAN_DESC				= "Serum derived from the crowbeast (Corvus Orthograde) species. Inject to temporarily gain the effects of the mutation.";
+
+ITEM_SERUM_CROWKING_NAME			= "Corvus Patriarch Serum";
+ITEM_SERUM_CROWKING_DESC			= "Serum derived from the Corvus Patriarch species. ";
+
+ITEM_SERUM_FISHDOG_NAME				= "Canis Aquaticus Serum";
+ITEM_SERUM_FISHDOG_DESC				= "Serum derived from the Canis Aquaticus species.";
+
+ITEM_SERUM_BATBARBER_NAME			= "Vesper Serum";
+ITEM_SERUM_BATBARBER_DESC			= "Serum derived from the batbeast (Vesper Sapiens) species. Inject to temporarily gain the effects of the mutation.";
+
+ITEM_SERUM_GOATMAN_NAME				= "Capra Serum";
+ITEM_SERUM_GOATMAN_DESC				= "Serum derived from the goatmen (Homo Caprae) species. Inject to temporarily gain the effects of the mutation.";
+
+ITEM_SERUM_RAT_NAME					= "Rat Serum";
+ITEM_SERUM_RAT_DESC					= "Serum derived from the Rat species.";
+
+ITEM_SERUM_HUNTSMAN_NAME			= "Homo Venari Serum";
+ITEM_SERUM_HUNTSMAN_DESC			= "Serum derived from the Homo Venari species.";
+
+ITEM_RESEARCH_JAR_1_EYEBALLS_NAME	= "Oculary Sample";
+ITEM_RESEARCH_JAR_1_EYEBALLS_DESC	= "A jar of many staring eyeballs wafting within a sticky, viscous fluid.";
+
+ITEM_RESEARCH_JAR_2_MOUTH_NAME		= "Gulper Gullet";
+ITEM_RESEARCH_JAR_2_MOUTH_DESC		= "A jar of a swollen Gulper mouth, afloat within a thick fluid.";
+
+ITEM_RESEARCH_JAR_3_TEETH_NAME		= "Toothed Gel";
+ITEM_RESEARCH_JAR_3_TEETH_DESC		= "A jar of hardened enamel teeth suspended in a coagulated goop.";
+
+ITEM_RESEARCH_JAR_4_RATTAILS_NAME	= "Rattail Vessel";
+ITEM_RESEARCH_JAR_4_RATTAILS_DESC	= "A fleshy clump of intertwined rat tails. Said to be harvested from a great Rat King that once ruled the rodent hordes from an aristocrat's manor crawlspace.";
+
+ITEM_RESEARCH_JAR_5_HAND_NAME		= "Palm Reliquary";
+ITEM_RESEARCH_JAR_5_HAND_DESC		= "A vat of pruney hands in sludge. Rumored to be collected by headsmen who dole out the Queen's Law for capital crimes.";
+
+ITEM_RESEARCH_JAR_6_LEECHES_NAME	= "Jar of Leeches";
+ITEM_RESEARCH_JAR_6_LEECHES_DESC	= "A jar of engorged leeches in a brackish water. Any self-respecting practitioner carries these for common bloodletting.";
+
+ITEM_RESEARCH_JAR_7_TENTACLES_NAME	= "Jar of Tentacles";
+ITEM_RESEARCH_JAR_7_TENTACLES_DESC	= "A glass jar of tentacles in viscous mucus, harvested from creatures of the deep sea for their inks and oils.";
+
+ITEM_RESEARCH_JAR_8_EARS_NAME        = "Collected Ears";
+ITEM_RESEARCH_JAR_8_EARS_DESC        = "Ears of all shapes and sizes culled from various species, each with unique applications in the art of medicine.";
+
+ITEM_RESEARCH_JAR_9_SPINE_NAME      = "Portion of Spine";
+ITEM_RESEARCH_JAR_9_SPINE_DESC      = "A preserved section of spine in a jar, said to be over 400 years old, though it doesn't look a day over 50.";
+
+ITEM_RESEARCH_JAR_10_WORMS_NAME		= "Worm Cluster";
+ITEM_RESEARCH_JAR_10_WORMS_DESC		= "A cluster of worms squirming in a slime. These worms are excellent natural cleaners of cadavers.";
+
+ITEM_RESEARCH_JAR_11_TONGUES_NAME	= "Canister of Tongues";
+ITEM_RESEARCH_JAR_11_TONGUES_DESC	= "A glass jar containing animal tongues thought to have anti-inflammatory properties.";
+
+ITEM_RESEARCH_JAR_12_SPIDER_NAME    = "Taxidermied Spider";
+ITEM_RESEARCH_JAR_12_SPIDER_DESC	= "A jar filled with the taxidermied remains of an extraordinarily large and venomous spider from the Far East. Very expensive.";
+
+ITEM_RESEARCH_JAR_13_DOLL_NAME		= "Preserved Effigy";
+ITEM_RESEARCH_JAR_13_DOLL_DESC		= "This jar contains a doll supposedly imbued with traces of the soul of a young lady who was greatly wronged in her short life.";
+
+ITEM_RESEARCH_JAR_14_BRAIN_NAME		= "Swollen Brain";
+ITEM_RESEARCH_JAR_14_BRAIN_DESC		= "The carefully preserved brain of an eccentric madman, whose brain was extracted during autopsy for study.";
+
+ITEM_RESEARCH_JAR_15_HEAD_NAME		= "Alchemist's Visage";
+ITEM_RESEARCH_JAR_15_HEAD_DESC		= "The preserved, decapitated head of an alchemist who was executed for claiming to have discovered the secret of immortality.";
+
+ITEM_RESEARCH_JAR_16_CLAW_NAME		= "Crystal Claw";
+ITEM_RESEARCH_JAR_16_CLAW_DESC		= "The claws of a now-extinct species of great lizard, stored in a thick preservative solution.";
+
+ITEM_RESEARCH_JAR_17_FROG_NAME		= "Hypnotic Toad";
+ITEM_RESEARCH_JAR_17_FROG_DESC		= "A cane toad (Rhinella marina) from the Amazon, known for secretions that can induce hypnosis and psychedelic experiences.";
+
+ITEM_RESEARCH_JAR_18_UNKNOWN_NAME   = "Unknown";
+ITEM_RESEARCH_JAR_18_UNKNOWN_DESC   = "A sample of a substance that defies identification and categorization. Probably useless, but you never know.";	
+
+ITEM_RESEARCH_JAR_19_HEART_NAME		= "Engorged Heart";
+ITEM_RESEARCH_JAR_19_HEART_DESC		= "An unlabeled jar containing a massive heart of unknown origin. Careful observation reveals a barely detectable heartbeat.";
+
+ITEM_RESEARCH_JAR_20_TWINS_NAME      = "Corpse of Conjoined Twins";
+ITEM_RESEARCH_JAR_20_TWINS_DESC      = "The embalmed body of conjoined twins in the late fetal stage, preserved for research into extreme mutations. You are unable to confirm whether or not it is human in origin.";
+
+ITEM_RESEARCH_JAR_GENERIC_NAME		= "Jar of Viscous Fluid";
+ITEM_RESEARCH_JAR_GENERIC_DESC		= "A jar of viscous fluid. It used to contain some substance of greater significance.";
+
+//-------------------------------------------------------------
+// Giblets - Huntsman
+
+ITEM_HUNTSMAN_HEAD_NAME				= "Huntsman Head";
+ITEM_HUNTSMAN_HEAD_DESC				= "The head of a dead Huntsman.";
+ITEM_HUNTSMAN_TORSO_NAME			= "Huntsman Torso";
+ITEM_HUNTSMAN_TORSO_DESC			= "The torso of a dead Huntsman.";
+ITEM_HUNTSMAN_PELVIS_NAME			= "Huntsman Pelvis";
+ITEM_HUNTSMAN_PELVIS_DESC			= "The pelvis of a dead Huntsman.";
+ITEM_HUNTSMAN_ARM_LEFT_NAME			= "Huntsman Left Arm";
+ITEM_HUNTSMAN_ARM_LEFT_DESC			= "The left arm of a dead Huntsman.";
+ITEM_HUNTSMAN_ARM_RIGHT_NAME		= "Huntsman Right Arm";
+ITEM_HUNTSMAN_ARM_RIGHT_DESC		= "The right arm of a dead Huntsman.";
+ITEM_HUNTSMAN_LEG_LEFT_NAME			= "Huntsman Left Leg";
+ITEM_HUNTSMAN_LEG_LEFT_DESC			= "The left leg of a dead Huntsman.";
+ITEM_HUNTSMAN_LEG_RIGHT_NAME		= "Huntsman Right Leg";
+ITEM_HUNTSMAN_LEG_RIGHT_DESC		= "The right leg of a dead Huntsman.";
+
+//-------------------------------------------------------------
+// Giblets - Woodsman
+
+ITEM_WOODSMAN_HEAD_NAME				= "Woodsman Head";
+ITEM_WOODSMAN_HEAD_DESC				= "The head of a dead Woodsman.";
+ITEM_WOODSMAN_TORSO_NAME			= "Woodsman Torso";
+ITEM_WOODSMAN_TORSO_DESC			= "The torso of a dead Woodsman.";
+ITEM_WOODSMAN_PELVIS_NAME			= "Woodsman Pelvis";
+ITEM_WOODSMAN_PELVIS_DESC			= "The pelvis of a dead Woodsman.";
+ITEM_WOODSMAN_ARM_LEFT_NAME			= "Woodsman Left Arm";
+ITEM_WOODSMAN_ARM_LEFT_DESC			= "The left arm of a dead Woodsman.";
+ITEM_WOODSMAN_ARM_RIGHT_NAME		= "Woodsman Right Arm";
+ITEM_WOODSMAN_ARM_RIGHT_DESC		= "The right arm of a dead Woodsman.";
+ITEM_WOODSMAN_LEG_LEFT_NAME			= "Woodsman Left Leg";
+ITEM_WOODSMAN_LEG_LEFT_DESC			= "The left leg of a dead Woodsman.";
+ITEM_WOODSMAN_LEG_RIGHT_NAME		= "Woodsman Right Leg";
+ITEM_WOODSMAN_LEG_RIGHT_DESC		= "The right leg of a dead Woodsman.";
+
+//-------------------------------------------------------------
+// Giblets - Crowman
+
+ITEM_CROWMAN_HEAD_NAME				= "Crowman Head";
+ITEM_CROWMAN_HEAD_DESC				= "The head of a dead Crowman.";
+ITEM_CROWMAN_TORSO_NAME				= "Crowman Torso";
+ITEM_CROWMAN_TORSO_DESC				= "The torso of a dead Crowman.";
+ITEM_CROWMAN_PELVIS_NAME			= "Crowman Pelvis";
+ITEM_CROWMAN_PELVIS_DESC			= "The pelvis of a dead Crowman.";
+ITEM_CROWMAN_ARM_LEFT_NAME			= "Crowman Left Arm";
+ITEM_CROWMAN_ARM_LEFT_DESC			= "The left arm of a dead Crowman.";
+ITEM_CROWMAN_UPPERARM_RIGHT_NAME	= "Crowman Upper Right Arm";
+ITEM_CROWMAN_UPPERARM_RIGHT_DESC	= "The upper right arm of a dead Crowman.";
+ITEM_CROWMAN_LEG_LEFT_NAME			= "Crowman Left Leg";
+ITEM_CROWMAN_LEG_LEFT_DESC			= "The left leg of a dead Crowman.";
+ITEM_CROWMAN_FOOT_RIGHT_NAME		= "Crowman Right Foot";
+ITEM_CROWMAN_FOOT_RIGHT_DESC		= "The right foot of a dead Crowman.";
+ITEM_CROWMAN_HAND_RIGHT_NAME		= "Crowman Right Hand";
+ITEM_CROWMAN_HAND_RIGHT_DESC		= "The right hand of a dead Crowman.";
+
+//-------------------------------------------------------------
+// Giblets - Crowking
+
+ITEM_CROWKING_HEAD_NAME				= "Crowking Head";
+ITEM_CROWKING_HEAD_DESC				= "The head of a dead Crowking.";
+ITEM_CROWKING_TORSO_NAME			= "Crowking Torso";
+ITEM_CROWKING_TORSO_DESC			= "The torso of a dead Crowking.";
+ITEM_CROWKING_PELVIS_NAME			= "Crowking Pelvis";
+ITEM_CROWKING_PELVIS_DESC			= "The pelvis of a dead Crowking.";
+ITEM_CROWKING_ARM_LEFT_NAME			= "Crowking Left Arm";
+ITEM_CROWKING_ARM_LEFT_DESC			= "The left arm of a dead Crowking.";
+ITEM_CROWKING_ARM_RIGHT_NAME		= "Crowking Right Arm";
+ITEM_CROWKING_ARM_RIGHT_DESC		= "The right arm of a dead Crowking.";
+ITEM_CROWKING_LEG_LEFT_NAME			= "Crowking Left Leg";
+ITEM_CROWKING_LEG_LEFT_DESC			= "The left leg of a dead Crowking.";
+ITEM_CROWKING_LEG_RIGHT_NAME		= "Crowking Right Leg";
+ITEM_CROWKING_LEG_RIGHT_DESC		= "The right leg of a dead Crowking.";
+ITEM_CROWKING_HAND_RIGHT_NAME		= "Crowking Right Hand";
+ITEM_CROWKING_HAND_RIGHT_DESC		= "The right hand of a dead Crowking.";
+
+//-------------------------------------------------------------
+// Giblets - Fishdog
+
+ITEM_FISHDOG_HEAD_NAME				= "Fishdog Head";
+ITEM_FISHDOG_HEAD_DESC				= "The head of a dead Fishdog.";
+ITEM_FISHDOG_TORSO_NAME				= "Fishdog Torso";
+ITEM_FISHDOG_TORSO_DESC				= "The torso of a dead Fishdog.";
+ITEM_FISHDOG_ARM_LEFT_NAME			= "Fishdog Left Arm";
+ITEM_FISHDOG_ARM_LEFT_DESC			= "The left arm of a dead Fishdog.";
+ITEM_FISHDOG_ARM_RIGHT_NAME			= "Fishdog Right Arm";
+ITEM_FISHDOG_ARM_RIGHT_DESC			= "The right arm of a dead Fishdog.";
+ITEM_FISHDOG_LEG_LEFT_NAME			= "Fishdog Left Leg";
+ITEM_FISHDOG_LEG_LEFT_DESC			= "The left leg of a dead Fishdog.";
+ITEM_FISHDOG_LEG_RIGHT_NAME			= "Fishdog Right Leg";
+ITEM_FISHDOG_LEG_RIGHT_DESC			= "The right leg of a dead Fishdog.";
+
+//-------------------------------------------------------------
+// Giblets - Goatman
+
+ITEM_GOATMAN_HEAD_NAME				= "Goatman Head";
+ITEM_GOATMAN_HEAD_DESC				= "The head of a dead Goatman.";
+ITEM_GOATMAN_TORSO_NAME				= "Goatman Torso";
+ITEM_GOATMAN_TORSO_DESC				= "The torso of a dead Goatman.";
+ITEM_GOATMAN_PELVIS_NAME			= "Goatman Pelvis";
+ITEM_GOATMAN_PELVIS_DESC			= "The pelvis of a dead Goatman.";
+ITEM_GOATMAN_ARM_LEFT_NAME			= "Goatman Left Arm";
+ITEM_GOATMAN_ARM_LEFT_DESC			= "The left arm of a dead Goatman.";
+ITEM_GOATMAN_ARM_RIGHT_NAME			= "Goatman Right Arm";
+ITEM_GOATMAN_ARM_RIGHT_DESC			= "The right arm of a dead Goatman.";
+ITEM_GOATMAN_LEG_LEFT_NAME			= "Goatman Left Leg";
+ITEM_GOATMAN_LEG_LEFT_DESC			= "The left leg of a dead Goatman.";
+ITEM_GOATMAN_LEG_RIGHT_NAME			= "Goatman Right Leg";
+ITEM_GOATMAN_LEG_RIGHT_DESC			= "The right leg of a dead Goatman.";
+ITEM_GOATMAN_HORN_RIGHT_NAME		= "Goatman Right Horn";
+ITEM_GOATMAN_HORN_RIGHT_DESC		= "The right horn of a dead Goatman.";
+ITEM_GOATMAN_HORN_LEFT_NAME			= "Goatman Left Horn";
+ITEM_GOATMAN_HORN_LEFT_DESC			= "The left horn of a dead Goatman.";
+
+
+//-------------------------------------------------------------
+// Giblets - Batbarber
+
+ITEM_BATBARBER_HEAD_NAME			= "Batbarber Head";
+ITEM_BATBARBER_HEAD_DESC			= "The head of a dead Batbarber.";
+ITEM_BATBARBER_TORSO_NAME			= "Batbarber Torso";
+ITEM_BATBARBER_TORSO_DESC			= "The torso of a dead Batbarber.";
+ITEM_BATBARBER_TAIL_NAME			= "Batbarber Tail";
+ITEM_BATBARBER_TAIL_DESC			= "The tail of a dead Batbarber.";
+ITEM_BATBARBER_ARM_LEFT_NAME		= "Batbarber Left Arm";
+ITEM_BATBARBER_ARM_LEFT_DESC		= "The left arm of a dead Batbarber.";
+ITEM_BATBARBER_ARM_RIGHT_NAME		= "Batbarber Right Arm";
+ITEM_BATBARBER_ARM_RIGHT_DESC		= "The right arm of a dead Batbarber.";
+ITEM_BATBARBER_LEG_LEFT_NAME		= "Batbarber Left Leg";
+ITEM_BATBARBER_LEG_LEFT_DESC		= "The left leg of a dead Batbarber.";
+ITEM_BATBARBER_LEG_RIGHT_NAME		= "Batbarber Right Leg";
+ITEM_BATBARBER_LEG_RIGHT_DESC		= "The right leg of a dead Batbarber.";
+ITEM_BATBARBER_HAND_RIGHT_NAME		= "Batbarber Right Hand";
+ITEM_BATBARBER_HAND_RIGHT_DESC		= "The right hand of a dead Batbarber.";
 
 //-------------------------------------------------------------
 // Seasonal

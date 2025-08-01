@@ -1,7 +1,131 @@
 NONE							= "";
 
-// Status Health
-CONDITION						= "Condition";
+//-------------------------------------------------------------
+// Tabs
+
+TAB_STATUS						= "Status";
+TAB_DIAGNOSIS					= "Report";
+TAB_FILES						= "Files";
+TAB_DOCUMENTS					= "Documents";
+TAB_MAPS						= "Maps";
+TAB_KEYS						= "Keys";
+TAB_RESEARCH					= "Research";
+TAB_ANATOMY						= "Anatomy";
+TAB_PATHOLOGY					= "Pathology";
+TAB_ANALYSIS					= "Analysis";
+
+//-------------------------------------------------------------
+// Header
+
+HEADER_STATUS					= "Medical Status";
+HEADER_DIAGNOSIS				= "Report";
+HEADER_FILES					= "Files";
+HEADER_DOCUMENTS				= "Documents";
+HEADER_DOCUMENTS_CONT			= "Documents Cont'd";
+HEADER_MAPS						= "Maps";
+HEADER_MAPS_CONT				= "Maps Cont'd";
+HEADER_KEYS						= "Keys";
+HEADER_KEYS_CONT				= "Keys Cont'd";
+HEADER_RESEARCH					= "Research";
+HEADER_ANATOMY					= "Anatomy";
+HEADER_PATHOLOGY				= "Pathology";
+HEADER_ANALYSIS					= "Analysis";
+
+//-------------------------------------------------------------
+// Status
+
+CONDITION_LIFE					= "Health";
+CONDITION_MIND					= "Mind";
+CONDITION_EXCELLENT				= "Excellent";
 CONDITION_FINE					= "Fine";
 CONDITION_CAUTION				= "Caution";
 CONDITION_DANGER				= "Danger";
+CONDITION_EFFECT_LIST			= "Symptoms";
+
+//-------------------------------------------------------------
+// Research
+
+// Research
+ENTRY_CROWKING					= "Corvus Patriarch";
+ENTRY_FISHDOG					= "Canis Aquaticus";
+ENTRY_HUNTSMAN_WOODSMAN			= "Homo Venari/Lignum";
+ENTRY_RAT						= "Rat";
+
+DESCRIPTION_ANATOMY				= "Find and dissect specimens.";
+DESCRIPTION_PATHOLOGY			= "Research specimen anatomy to discover formula for serum.";
+ENTRY_COMPLETE					= "- Complete";
+ENTRY_UNKNOWN					= "Unknown";
+ANATOMY_PARTS					= "Parts";
+SERUM_PREFIX					= "Serum:";
+SERUM_DOSES						= "Doses";
+SERUM_UNKNOWN					= "Unknown Serum";
+PASSIVE_PREFIX					= "Trait:";
+
+IDENTIFIER_HEAD					= "Head";
+IDENTIFIER_TORSO				= "Torso";
+IDENTIFIER_LEFTARM				= "Left Arm";
+IDENTIFIER_RIGHTARM				= "Right Arm";
+IDENTIFIER_RIGHTLEG				= "Right Leg";
+IDENTIFIER_LEFTLEG				= "Left Leg";
+IDENTIFIER_PELVIS				= "Pelvis";
+IDENTIFIER_LEFTHORN				= "Left Horn";
+IDENTIFIER_RIGHTHORN			= "Right Horn";
+IDENTIFIER_TAIL					= "Tail";
+IDENTIFIER_RIGHTHAND			= "Right Hand";
+IDENTIFIER_RIGHTUPPERARM		= "Right Upper Arm";
+
+//-------------------------------------------------------------
+// Research - Huntsman
+
+ENTRY_HUNTSMAN					= "Huntsmen";
+ENTRY_HUNTSMAN_SPECIES			= "Homo Venatores";
+ENTRY_HUNTSMAN_SERUM_NAME		= "Homo Venatores Strain";
+ENTRY_HUNTSMAN_SERUM_DESC		= "Enhance sensory perception of all nearby infected lifeforms (even through solid walls) and allow kinship with other huntsmen for a time. This form can also use standard weaponry.";
+ENTRY_HUNTSMAN_PASSIVE_NAME		= "Huntsman's Mark";
+ENTRY_HUNTSMAN_PASSIVE_DESC		= "Increased physical damage and ballistic headshot damage against all huntsmen variants.";
+
+RESEARCH_HUNTSMAN_1				= "Specimen 'Homo Venatores' is a former human constituent of the local Hunters' Guild. The specimen wears a leather, robed garment, a wide-brimmed hat and a face mask with goggles for scouting expeditions.";
+RESEARCH_HUNTSMAN_2				= "The infection has heightened the specimen's aggression, reduced their intelligence, and enhanced their sensory perception of other lifeforms carrying the contagion.";
+RESEARCH_HUNTSMAN_3				= "The social hierarchy allows the specimens to readily alert and inform each other, but this can also allow them to be easily tricked. They also carry various weaponry and armors, but often lack skill expertise.";
+
+//-------------------------------------------------------------
+// Research - Goatman
+
+ENTRY_GOATMAN					= "Goatman - Type A";
+ENTRY_GOATMAN_SPECIES			= "Homo Caprae";
+ENTRY_GOATMAN_SERUM_NAME		= "Caprae Strain";
+ENTRY_GOATMAN_SERUM_DESC		= "Gain extraordinary physical and ballistic defense, great melee power and throw force strength for a time.";
+ENTRY_GOATMAN_PASSIVE_NAME		= "Hircine Vigor";
+ENTRY_GOATMAN_PASSIVE_DESC		= "Increased physical and ballistic defense.";
+
+RESEARCH_GOATMAN_1				= "Specimen 'Homo Caprae' is an eight foot nine, bipedal humanoid with goat-like features. The tongue structure seems capable of some gutteral speech.";
+RESEARCH_GOATMAN_2				= "The infection has formed dense muscle masses throughout the body and reshaped various bones into keratin-like horns and hooves.";
+RESEARCH_GOATMAN_3				= "The dense fur makes the body vulnerable to fire, but may provoke the specimen into a rage. While enraged, the specimen will enter a quadrupedal stance to increase its overall movement speed.";
+
+//-------------------------------------------------------------
+// Research - Batbarber
+
+ENTRY_BATBARBER					= "Batbeast - Type A";
+ENTRY_BATBARBER_SPECIES			= "Vesper Sapiens";
+ENTRY_BATBARBER_SERUM_NAME		= "Vesper Strain";
+ENTRY_BATBARBER_SERUM_DESC		= "Gain great jumping and climbing abilities, immense fall height damage reduction and allow kinship with other batbeasts for a time.";
+ENTRY_BATBARBER_PASSIVE_NAME	= "Winged Agility";
+ENTRY_BATBARBER_PASSIVE_DESC	= "Increased jump height and reduced fall damage.";
+
+RESEARCH_BATBARBER_1			= "Specimen 'Vesper Sapiens' is a human-bat hybrid standing at just over four feet with a hunched posture and elongated arms and digits.";
+RESEARCH_BATBARBER_2			= "The infection has shrunken the specimen's skeletal structure and enlarged the ears and nose to allow for enhanced sensory perception.";
+RESEARCH_BATBARBER_3			= "While incapable of flight, the specimen is incredibly agile and able to leap from great heights. It also appears to be able to use tools.";
+
+//-------------------------------------------------------------
+// Research - Crowman
+
+ENTRY_CROWMAN					= "Crowman - Type A";
+ENTRY_CROWMAN_SPECIES			= "Corvus Orthograde";
+ENTRY_CROWMAN_SERUM_NAME		= "Corvus Strain";
+ENTRY_CROWMAN_SERUM_DESC		= "Gain great running and crouch speed, the ability to regenerate health by attacking flesh, and kinship with other crowbeasts for a time.";
+ENTRY_CROWMAN_PASSIVE_NAME		= "Corvian Nimbleness";
+ENTRY_CROWMAN_PASSIVE_DESC		= "Increased holstered run speed.";
+
+RESEARCH_CROWMAN_1				= "Specimen 'Corvus Orthograde' is a seven foot tall, humanoid crow hybrid with a large, protruding and bony beak.";
+RESEARCH_CROWMAN_2				= "The infection has formed a hardened skeletal structure around the spinal cord, protecting it from most physical damage.";
+RESEARCH_CROWMAN_3				= "The specimen appears to be wearing some form of clothing. It is unknown whether these were scavenged or part of the original body.";

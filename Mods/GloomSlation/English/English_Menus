@@ -147,6 +147,10 @@ OPTION_AA_2X			= "2X";
 OPTION_AA_4X			= "4X";
 OPTION_AA_8X			= "8X";
 OPTION_LIGHTFLARES		= "Enable Light Flares";
+OPTION_WEATHERQ		    = "Weather Particles Quality";
+OPTION_WEATHERQ_NORMAL		= "Normal";
+OPTION_WEATHERQ_LOW			= "Low";
+OPTION_WEATHERQ_VERYLOW		= "Very Low";
 
 // Settings Audio Menu
 OPTION_SPEAKER_MODE		= "Speaker Mode";

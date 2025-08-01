@@ -34,11 +34,22 @@ NOTE_DEMO_COIN_CONTENT			= "The word of tonight's happenings will be reaching th
 
 NOTE_DEMO_MANOR_CONTENT			= "Steel boots gnash upon the gravel\n\nCoals of a furnace that spit and crackle\n\nDrawn by the stench of the rotting dead\n\nPlumes of soot follow its heavy tread\n\nCadavers charred by its godless will\n\nWhat face lies behind that blackened grill?\n\nWith wretched breath comes the vile Corpse Duster\n\nRun, hide or bring all that you can muster...";
 
+//-------------------------------------------------------------
+// Maps
+
 // Treasure Maps
 MAPSET_TREASURE_COAST_1_NAME	= "Treasure Map - Coast #1";
 MAP_TREASURE_COAST_1_NAME		= "Treasure Map - Coast #1";
 
-// Fishery
+MAPSET_RESEARCH_NAME			= "Research Diagram";
+MAP_RESEARCH_DIAGRAM_NAME		= "Research Diagram";
+
+//-------------------------------------------------------------
+// Documents
+
+//-------------------------------------------------------------
+// Coast - Fishery
+
 NOTE_FISHERY_LIFTBUTTON_NAME	= "Fishery Lift Buttons";
 NOTE_FISHERY_LIFTBUTTON_BODY	= "All- \n\nA few of the lift buttons weren't working right, so I've taken them to my workshop down the hall for fixing. \n\n -Samuel";
 
@@ -74,6 +85,12 @@ MAPSET_TREASURE_FISHERY_COVE_BODY	= "Treasure Map";
 NOTE_FISHERY_HOBBSCHEESE_NAME   = "Hobbs' Cheese Collection";
 NOTE_FISHERY_HOBBSCHEESE_BODY   = "These are my cheeses.  \n\nDO NOT TOUCH.  \n\nI am hiding them here so the dogs do not find them.  I can see the desire for cheese in their eyes.  Oh, such desire they have for this delicious cheese... those foul fishy dogs and their accomplices, the bugs which feast upon electricity.  \n\nThey will not find the cheese here.  \n\nOh no they will not.\n\n-Hobbs";
 
+NOTE_FISHERY_CHEM_MANIFEST_NAME	= "Fishery Freezer List";
+NOTE_FISHERY_CHEM_MANIFEST_BODY	= "We seem to be running out of some important materials for the operation.\n\nThe oils secreted by the local squids and octopuses in the area are vital for both the preservation of the canned meats and lubricating the machinery.\n\nApparently, the fishermen have to go deeper to get the same catch as they could in shallow waters a year ago.\n\nUntil this problem is resolved, we're keeping a reserve of materials in the freezer. These are to be only used with permission from Mr. Croup himself.\n\n<color=#840601><alpha=#EE><b>1 - Gulper Gullet\n1 - Hypnotic Toad\n1 - Jar of Tentacles\n1 - Jar of Leeches</color></b>";
+
+//-------------------------------------------------------------
+// Coast - Caves
+
 // Coast Caves
 NOTE_CAVES_POWERGENERATOR_NAME	= "Cave Power Generator";
 NOTE_CAVES_POWERGENERATOR_BODY	= "The dogs are loose again.  I certainly know how locks work, and I assume you knows how locks work, so my guess is that Hobbs is the one who keeps leaving the kennels unlocked.  Not a surprise, really.  \n\nI closed off the entrance to the kennels and electrified it, because Hobbs was in charge of feeding them this week so I assume they have not been fed and would be all too happy to gnaw on whatever face pokes into their new little subterranean dog paradise.  \n\nIf you need to get into the kennels... well, first pray.  Then, you'll have to turn off the generator.  I locked the generator room and left the key in the break room down the tunnel.  I figure locking it should keep Hobbs from going in and relieving himself in the fuel tank or anything like that.";
@@ -92,6 +109,9 @@ NOTE_COAST_MINING_LOG_1_BODY	= "Day 1: Arrived on site near the beachhead. Surve
 
 NOTE_COAST_UNDERCITY_NAME		= "Discovery of Old Kingdom Site A";
 NOTE_COAST_UNDERCITY_BODY		= "I've found it.\n\nAfter months of the men digging tunnels, I'm staring at what is undoubtedly an entranceway to the Old Kingdom. It is truly a sight to behold!\n\nThe men are uneasy about it. They have clearly heard the childhood stories and wives' tales. In truth, I felt rather anxious as I took the relief sketches of the lithograph at the head of the ziggurat.\n\nHowever, it is not fear that guides my heart, but excitement. I still have the blood-stone that Wait found in the beach tidepool that started this whole operation. In the morning, I will lay out my plans to breach this edifice and unearth that which has not been seen in millenia.";
+
+//-------------------------------------------------------------
+// Coast - Cliffside
 
 // Coastal Cliffs
 NOTE_CLIFFS_HOUSE_1_NAME		= "Something Is Not Right";
@@ -133,6 +153,12 @@ NOTE_TAVERN_MURDERER_BODY		= "The crime spree between 1884 and 1885, now known a
 NOTE_TAVERN_VALVE_NAME			= "Valve Repair Job";
 NOTE_TAVERN_VALVE_BODY			= "I've been hired to fix this old dump's plumbing system, but half this metalwork is either corroded beyond repair or built so long ago that they don't manufacture the parts anymore.\n\nThe valve I have here can be used all over the city's sewer system, but it's essentially scrap when it comes to this ancient heap of junk.\n\nI might as well go order another beer while I figure this out. Being up here alone gives me the creeps.";
 
+NOTE_RESEARCH_INSTRUCTION_NAME	= "Research Laboratory Instructions";
+NOTE_RESEARCH_INSTRUCTION_BODY	= "Doctor, an associate of mine wrote up these instructions on using this old laboratory equipment. I trust you'll find it useful:\n\n<b>Research Specimens</b>\nFirst, you'll need an infected cadaver. Use the bonesaw to cut the corpse up into smaller body parts, and place it onto the pike. Apply the magnifying glass to analyze it, and keep your journal handy for any observations.\n\n<b>Concoct Serums</b>\nEach serum requires three ingredients. You can discover these ingredients by analyzing body parts, but experimentation is also allowed. Be warned, a failed serum will waste precious resources.\n\nOnce you're ready, follow these steps:<color=#840601><alpha=#EE><b>\n\t1. Place the three jars of ingredients onto the stand over the vessel.\n\t2. Place a body part of the specimen onto the pike.\n\t3. Activate the burner in front of the vessel.\n\t4. Collect the syringe capsule that fills up at the base of the pike.</color></b>\n\nTo find more ingredients, search the various shops and storehouses throughout the city. There's an apothecary at the entrance of the Market. Might be a good place to start. Don't try to carry around all the jars at once: it's impractical and unnecessary.";
+
+//-------------------------------------------------------------
+// Market
+
 NOTE_MARKET_CONSTABLE_ORDER_1_NAME	= "Constabulary Order #1";
 NOTE_MARKET_CONSTABLE_ORDER_1_BODY	= "Direct order from Chief Constable Harland:\n\nSecond Brigade:\nHold south gate positions until three bells.\n\nThird Brigade:\nReinforce central plaza garrisons and cover second brigade's withdrawel.\n\nWorkshop Division has N.B. rigged and primed.\n\nDestroy this message upon reading.";
 
@@ -160,6 +186,12 @@ NOTE_MARKET_MANOR_KITCHEN_1_BODY = "Lord Kar now has a kitchen dumbwaiter!\n\nIt
 NOTE_MARKET_MANOR_KITCHEN_2_NAME = "Lord Kar Manor Kitchen Note";
 NOTE_MARKET_MANOR_KITCHEN_2_BODY = "Staff,\n\nA trespasser was caught in my altar room after sneaking in through the skylight. I've sent word to the metalsmith to forge some guards for those windows.\n\nIn the mean time, show our guest some Kar hospitality. You know how I like the meat prepared.";
 
+NOTE_MARKET_CHEM_MANIFEST_NAME = "Daily Apothecary Inventory";
+NOTE_MARKET_CHEM_MANIFEST_BODY = "Tuesday's Inventory After Close:<color=#840601><alpha=#EE><b>\n\nCanister of Tongues - 1\nHypnotic Toad - 1\nToothed Gel - 1\nPalm Reliquary - 1\nCrystal Claw - 1</color><\b>\n\n-----\n\nSold:<color=#840601><alpha=#EE><b>\n\nCollected Ears - 1\nRattail Vessel - 1</color><\b>\n\nBoth sold to the proprietor of the barbershop. Off-putting fellow. Very rude. What a barber could need with these items, I can't begin to fathom. Nothing good, I'm sure.\n\nAlso, where is our next shipment from Van Der Meer? I was promised a rare brain sample and it is yet to have arrived! I'll send my assistant to the Underport at once.";
+
+NOTE_SHOP_ITEM_STORAGE_NAME		= "Item Storage";
+NOTE_SHOP_ITEM_STORAGE_BODY		= "Doctor,\n\nFeel free to leave behind any belongings in this room.\n\nThey'll be safe in my possession.";
+
 //-------------------------------------------------------------
 // Underport
 
@@ -182,13 +214,13 @@ NOTE_UNDERPORT_WAREHOUSE_MANAGER_2_NAME		= "Mr. Van Der Meer's Note #2";
 NOTE_UNDERPORT_WAREHOUSE_MANAGER_2_BODY		= "You can't get good hired help anymore.\n\nI've been trying to retrieve that damned guild seal from the tunnels for months now. A group of mountain mercenaries, two accomplished treasure hunters and an exhibition shooter all could not dislodge that prize from the undercity's talons.\n\nI can't very well go down there myself. I am a businessman, not some rogue spoiling for a fight.\n\nPerhaps the order of the huntsmen has enough meatheads to take on such a perilous dive. I would just need to entice them with the right strategy...\n\nFor now, the crank is safe with me, so I won't have to worry about other thieves taking the seal.\n\nI've tried to contact Sylvia, but she isn't responding anymore in my mirror.\n\nDoes she no longer believe I am up to this task?";
 
 NOTE_UNDERPORT_PIT_1_NAME					= "Underport Pit Barricade";
-NOTE_UNDERPORT_PIT_1_BODY					= "I saw that Mr. Van Der Meer bring a bunch of his boys around and build this barricade here.\n\nWe all know them pigs ain't done squat about them missing folks.\n\nGood for Mr. Van Der Meer!\n\nThere's things down there they ain't telling us about.";
+NOTE_UNDERPORT_PIT_1_BODY					= "Mr. Van Der Meer came around with some of his boys and sealed the garbage pit off with a special crank.\n\nThe Constables won't lift a finger and Lampfire is planning to shut the power off to the stations below.\n\nThere's still people down there!\n\nMeet us at Lampfire tonight and we'll find a way to get the pit open and our boys out.\n\nWe need to stick together if we're going to survive this.";
 
 NOTE_UNDERPORT_POWERPLANT_SUBFLOW_1_NAME	= "Underport Power Plant Switch Note";
-NOTE_UNDERPORT_POWERPLANT_SUBFLOW_1_BODY	= "We've lost contact with the workers down in the tunnels. Considering what we've heard from the Constabulary, they're likely a lost cause.\n\nManagement is giving the call to cut off the power down there. Let's hope for their sake that they've got a backup generator.";
+NOTE_UNDERPORT_POWERPLANT_SUBFLOW_1_BODY	= "We've lost contact with the workers down in the tunnels. Considering what we've heard from the Constabulary, they're likely a lost cause.\n\nManagement is giving the call to cut off the power down there. The foreman said we'll give them until midnight.\n\nIf you're planning on going down there after the shut off, bring a lantern and a lot of flares.\n\nLet's hope for their sake there's a backup generator.";
 
-NOTE_SHOP_ITEM_STORAGE_NAME		= "Item Storage";
-NOTE_SHOP_ITEM_STORAGE_BODY		= "Doctor,\n\nFeel free to leave behind any belongings in this room.\n\nThey'll be safe in my possession.";
+NOTE_UNDERPORT_CHEM_MANIFEST_NAME			= "Van Der Meer Shipping Manifest";
+NOTE_UNDERPORT_CHEM_MANIFEST_BODY			= "<b>Items Received:</b>\n\n<color=#840601><alpha=#EE>[x] (1) Oculary Sample\n[x] (1) Portion of Spine\n[x] (1) Crystal Claw\n[x] (1) Gulper Gullet\n[x] (1) Worm Cluster\n[   ] (1) Brain Sample</color></b>\n\nBrain Sample was missing from the pallet. Goddamned fool deliverymen probably dropped it en route. Must make a note to contact their manager. - VDM";
 
 //-------------------------------------------------------------
 // Underport - Hive
@@ -203,7 +235,7 @@ NOTE_UNDERPORT_HIVE_MONITORING_NAME = "Pump Monitoring Station Logs";
 NOTE_UNDERPORT_HIVE_MONITORING_BODY = "Tuesday\n\nPressure is nominal, no fluctuations +/- 10 PSI\n\nNote: Complained to the constables AGAIN about the riff-raff living down the way in waste treatment. Those laggards live in filth, always making a racket. Drives me nuts. Someone needs to beat some sense into them.\n\nWednesday\n\nPressure nominal, one small fluctuation @ 6:15 AM\n\nNote: Did the constables finally listen to me? I haven't heard a peep from those hooligans for the last two days. Peace at last.\n\nThursday\n\nPressure nominal, no fluctuations +/- 10 PSI\n\nNote: Saw something through the bars down the hall. I don't know what that was, but it didn't look human. Thank Christ there's no door valve on their side.";
 
 NOTE_UNDERPORT_HIVE_HIDING_NAME = "Note from Hiding Worker";
-NOTE_UNDERPORT_HIVE_HIDING_BODY = "I saw one of those bird... things and hid in this back room. I keep trying to run for it but they're everywhere now. This place is hell -- even the rats aren't right down here. Nothing to do but hunker down and wait for the right moment. If I can just keep out of the way, maybe I've got a chance.\n\nMaybe.\n\nIt's the waiting that's the worst part. Writing this down helps keep me from losing it. Gotta stay sharp if I want to see the sky again.";
+NOTE_UNDERPORT_HIVE_HIDING_BODY = "I saw one of those bird... things and hid in this crawlspace. I keep trying to run for it but they're everywhere now.\n\nThis place is hell -- even the rats aren't right down here. Nothing to do but hunker down and wait for the right moment. If I can just keep out of the way, maybe I've got a chance. I just want to see the sky again.\n\nNew plan:\nFind the Foreman's key.\nRetrieve the replacement handle for the door lever to access Section 4.\nAnd swim through the turbine section.\n\nI just hope to God they're off.";
 
 NOTE_UNDERPORT_HIVE_ELEVATOR_NAME = "Archaeologists' Note About Generator";
 NOTE_UNDERPORT_HIVE_ELEVATOR_BODY = "Professor,\n\nI pulled some strings with my father, who called in a favor with one of his company's suppliers and secured us our very own generator to power the lift and any other machinery we might need. One of the many benefits of having family in high places! Finally, we'll be free of the incessant blackouts from those dingbats at Lampfire Power. They couldn't keep a torch lit in an inferno.\n\nNow here's the important bit: if the generator runs low on fuel, we've set up a depot near the bathhouse ruins where you can get new canisters AND get them filled. Don't make the same mistake Peter did: make sure the canister is actually full before lugging it all the way over!\n\nWith the generator in place we'll no long be constrained by the whims of the power grid and we can finally make some serious progress on the excavation. Huzzah!";
