@@ -1,25 +1,29 @@
-﻿using Gloomwood.Languages;
-using Gloomwood.UI;
-using Gloomwood;
-using HarmonyLib;
-using MelonLoader;
-using MelonLoader.TinyJSON;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Reflection;
+using System.Linq;
+
+// Game/Melon/Unity
+using HarmonyLib;
+using MelonLoader;
+using Gloomwood;
+using Gloomwood.Languages;
+using Gloomwood.UI;
+using Gloomwood.Entity;
+using Gloomwood.Entity.Items;
+using Gloomwood.UI.Journal;
+using UnityEngine.Networking;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Gloomwood.Entity;
-using Gloomwood.Entity.Items;
-using Gloomwood.UI.Journal;
-using System.Linq;
 
+// External deps
+using Newtonsoft.Json;
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.305.02-modv0.5", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.309.19-modv0.6", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
@@ -32,6 +36,14 @@ namespace GloomSlation
                 .GetType()
                 .GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
                 .GetValue(instance);
+        }
+
+        public static void WritePrivateField<T>(this object instance, string name, T val)
+        {
+            instance
+                .GetType()
+                .GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
+                .SetValue(instance, val);
         }
 
         public static bool NullOrEmpty(this string inst)
@@ -126,6 +138,8 @@ namespace GloomSlation
     {
         private readonly Dictionary<string, TMP_FontAsset> fontMap = new Dictionary<string, TMP_FontAsset>();
         private readonly HashSet<string> availableTextures = new HashSet<string>();
+        private readonly Dictionary<string, AudioClip> availableAudio = new Dictionary<string, AudioClip>();
+        private readonly HashSet<int> processedAudioIds = new HashSet<int>();
         private readonly HashSet<string> specializedTex = new HashSet<string>();
         private readonly AdjustVisitor postInitAdjustVisitor = new AdjustVisitor();
 
@@ -158,7 +172,8 @@ namespace GloomSlation
 
             // Read font map
             var text = File.ReadAllText(Path.Combine(langPath, "fontMap.json"));
-            if (!(JSON.Load(text) is ProxyObject fMap))
+            var fMap = JsonConvert.DeserializeObject<Dictionary<string, string>>(text);
+            if (fMap == null)
             {
                 LoggerInstance.Error("failed to load fontMap.json");
                 return;
@@ -213,7 +228,54 @@ namespace GloomSlation
                 }
             }
 
+            // Load audio
+            var audioPath = Path.Combine(langPath, "Audio");
+            if (Directory.Exists(audioPath))
+            {
+                foreach (var path in Directory.EnumerateFiles(audioPath))
+                {
+                    var name = Path.GetFileNameWithoutExtension(path);
+                    if (Path.GetExtension(path) != ".mp3")
+                    {
+                        continue;
+                    }
+
+                    name = PreparePatchName(name);
+                    var clip = LoadAudioClip(path);
+                    availableAudio.Add(name, clip);
+                    DebugMsg($"Available audio {name}");
+                }
+            }
+
             InitAdjustments();
+        }
+
+        // FIXME: What a cursed way to load clip... 
+        AudioClip LoadAudioClip(string path)
+        {
+            // Create UnityWebRequest for the MP3 file
+            path = $"file:///{path}";
+            using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(path, AudioType.MPEG))
+            {
+                // Enable streaming to reduce memory usage
+                ((DownloadHandlerAudioClip)www.downloadHandler).streamAudio = true;
+
+                // Send the request and block until complete
+                www.SendWebRequest();
+                while (!www.isDone)
+                {
+                    System.Threading.Thread.Sleep(1);
+                }
+
+                // Check for errors
+                if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+                {
+                    MelonLogger.Error("Error loading MP3: " + www.error);
+                }
+
+                // Return the AudioClip
+                return DownloadHandlerAudioClip.GetContent(www);
+            }
         }
 
         /// Log message only if debugMode active
@@ -512,6 +574,27 @@ namespace GloomSlation
 
             return entries;
         }
+
+        /// Replace all clips in asset
+        public void PatchSound(Gloomwood.Sound.SoundAsset asset) {
+            var id = asset.GetInstanceID();
+            // Skip processed
+            if (processedAudioIds.Contains(id)) {
+                return;
+            }
+            DebugMsg($"Audio asset discovered: name {asset.name} clips {asset.ClipCount} order {asset.Order}");
+            for (var clipn = 0; clipn < asset.ClipCount; clipn++) {
+                var key = PreparePatchName($"{asset.name}_{clipn}");
+                if (availableAudio.TryGetValue(key, out var clip)) {
+                    DebugMsg($"Patch audio {asset.name}:{clipn}");
+                    // Replace clip
+                    var clips = asset.ReadPrivateField<AudioClip[]>("clips");
+                    clips[clipn] = clip;
+                    asset.WritePrivateField<AudioClip[]>("clips", clips);
+                }
+            }
+            processedAudioIds.Add(id);
+        }
     }
 
     [HarmonyPatch(typeof(GameObject), "SetActive")]
@@ -591,24 +674,7 @@ namespace GloomSlation
         }
     }
 
-    /// Force inventory item quantity, slot, etc. to be rendered as overlay.
-    /// TODO: This should be achievable through changing font asset in some way, 
-    /// but we currently haven't figured out, what to change exactly. 
-    [HarmonyPatch(typeof(TextIcon), "Awake")]
-    static class PatchTextIcon
-    {
-        static void Prefix(ref TextBehaviour ___counterText)
-        {
-            var tmp = ___counterText.ReadPrivateField<TextMeshProUGUI>("textMesh");
-            // It won't actually be applied other way
-            tmp.OnPreRenderText += (ti) =>
-            {
-                ti.textComponent.isOverlay = true;
-            };
-        }
-    }
-
-    /// Journal: automatically adjust data entries height
+    /// Journal: automatically adjust data entries height; adjust serum texts
     [HarmonyPatch(typeof(JournalAnalysisPanel), "ApplyMode")]
     static class PatchJournalData {
         static void Prefix(
@@ -619,22 +685,72 @@ namespace GloomSlation
         }
 
         static void Postfix(
-            ref List<JournalDiagramElement> ___elementList
+            ref List<JournalDiagramElement> ___elementList,
+            ref TextBehaviour ___serumLabelPrefix,
+            ref TextBehaviour ___passiveLabelPrefix,
+            ref TextBehaviour ___serumTextArea,
+            ref TextBehaviour ___passiveTextArea
         ) {
             if (___elementList == null) {
                 return;
             }
             
-            foreach(var elem in ___elementList) {
+            // Entries height
+            foreach (var elem in ___elementList) {
                 var tmp = elem.GetComponentInChildren<TMPro.TextMeshProUGUI>();    
                 var lpos = tmp.rectTransform.localPosition;
                 // Shift text higher to match <> marker
-                lpos.y = -0.005f;
+                lpos.y = -0.007f;
                 tmp.rectTransform.localPosition = lpos;
+                // Make font smaller
+                tmp.fontSize = 0.03f;
                 // Resize outer box based on entry text height
                 var boxtf = elem.GetComponent<RectTransform>();
                 boxtf.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, tmp.preferredHeight);
             }
+
+            // Serum and Effect labels
+            Action<TextBehaviour> adjustLabel = (prefix) => {
+                var tmp1 = prefix.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+                tmp1.autoSizeTextContainer = true;
+                // Increase layout spacing
+                var hl1 = prefix.gameObject.GetComponentInParent<HorizontalLayoutGroup>();
+                hl1.spacing = -0.03f;
+            };
+
+            adjustLabel(___serumLabelPrefix);
+            adjustLabel(___passiveLabelPrefix);            
+
+            // Serum and Effect texts
+            Action<TextBehaviour> adjustText = (prefix) => {
+                var tmp1 = prefix.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+                tmp1.enableAutoSizing = true;
+                tmp1.fontSizeMin = 0.025f;
+                tmp1.fontSizeMax = 0.028f;
+            };
+
+            adjustText(___serumTextArea);
+            adjustText(___passiveTextArea);
+        }
+    }
+
+    /// Workaround for mirror that should display Countess
+    [HarmonyPatch(typeof(Gloomwood.Rendering.CountessMirror), "StartSequence")]
+    static class PatchMirror
+    {
+        static void Postfix(ref Gloomwood.Rendering.CountessMirror __instance)
+        {
+            __instance.SendMessage("Awake");
+        }
+    }
+
+    /// Replace audio on first access
+    [HarmonyPatch(typeof(Gloomwood.Sound.SoundAsset), "get_Clips")]
+    static class PatchSoundAsset
+    {
+        static void Prefix(ref Gloomwood.Sound.SoundAsset __instance)
+        {
+            Melon<GloomSlation>.Instance.PatchSound(__instance);
         }
     }
 }
