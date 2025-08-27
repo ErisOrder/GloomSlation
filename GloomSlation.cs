@@ -711,11 +711,16 @@ namespace GloomSlation
 
             // Serum and Effect labels
             Action<TextBehaviour> adjustLabel = (prefix) => {
-                var tmp1 = prefix.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
-                tmp1.autoSizeTextContainer = true;
-                // Increase layout spacing
-                var hl1 = prefix.gameObject.GetComponentInParent<HorizontalLayoutGroup>();
-                hl1.spacing = -0.03f;
+                // Handle race condition on journal open
+                try {
+                    var tmp1 = prefix.gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+                    tmp1.autoSizeTextContainer = true;
+                    // Increase layout spacing
+                    var hl1 = prefix.gameObject.GetComponentInParent<HorizontalLayoutGroup>();
+                    hl1.spacing = -0.03f;
+                } catch {
+                    // Do nothing
+                }
             };
 
             adjustLabel(___serumLabelPrefix);
