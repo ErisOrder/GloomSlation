@@ -4,6 +4,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Reflection;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 // Game/Melon/Unity
 using HarmonyLib;
@@ -150,6 +151,12 @@ namespace GloomSlation
         private string langPath = "";
         private bool debugMode = false;
 
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
         public override void OnInitializeMelon()
         {
             // We want full stacktraces to be printed in case of exception
@@ -166,9 +173,17 @@ namespace GloomSlation
             prefCategory.SetFilePath(Path.Combine(modPath, "cfg.toml"));
             var languageEntry = prefCategory.CreateEntry<string>("language", "Russian");
             var debugEntry = prefCategory.CreateEntry<bool>("debug", false);
+            var hideConsole = prefCategory.CreateEntry<bool>("hideConsole", true);
 
             langPath = Path.Combine(modPath, languageEntry.Value);
             debugMode = debugEntry.Value;
+
+            // Hide console
+            if (hideConsole.Value)
+            {
+                DebugMsg("Hide console");
+                ShowWindow(GetConsoleWindow(), 0);
+            }
 
             // Read font map
             var text = File.ReadAllText(Path.Combine(langPath, "fontMap.json"));
