@@ -410,6 +410,33 @@ namespace GloomSlation
                     }
                 );
             }
+
+            // Hightown title
+            // All buttons were aligned manually and in strange ways?
+            var hightownMenu = new [] {
+                ("Menu_Title/Button_NewGameMenu", 35.10f, -32.47f, -74.03f),
+                ("Menu_Title/Button_LoadGameMenu", 34.65f, -33.35f, -73.65f),
+                ("Menu_Title/Button_SettingsMenu", 35.37f, -34.27f, -73.66f),
+                ("Menu_Title/Button_QuitGame", 35.46f, -35.27f, -73.52f)
+            };
+            foreach (var (btn, nx, ny, nz) in hightownMenu) {
+                postInitAdjustVisitor.AddAdjustment<TMPro.TextMeshProUGUI>(
+                    true,
+                    btn,
+                    tmp => {
+                        var tf = tmp.gameObject.transform.parent;
+                        var pos = tf.position;
+                        pos.x = nx;
+                        pos.y = ny;
+                        pos.z = nz;
+                        tf.position = pos;
+                        // Reset Label rotation and scale
+                        var label = tf.GetChild(0);
+                        label.localRotation = Quaternion.identity;
+                        label.localScale = Vector3.one;
+                    }
+                );
+            }
         }
         
         /// Load texture from disk
