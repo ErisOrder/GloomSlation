@@ -24,7 +24,7 @@ using UnityEngine.UI;
 // External deps
 using Newtonsoft.Json;
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.310.05-modv0.6.1", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.311.35-modv0.6.2", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
