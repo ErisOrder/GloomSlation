@@ -5,7 +5,7 @@ mkdir bin/temp
 ls Mods/GloomSlation | where type == "dir" | each { |it| 
   let lang = $it.name | path basename 
   # Prepare config file
-  $"[GloomSlation]\nlanguage = \"($lang)\"\ndebug = false" | save bin/temp/cfg.toml -f
+  $"[GloomSlation]\nlanguage = \"($lang)\"\ndebug = false\nhideConsole = true" | save bin/temp/cfg.toml -f
   # Find built dll
   let dll = (ls bin/Release/*/GloomSlation.dll | first).name
   let out = $"dist/GloomSlation-($lang)"

@@ -24,7 +24,7 @@ using UnityEngine.UI;
 // External deps
 using Newtonsoft.Json;
 
-[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.311.35-modv0.6.2", "pipo, nikvoid")]
+[assembly: MelonInfo(typeof(GloomSlation.GloomSlation), "GloomSlation", "0.1.311.35-modv0.6.3", "pipo, nikvoid")]
 [assembly: MelonGame("Dillon Rogers", "Gloomwood")]
 
 namespace GloomSlation
@@ -76,13 +76,13 @@ namespace GloomSlation
 
     // Recursively visit objects in scene and apply patches on matched paths
     class AdjustVisitor {
-        Dictionary<String, List<(bool, Action<Component>, Type)>> adjustments = 
-            new Dictionary<string, List<(bool, Action<Component>, Type)>>();
+        Dictionary<String, List<(bool, Action<Component>, Type, String?)>> adjustments = 
+            new Dictionary<string, List<(bool, Action<Component>, Type, String?)>>();
     
-        public void RunAdjustments(GameObject[] roots) {
+        public void RunAdjustments(GameObject[] roots, string scene) {
             foreach (var root in roots) {
                 if (VisitNeeded(root.name)) {
-                    AdjustObjectsRec(root, root.name);
+                    AdjustObjectsRec(root, root.name, scene);
                 }
             }
         }
@@ -91,12 +91,17 @@ namespace GloomSlation
             return adjustments.Any((kv) => kv.Key.StartsWith(pathStart));
         } 
 
-        void AdjustObjectsRec(GameObject obj, string path) {
+        void AdjustObjectsRec(GameObject obj, string path, string scene) {
             foreach (Transform child in obj.transform) {
                 var childObj = child.gameObject;
                 var thisPath = $"{path}/{childObj.name}";
                 if (adjustments.TryGetValue(thisPath, out var list)) {
-                    foreach ((var children, var adjust, var ty) in list) {
+                    foreach ((var children, var adjust, var ty, var reqscene) in list) {
+                        // Skip if scene doesn't match
+                        if (reqscene != null && scene != reqscene) {
+                            continue;
+                        }
+                    
                         Component[] comps;
                         if (children) {
                             comps = childObj.GetComponentsInChildren(ty, true);
@@ -111,26 +116,26 @@ namespace GloomSlation
                     }
                 }
                 if (VisitNeeded(thisPath)) {
-                    AdjustObjectsRec(childObj, thisPath);
+                    AdjustObjectsRec(childObj, thisPath, scene);
                 }
             }
         }
 
-        public void AddAdjustment<T>(bool children, string path, Action<T> adjust) where T: Component {
+        public void AddAdjustment<T>(bool children, string path, string? scene, Action<T> adjust) where T: Component {
             Action<Component> dynAdjust = (comp) => {
                 adjust((comp as T)!);
             };
             
             if (adjustments.TryGetValue(path, out var val)) {
-                val.Add((children, dynAdjust, typeof(T)));
+                val.Add((children, dynAdjust, typeof(T), scene));
             } else {
-                adjustments.Add(path, new List<(bool, Action<Component>, Type)> { (children, dynAdjust, typeof(T)) });
+                adjustments.Add(path, new List<(bool, Action<Component>, Type, String?)> { (children, dynAdjust, typeof(T), scene) });
             }
         } 
         
-        public void AddAdjustment<T>(bool recursive, string[] paths, Action<T> adjust) where T: Component {
+        public void AddAdjustment<T>(bool recursive, string[] paths, string? scene, Action<T> adjust) where T: Component {
             foreach (var path in paths) {
-                AddAdjustment<T>(recursive, path, adjust);
+                AddAdjustment<T>(recursive, path, scene, adjust);
             }
         } 
     }
@@ -321,7 +326,7 @@ namespace GloomSlation
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
             var scene = SceneManager.GetSceneByBuildIndex(buildIndex);
-            postInitAdjustVisitor.RunAdjustments(scene.GetRootGameObjects());
+            postInitAdjustVisitor.RunAdjustments(scene.GetRootGameObjects(), sceneName);
         }
 
         /// Construct localization entry ID from GameObject name and original text
@@ -376,6 +381,7 @@ namespace GloomSlation
                 postInitAdjustVisitor.AddAdjustment<TMPro.TextMeshProUGUI>(
                     true,
                     btn,
+                    "Level_Title_Cliffside",
                     tmp => {
                         // Align all objects by central axis and set text alignment to Center
                         var tf = tmp.gameObject.transform.parent;
@@ -402,6 +408,7 @@ namespace GloomSlation
                 postInitAdjustVisitor.AddAdjustment<TMPro.TextMeshProUGUI>(
                     true,
                     btn,
+                    "Level_Title_Underport_Powerstation",
                     tmp => {
                         var tf = tmp.gameObject.transform.parent;
                         var pos = tf.position;
@@ -423,6 +430,7 @@ namespace GloomSlation
                 postInitAdjustVisitor.AddAdjustment<TMPro.TextMeshProUGUI>(
                     true,
                     btn,
+                    "Level_Title_Hightown_Gate",
                     tmp => {
                         var tf = tmp.gameObject.transform.parent;
                         var pos = tf.position;
